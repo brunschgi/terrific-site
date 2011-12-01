@@ -1,0 +1,7 @@
+parameters:
+#    terrific_core.example.class: Terrific\CoreBundle\Example
+
+services:
+#    terrific_core.example:
+#        class: %terrific_core.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

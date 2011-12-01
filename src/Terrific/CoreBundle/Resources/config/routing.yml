@@ -1,0 +1,3 @@
+TerrificCoreBundle_CreationModule:
+    pattern:  /terrific/creation/module
+    defaults: { _controller: TerrificCoreBundle:Creation:module }
