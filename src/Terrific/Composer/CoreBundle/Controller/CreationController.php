@@ -7,6 +7,9 @@ use Symfony\Component\HttpFoundation\Request;
 use Terrific\Composer\CoreBundle\Entity\Module;
 use Terrific\Composer\CoreBundle\Form\ModuleType;
 
+// these import the "@Route" and "@Template" annotations
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 /**
  * Creates the terrific components.
@@ -17,7 +20,7 @@ class CreationController extends Controller
     /**
      * Creates a terrific module with the designated skins.
      *
-     * @Route("/composer/create/module")
+     * @Route("/create/module", name="composer_create_module")
      * @Template()
      *
      * @param \Symfony\Component\HttpFoundation\Request $request
@@ -37,7 +40,7 @@ class CreationController extends Controller
             if ($form->isValid()) {
                 // create the module in the filesystem
 
-                return $this->redirect($this->generateUrl('composer_CreateModuleSuccess'));
+                return $this->redirect($this->generateUrl('composer_create_module_success'));
             }
         }
 

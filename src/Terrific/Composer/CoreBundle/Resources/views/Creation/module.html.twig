@@ -1,11 +1,21 @@
-<form action="{{ path('terrificCreateModule') }}" method="post" {{ form_enctype(form) }}>
-    {{ form_errors(form) }}
+{% extends 'TerrificComposerCoreBundle::base.html.twig' %}
+{# import composer macros #}
+{% from 'TerrificComposerCoreBundle::macros.html.twig' import module as mod %}
 
-    {{ form_row(form.author) }}
-    {{ form_row(form.namespace) }}
-    {{ form_row(form.name) }}
 
-    {{ form_rest(form) }}
+{% block composition %}
+    <form action="{{ path('composer_create_module') }}" method="post" {{ form_enctype(form) }}>
+        {{ form_errors(form) }}
 
-    <input type="submit" />
-</form>
+        {{ form_row(form.author) }}
+        {{ form_row(form.namespace) }}
+        {{ form_row(form.name) }}
+
+        {{ form_rest(form) }}
+
+        <input type="submit" />
+    </form>
+
+    {{ mod('Teaser', 'test', ['advanced', 'more'], [1,2,3], {'data-id':'test'}) }}
+{% endblock %}
+

@@ -1,10 +1,10 @@
 TerrificComposerCoreBundle:
     resource: "@TerrificComposerCoreBundle/Controller/"
     type:     annotation
-    prefix:   /terrific/composer/
+    prefix:   /terrific/composer
 
-AcmeModuleDemoBundle:
-    resource: "@AcmeModuleDemoBundle/Controller/"
+AcmeDemoBundle:
+    resource: "@AcmeDemoBundle/Controller/"
     type:     annotation
     prefix:   /
 

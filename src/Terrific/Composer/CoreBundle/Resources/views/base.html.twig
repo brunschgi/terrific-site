@@ -1,0 +1,57 @@
+{# Terrific/Composer/CoreBundle/Resources/views/base.html.twig #}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Terrific Composer{% endblock %}</title>
+    <meta name="description"
+          content="{% block meta_description %}Modularize your code, scale down your problems{% endblock %}"/>
+    <meta name="keywords" content="{% block meta_keywords %}Terrific Composer, TerrificJS{% endblock %}"/>
+    <meta name="generator" content="Terrific Composer"/>
+    <meta charset="UTF-8"/>
+</head>
+<body class="{% block body_class %}{% endblock %}">
+    {# the content goes here #}
+    {% block composition %}{% endblock %}
+
+    {# javascripts #}
+    {% block jquery %}
+        {% javascripts
+            '@TerrificComposerCoreBundle/Resources/public/js/jquery-1.7.1.min.js'
+            output='js/jquery-1.7.1.min.js'
+        %}
+            <script src="{{ asset_url }}" type="text/javascript"></script>
+        {% endjavascripts %}
+    {% endblock %}
+    {% block terrificjs %}
+        {% javascripts
+            '@TerrificComposerCoreBundle/Resources/public/js/terrific-1.0.0.min.js'
+            output='js/terrific-1.0.0.min.js'
+        %}
+            <script src="{{ asset_url }}" type="text/javascript"></script>
+        {% endjavascripts %}
+    {% endblock %}
+    {% block scripts %}
+        {% javascripts
+            'Terrific/Module/*/Resources/public/js/*'
+            output='js/compiled/base.js'
+        %}
+            <script src="{{ asset_url }}" type="text/javascript"></script>
+        {% endjavascripts %}
+    {% endblock %}
+
+    {# terrificjs bootstrap #}
+    {% block bootstrap %}
+        <script type="text/javascript">
+            (function($) {
+                $(document).ready(function() {
+                    var $page = $('body');
+                    var application = new Tc.Application();
+                    application.registerModules($page);
+                    application.start();
+                });
+            })(Tc.$);
+        </script>
+    {% endblock %}
+</body>
+</html>
+

@@ -21,14 +21,13 @@ class AppKernel extends Kernel
         );
 
         // register all composer modules
-        $dir = '../src/Composer/Module/';
+        $dir = '../src/Terrific/Module/';
 
         foreach (glob($dir . '*') as $file) {
-            $bundles[] = new Composer/Module/$$file();
+            // $bundles[] = new Composer/Module/$$file();
         }
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
-            $bundles[] = new Terrific\CoreBundle\TerrificCoreBundle();
             $bundles[] = new Acme\DemoBundle\AcmeDemoBundle();
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
