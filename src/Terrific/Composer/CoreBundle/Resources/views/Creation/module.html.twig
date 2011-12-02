@@ -1,0 +1,11 @@
+<form action="{{ path('terrificCreateModule') }}" method="post" {{ form_enctype(form) }}>
+    {{ form_errors(form) }}
+
+    {{ form_row(form.author) }}
+    {{ form_row(form.namespace) }}
+    {{ form_row(form.name) }}
+
+    {{ form_rest(form) }}
+
+    <input type="submit" />
+</form>

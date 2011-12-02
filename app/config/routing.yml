@@ -1,6 +1,13 @@
-TerrificCoreBundle:
-    resource: "@TerrificCoreBundle/Resources/config/routing.yml"
+TerrificComposerCoreBundle:
+    resource: "@TerrificComposerCoreBundle/Controller/"
+    type:     annotation
+    prefix:   /terrific/composer/
+
+AcmeModuleDemoBundle:
+    resource: "@AcmeModuleDemoBundle/Controller/"
+    type:     annotation
     prefix:   /
+
 
 # Internal routing configuration to handle ESI
 #_internal:
