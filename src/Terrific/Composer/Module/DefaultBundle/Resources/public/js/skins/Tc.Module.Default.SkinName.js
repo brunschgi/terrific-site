@@ -3,12 +3,12 @@
      * SkinName Skin implementation for module Default.
      *
      * @author Your Name
-     * @namespace Nx.Module.Default
+     * @namespace Tc.Module.Default
      * @class SkinName
-     * @extends Nx.Module
+     * @extends Tc.Module
      * @constructor
      */
-    Nx.Module.Default.SkinName = function(parent) {
+    Tc.Module.Default.SkinName = function(parent) {
         /** 
          * override the appropriate methods from the decorated module (ie. this.get = function()).
          * the former/original method may be called via parent.<method>()
@@ -35,4 +35,4 @@
             parent.afterBinding();
         };
     };
-})(Nx.$);
+})(Tc.$);

@@ -1,0 +1,7 @@
+{% extends 'TerrificCoreBundle::base.html.twig' %}
+
+{% block composition %}
+    {{ tc.module('Navigation', 'Navigation:main') }}
+    {% block body %}
+    {% endblock%}
+{% endblock %}

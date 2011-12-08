@@ -1,4 +1,4 @@
-{# Terrific/Composer/CoreBundle/Resources/views/base.html.twig #}
+{# Terrific/CoreBundle/Resources/views/base.html.twig #}
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +16,7 @@
     {# javascripts #}
     {% block jquery %}
         {% javascripts
-            '@TerrificComposerCoreBundle/Resources/public/js/jquery-1.7.1.min.js'
+            '@TerrificCoreBundle/Resources/public/js/jquery-1.7.1.min.js'
             output='js/jquery-1.7.1.min.js'
         %}
             <script src="{{ asset_url }}" type="text/javascript"></script>
@@ -24,7 +24,7 @@
     {% endblock %}
     {% block terrificjs %}
         {% javascripts
-            '@TerrificComposerCoreBundle/Resources/public/js/terrific-1.0.0.min.js'
+            '@TerrificCoreBundle/Resources/public/js/terrific-1.0.0.min.js'
             output='js/terrific-1.0.0.min.js'
         %}
             <script src="{{ asset_url }}" type="text/javascript"></script>
@@ -32,7 +32,7 @@
     {% endblock %}
     {% block scripts %}
         {% javascripts
-            'Terrific/Module/*/Resources/public/js/*'
+            '../src/Terrific/Module/*/Resources/public/js/*'
             output='js/compiled/base.js'
         %}
             <script src="{{ asset_url }}" type="text/javascript"></script>

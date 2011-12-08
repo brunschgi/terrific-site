@@ -2,6 +2,7 @@
 
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
+use Symfony\Component\Finder\Finder;
 
 class AppKernel extends Kernel
 {
@@ -17,18 +18,24 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
-            new Terrific\Composer\CoreBundle\TerrificComposerCoreBundle()
+            new Terrific\CoreBundle\TerrificCoreBundle(),
+            new Terrific\CompositionBundle\TerrificCompositionBundle(),
         );
 
-        // register all composer modules
+        // register all terrific modules
         $dir = '../src/Terrific/Module/';
 
-        foreach (glob($dir . '*') as $file) {
-            // $bundles[] = new Composer/Module/$$file();
+        $finder = new Finder();
+        $finder->directories()->in($dir)->depth('== 0');
+
+        foreach ($finder as $file) {
+            $filename = $file->getFilename();
+            $module = 'Terrific\Module\\'.$filename.'\TerrificModule'.$filename;
+            $bundles[] = new $module();
         }
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
-            $bundles[] = new Acme\DemoBundle\AcmeDemoBundle();
+            $bundles[] = new Terrific\Composer\CoreBundle\TerrificComposerCoreBundle();
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();

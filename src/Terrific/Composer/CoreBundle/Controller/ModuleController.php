@@ -12,21 +12,21 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 /**
- * Creates the terrific components.
+ * ModuleController.
  */
-class CreationController extends Controller
+class ModuleController extends Controller
 {
 
     /**
      * Creates a terrific module with the designated skins.
      *
-     * @Route("/create/module", name="composer_create_module")
+     * @Route("/module/create", name="composer_create_module")
      * @Template()
      *
      * @param \Symfony\Component\HttpFoundation\Request $request
      * @return \Symfony\Bundle\FrameworkBundle\Controller\RedirectResponse|\Symfony\Bundle\FrameworkBundle\Controller\Response
      */
-    public function moduleAction(Request $request)
+    public function createAction(Request $request)
     {
         // setup a fresh module object
         $module = new Module();
@@ -39,7 +39,6 @@ class CreationController extends Controller
 
             if ($form->isValid()) {
                 // create the module in the filesystem
-
                 return $this->redirect($this->generateUrl('composer_create_module_success'));
             }
         }

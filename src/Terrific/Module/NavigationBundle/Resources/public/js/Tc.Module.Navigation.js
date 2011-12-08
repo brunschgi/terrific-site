@@ -3,11 +3,11 @@
      * Default module implementation.
      *
      * @author Your Name
-     * @namespace Nx.Module
+     * @namespace Tc.Module
      * @class Default
-     * @extends Nx.Module
+     * @extends Tc.Module
      */
-    Nx.Module.Default = Nx.Module.extend({
+    Tc.Module.Navigation = Tc.Module.extend({
 		
 		/**
 		 * Initializes the Default module.
@@ -63,6 +63,5 @@
         afterBinding: function() {
         
         }
-        
     });
-})(Nx.$);
+})(Tc.$);

@@ -1,7 +1,4 @@
-{% extends 'TerrificComposerCoreBundle::base.html.twig' %}
-{# import composer macros #}
-{% from 'TerrificComposerCoreBundle::macros.html.twig' import module as mod %}
-
+{% extends 'TerrificCoreBundle::base.html.twig' %}
 
 {% block composition %}
     <form action="{{ path('composer_create_module') }}" method="post" {{ form_enctype(form) }}>
@@ -16,6 +13,6 @@
         <input type="submit" />
     </form>
 
-    {{ mod('Teaser', 'test', ['advanced', 'more'], [1,2,3], {'data-id':'test'}) }}
+    {{ tc.module('Teaser', 'test', ['advanced', 'more'], [1,2,3], {'data-id':'test'}) }}
 {% endblock %}
 
