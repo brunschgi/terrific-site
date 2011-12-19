@@ -8,6 +8,36 @@
     <meta name="keywords" content="{% block meta_keywords %}Terrific Composer, TerrificJS{% endblock %}"/>
     <meta name="generator" content="Terrific Composer"/>
     <meta charset="UTF-8"/>
+    {# stylesheets #}
+    {% block css_reset %}
+        {% stylesheets
+            '@TerrificCoreBundle/Resources/public/css/cssreset-min.css'
+            output="css/reset.css"
+        %}
+            <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+    {% endblock %}
+    {% block css_default %}
+    {% endblock %}
+    {% block css_dependencies %}
+        {% stylesheets
+            'css/static/libraries/*'
+            'css/static/plugins/*'
+            'css/static/utils/*'
+            output="css/dependencies.css"
+        %}
+            <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+    {% endblock %}
+    {% block styles %}
+        {% stylesheets
+            '@TerrificCompositionBundle/Resources/public/css/elements.css'
+            '../src/Terrific/Module/*/Resources/public/css/*'
+            output="css/base.css" filter="cssrewrite"
+        %}
+            <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+    {% endblock %}
 </head>
 <body class="{% block body_class %}{% endblock %}">
     {# the content goes here #}
@@ -30,10 +60,20 @@
             <script src="{{ asset_url }}" type="text/javascript"></script>
         {% endjavascripts %}
     {% endblock %}
+    {% block js_dependencies %}
+        {% javascripts
+               'js/static/libraries/*'
+               'js/static/plugins/*'
+               'js/static/utils/*'
+               output='js/dependencies.js'
+           %}
+               <script src="{{ asset_url }}" type="text/javascript"></script>
+        {% endjavascripts %}
+    {% endblock %}
     {% block scripts %}
         {% javascripts
             '../src/Terrific/Module/*/Resources/public/js/*'
-            output='js/compiled/base.js'
+            output='js/base.js'
         %}
             <script src="{{ asset_url }}" type="text/javascript"></script>
         {% endjavascripts %}

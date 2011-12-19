@@ -18,12 +18,13 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
+            new Highlight\Bundle\HighlightBundle(),
             new Terrific\CoreBundle\TerrificCoreBundle(),
             new Terrific\CompositionBundle\TerrificCompositionBundle(),
         );
 
         // register all terrific modules
-        $dir = '../src/Terrific/Module/';
+        $dir = __DIR__.'/../src/Terrific/Module/';
 
         $finder = new Finder();
         $finder->directories()->in($dir)->depth('== 0');

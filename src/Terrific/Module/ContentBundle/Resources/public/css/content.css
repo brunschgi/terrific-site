@@ -1,0 +1,85 @@
+/* @group Module: Default */
+@media all {
+
+    .modContent {
+        margin-top: 2em;
+        border-top: 4px solid #7F7F7F;
+    }
+
+    .modContent .rich {
+        padding: 0 0.9375em;
+    }
+
+    .modContent .block {
+        padding-top: 4em;
+    }
+
+    .modContent ul.dir li {
+        padding-left: 0;
+        background: none;
+    }
+
+    .modContent .highlight {
+        margin: 0.5em 0.15384615em;
+        border: 1px solid #7F7F7F;
+        box-shadow: 1px 3px 2px 0 #dddddd;
+    }
+
+    .modContent .slogan {
+        display: block;
+        margin: 0.8em auto; /* 12 / 15 */
+        text-align: center;
+        width: 60%;
+        font-size: 0.9375em; /* 15 /16 */
+        line-height: 1.6em; /* 24 / 15 */
+    }
+
+    .modContent h2.promo {
+        padding-top: 1.5em;
+        margin-bottom: 0;
+        border: none;
+    }
+
+    .modContent .promo {
+        text-align: center;
+        margin: 0 1em;
+        border-bottom: 5px solid #dddddd
+    }
+
+    .modContent .nav {
+        overflow: hidden;
+    }
+
+    .modContent .nav li {
+        background: none;
+        display: block;
+        float: left;
+        padding: 0;
+    }
+
+    .modContent .nav a {
+        display: block;
+        font-size: 0.9375em; /* 15 /16 */
+        line-height: 1.6em; /* 24 / 15 */
+        padding: 0.8em 0.6666666em 0.8em 0.6666666em;
+        text-decoration: none;
+        border-top: 1px solid #7F7F7F;;
+        border-bottom: 4px solid #7F7F7F;
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
+        border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+    }
+
+    .modContent .nav a:hover {
+        background : #333333;
+        border-top: 1px solid #7F7F7F;
+        border-bottom: 4px solid #000;
+        border-left: 1px solid #7F7F7F;
+        border-right: 1px solid #7F7F7F;
+    }
+
+}
+
+/* @end */

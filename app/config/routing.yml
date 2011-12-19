@@ -3,11 +3,6 @@ TerrificCompositionBundle:
     type:     annotation
     prefix:   /
 
-TerrificComposerCoreBundle:
-    resource: "@TerrificComposerCoreBundle/Controller/"
-    type:     annotation
-    prefix:   /terrific/composer
-
 # Internal routing configuration to handle ESI
 #_internal:
 #   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"

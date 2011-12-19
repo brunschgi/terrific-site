@@ -1,7 +1,21 @@
 {% extends 'TerrificCoreBundle::base.html.twig' %}
 
+{% block css_default %}
+    {% stylesheets
+        '@TerrificCompositionBundle/Resources/public/css/default.css'
+        '@TerrificCompositionBundle/Resources/public/css/solarized.css'
+        output="css/default.css"
+        filter="cssrewrite"
+    %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+{% endblock %}
+
 {% block composition %}
-    {{ tc.module('Navigation', 'Navigation:main') }}
-    {% block body %}
-    {% endblock%}
+{{ tc.module('Navigation', 'Navigation:main') }}
+{{ tc.module('Logo') }}
+
+{% block body %}
+{% endblock %}
+
 {% endblock %}

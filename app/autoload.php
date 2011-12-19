@@ -14,7 +14,8 @@ $loader->registerNamespaces(array(
     'Monolog'          => __DIR__.'/../vendor/monolog/src',
     'Assetic'          => __DIR__.'/../vendor/assetic/src',
     'Metadata'         => __DIR__.'/../vendor/metadata/src',
-    'Knp\Menu'         => __DIR__.'/../vendor/KnpMenu/src'
+    'Knp\Menu'         => __DIR__.'/../vendor/KnpMenu/src',
+    'Highlight'        => __DIR__.'/../vendor/bundles'
 ));
 $loader->registerPrefixes(array(
     'Twig_Extensions_' => __DIR__.'/../vendor/twig-extensions/lib',

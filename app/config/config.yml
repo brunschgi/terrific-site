@@ -1,6 +1,7 @@
 imports:
     - { resource: parameters.ini }
     - { resource: security.yml }
+    - { resource: @HighlightBundle/Resources/config/config.yml }
 
 framework:
     #esi:             ~
@@ -28,6 +29,9 @@ assetic:
     # java: /usr/bin/java
     filters:
         cssrewrite: ~
+        less:
+            node: /usr/bin/node
+            node_paths: [/usr/lib/node]
         # closure:
         #     jar: %kernel.root_dir%/java/compiler.jar
         # yui_css:
@@ -58,3 +62,19 @@ swiftmailer:
 jms_security_extra:
     secure_controllers:  true
     secure_all_services: false
+
+# Highlight Configuration
+highlight:
+    # Each provider in this list are use on after other
+    # if language given in template ins't allowed
+    providers: [ pygment ]
+
+    globals:
+        linenos: false
+        blockstyles: ""
+        cssclass: highlight
+
+    pygment:
+        linenos: false
+        blockstyles: ""
+        cssclass: pygment

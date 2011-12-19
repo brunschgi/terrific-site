@@ -1,5 +1,21 @@
 {% extends 'TerrificCompositionBundle::base.html.twig' %}
 
 {% block body %}
-    Hello Hello
+<div class="body">
+    <div class="line">
+        <div class="unit size1of3">
+            {{ tc.module('Teaser', 'concept') }}
+        </div>
+        <div class="unit size1of3">
+            {{ tc.module('Teaser', 'compose') }}
+        </div>
+        <div class="lastUnit">
+            {{ tc.module('Teaser', 'integrate') }}
+        </div>
+    </div>
+
+    {{ tc.module('Content', 'Content:concept') }}
+    {{ tc.module('Content', 'Content:composer') }}
+    {{ tc.module('Content', 'Content:integrations') }}
+</div>
 {% endblock %}

@@ -1,0 +1,43 @@
+/* @group Module: Navigation */
+@media all {
+    .modNavigation {
+        background: #000;
+    }
+
+    .modNavigation ul {
+        overflow: hidden;
+        margin: 0 auto;
+        width: 960px;
+    }
+    
+    .modNavigation li {
+        float: left;
+        font-family: 'QuicksandBook', Arial, Helvetica, sans-serif;
+        font-size: 0.6875em; /* 11 / 16 */
+        line-height: 1em;
+        letter-spacing: 0.1em;
+        padding: 21px 15px 16px; /* 21 + 16 + 11 (font) = 48 */
+    }
+    
+    .modNavigation a {
+        color: #A9A9AA;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .modNavigation:hover {
+        color:
+    }
+
+    .modNavigation:active {
+        color: #fff;
+    }
+}
+
+@media print {
+    .modNavigation {
+        display: none;
+    }
+}
+
+/* @end */

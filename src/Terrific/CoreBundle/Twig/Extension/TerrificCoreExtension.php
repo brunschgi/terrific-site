@@ -23,28 +23,6 @@ class TerrificCoreExtension extends \Twig_Extension
     /**
      * {@inheritdoc}
      */
-    function getGlobals()
-    {
-        // get all registered terrific modules
-        global $kernel;
-
-        $bundles = $kernel->getBundles();
-        $modules = array();
-
-        foreach($bundles as $bundle) {
-            $name = $bundle->getName();
-
-            if(strpos($name, 'TerrificModule') !== false) {
-                $modules[] = $bundle->getName();
-            }
-        }
-
-        return array('modules' => $modules);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function getTests()
     {
         return array(

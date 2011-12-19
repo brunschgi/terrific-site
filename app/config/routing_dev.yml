@@ -1,3 +1,8 @@
+TerrificComposerCoreBundle:
+    resource: "@TerrificComposerCoreBundle/Controller/"
+    type:     annotation
+    prefix:   /terrific/composer
+
 _assetic:
     resource: .
     type:     assetic

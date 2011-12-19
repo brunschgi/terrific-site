@@ -1,0 +1,20 @@
+/* @group Module: Default */
+@media all {
+    .modLogo {
+        text-align: center;
+        padding: 1em 0 2em 0;
+    }
+
+    .modLogo a {
+        display: inline-block;
+    }
+
+    .modLogo span {
+        display: block;
+        text-align: center;
+        font-family: "Times New Roman",Times,serif;
+        font-size: 0.9em;
+    }
+}
+
+/* @end */

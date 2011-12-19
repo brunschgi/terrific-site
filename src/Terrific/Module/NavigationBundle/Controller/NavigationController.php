@@ -20,9 +20,9 @@ class NavigationController extends Controller
     {
         $factory = new MenuFactory();
         $menu = $factory->createItem('Main');
-        $menu->setCurrentUri($request->getPathInfo());
+        $menu->setCurrentUri($request->getRequestUri());
 
-        $menu->addChild('Concept', array('uri' => '/'));
+        $menu->addChild('Concept', array('uri' => $this->generateUrl('home')));
         $menu->addChild('Core', array('uri' => '/core'));
         $menu->addChild('Composer', array('uri' => '/composer'));
         $menu->addChild('Integrations', array('uri' => '/#integrations'));

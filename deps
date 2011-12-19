@@ -1,3 +1,7 @@
+[Highlight]
+    git=https://github.com/nicodmf/HighlightBundle.git
+    target=/bundles/Highlight
+
 [KnpMenu]
     git=https://github.com/KnpLabs/KnpMenu.git
 
