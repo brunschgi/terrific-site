@@ -24,7 +24,7 @@
             'css/static/libraries/*'
             'css/static/plugins/*'
             'css/static/utils/*'
-            output="css/dependencies.css"
+            output="css/compiled/dependencies.css"
         %}
             <link rel="stylesheet" href="{{ asset_url }}" />
         {% endstylesheets %}
@@ -32,7 +32,7 @@
     {% block styles %}
         {% stylesheets
             '../src/Terrific/Module/*/Resources/public/css/*'
-            output="css/base.css" filter="cssrewrite"
+            output="css/compiled/base.css" filter="cssrewrite"
         %}
             <link rel="stylesheet" href="{{ asset_url }}" />
         {% endstylesheets %}
@@ -64,7 +64,7 @@
                'js/static/libraries/*'
                'js/static/plugins/*'
                'js/static/utils/*'
-               output='js/dependencies.js'
+               output='js/compiled/dependencies.js'
            %}
                <script src="{{ asset_url }}" type="text/javascript"></script>
         {% endjavascripts %}
@@ -72,7 +72,7 @@
     {% block scripts %}
         {% javascripts
             '../src/Terrific/Module/*/Resources/public/js/*'
-            output='js/base.js'
+            output='js/compiled/base.js'
         %}
             <script src="{{ asset_url }}" type="text/javascript"></script>
         {% endjavascripts %}
