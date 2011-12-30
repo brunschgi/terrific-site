@@ -36,19 +36,19 @@ class CoreDocsController extends Controller
     }
 
     /**
-     * @Route("/core/docs/skin", name="core_docs_skin")
+     * @Route("/core/docs/module", name="core_docs_module")
      * @Template()
      */
-    public function skinAction()
+    public function moduleAction()
     {
         return array();
     }
 
     /**
-     * @Route("/core/docs/module", name="core_docs_module")
+     * @Route("/core/docs/skin", name="core_docs_skin")
      * @Template()
      */
-    public function moduleAction()
+    public function skinAction()
     {
         return array();
     }

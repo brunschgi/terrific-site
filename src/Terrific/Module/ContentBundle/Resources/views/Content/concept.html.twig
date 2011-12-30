@@ -1,93 +1,102 @@
-<h2 class="base promo">Concept</h2>
-<div class="line block">
-    <div class="unit size1of3">
-        <img src="{{ asset('/web/img/content/spaghetti.jpg')}}" width="279"/>
+<div class="slope">
+    <h2 class="base promo">Concept</h2>
+    <span class="slogan">Build your own Legos</span>
+    <div class="line block">
+        <div class="unit size1of3">
+            <img src="{{ asset('bundles/terrificmodulecontent/images/content/spaghetti.jpg')}}" width="279"/>
+        </div>
+        <div class="lastUnit rich">
+            <h3>What Terrific can do for you</h3>
+            <ul>
+                <li>Eliminates spaghetti code and brain knots forever</li>
+                <li>Modularizes your HTML, CSS and JS code</li>
+                <li>Fasten and streamlines your development</li>
+                <li>Helps you to create highly maintainable frontends</li>
+                <li>Based on a <a href="{{ path('core') }}" title="">rock-solid core</a> that has been tested in
+                    countless
+                    big and small projects
+                </li>
+            </ul>
+        </div>
     </div>
-    <div class="lastUnit rich">
-        <h3>What Terrific can do for you</h3>
-        <ul>
-            <li>Eliminates spaghetti code and brain knots forever</li>
-            <li>Modularizes your HTML, CSS and JS code</li>
-            <li>Fasten and streamlines your development</li>
-            <li>Helps you to create highly maintainable frontends</li>
-            <li>Based on a <a href="{{ path('core') }}" title="">rock-solid core</a> that has been tested in countless
-                big and small projects
-            </li>
-        </ul>
+    <div class="line block">
+        <div class="unit size1of2 rich">
+            <h3>Module Structure</h3>
+            <ul class="dir">
+                <li>
+                    <mark>Hero/hero.html</mark>
+                    – Module Markup
+                </li>
+                <li>
+                    <mark>Hero/css/hero.css</mark>
+                    – Module CSS
+                </li>
+                <li>
+                    <mark>Hero/css/skin/*.css</mark>
+                    – Module CSS Skins (optional)
+                </li>
+                <li>
+                    <mark>Hero/js/Tc.Module.Hero.js</mark>
+                    – Module JS (optional)
+                </li>
+                <li>
+                    <mark>Hero/js/skin/*.js</mark>
+                    – Module JS Skins (optional)
+                </li>
+            </ul>
+        </div>
+        <div class="lastUnit">
+            <img src="{{ asset('bundles/terrificmodulecontent/images/content/structure.jpg')}}" width="279"/>
+        </div>
     </div>
-</div>
-<div class="line block">
-    <div class="unit size1of2 rich">
-        <h3>Module Structure</h3>
-        <ul class="dir">
-            <li>
-                <mark>Hero/hero.html</mark>
-                – Module Markup
-            </li>
-            <li>
-                <mark>Hero/css/hero.css</mark>
-                – Module CSS
-            </li>
-            <li>
-                <mark>Hero/css/skin/*.css</mark>
-                – Module CSS Skins (optional)
-            </li>
-            <li>
-                <mark>Hero/js/Tc.Module.Hero.js</mark>
-                – Module JS (optional)
-            </li>
-            <li>
-                <mark>Hero/js/skin/*.js</mark>
-                – Module JS Skins (optional)
-            </li>
-        </ul>
+    <div class="line block">
+        <div class="unit size1of3">
+            {{ highlight(snippets.html, 'html','pygment') }}
+            <div class="promo rich">
+                <h4>Give your HTML some semantics…</h4>
+
+                <p>
+                    Simply mark your modules by giving them a name. This will do the trick and everything is wired up
+                    for
+                    you in the background.
+                </p>
+            </div>
+        </div>
+        <div class="unit size1of3">
+            {{ highlight(snippets.css, 'css','pygment') }}
+            <div class="promo rich">
+                <h4>Write CSS in OOCSS manner…</h4>
+
+                <p>
+                    Write encapsulating CSS rules in OOCSS manner. This prevents you from strange side-effects when
+                    using your modules in different parts of your layout.
+                </p>
+            </div>
+        </div>
+        <div class="lastUnit">
+            {{ highlight(snippets.js, 'js','pygment') }}
+            <div class="promo rich">
+                <h4>Flavor it with a little JS magic…</h4>
+
+                <p>
+                    Create a TerrificJS module with the same name, fill it with your jQuery code and let the magic
+                    happen!
+                </p>
+            </div>
+        </div>
     </div>
-    <div class="lastUnit">
-        <img src="{{ asset('/web/img/content/structure.jpg')}}" width="279"/>
-    </div>
-</div>
-<div class="line block">
-    <div class="unit size1of3">
-        {{ highlight(snippets.html, 'html','pygment') }}
-        <div class="promo rich">
-            <h4>Give your HTML some semantics…</h4>
+    <div class="line block">
+        <div class="unit size1of3">
+            <img src="{{ asset('bundles/terrificmodulecontent/images/content/playing.jpg')}}" width="279"/>
+        </div>
+        <div class="lastUnit rich">
+            <h3>It's like playing Lego</h3>
 
             <p>
-                Simply mark your modules by giving them a name. This will do the trick and everything is wired up for
-                you in the background.
+                Your module legos are prepared. Now arrange them in your layout in every combination you can think of
+                and build the new killer frontend! And don't forget to stay calm… just because everything is soo
+                terrific!
             </p>
         </div>
     </div>
-    <div class="unit size1of3">
-        {{ highlight(snippets.css, 'css','pygment') }}
-        <div class="promo rich">
-            <h4>Write CSS in OOCSS manner…</h4>
-
-            <p>
-                Write encapsulating CSS rules in OOCSS manner. This prevents you from strange side-effects when using your modules in different parts of your layout.
-            </p>
-        </div>
-    </div>
-    <div class="lastUnit">
-        {{ highlight(snippets.js, 'js','pygment') }}
-        <div class="promo rich">
-            <h4>Flavor it with a little JS magic…</h4>
-
-            <p>
-                Create a TerrificJS module with the same name, fill it with your jQuery code and let the magic happen!
-            </p>
-        </div>
-    </div>
 </div>
-<div class="line block">
-    <div class="unit size1of3">
-        <img src="{{ asset('/web/img/content/playing.jpg')}}" width="279"/>
-    </div>
-    <div class="lastUnit rich">
-        <h3>It's like playing Lego</h3>
-        <p>
-            Your module legos are prepared. Now arrange them in your layout in every combination you can think of and build the new killer frontend! And don't forget to stay calm… just because everything is soo terrific!
-        </p>
-    </div>
-</div>
-

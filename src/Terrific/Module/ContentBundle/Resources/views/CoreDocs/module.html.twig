@@ -1,0 +1,19 @@
+<div class="rich">
+    <h2>Module</h2>
+    <p><em>Modules</em> are the real stars of your TerrificJS application. All of your JavaScript code will find its place in one of the <em>Modules</em>. In regard to this fact you will find yourself spending most of your time writing <em>Modules</em>.</p>
+    <h3>Basics</h3>
+{% highlight 'js' 'pygment' %}
+/**
+  * @method registerModule
+  * @param {jQuery} $node the module node.
+  * @param {String} modName the module name. it must match the class name of the module (case sensitive).
+  * @param {Array} skins a list of skin names. each entry must match a class name of a skin (case sensitive)).
+  * @param {Array} connectors a list of connectors identifiers. schema: <connectorName><connectorId><connectorRole> (ie. MasterSlave1Master).
+  * @return {Module} the reference to the registered module.
+  */
+ registerModule : function($node, modName, [skins], [connectors]) {
+{% endhighlight %}
+</div>
+
+    <div class="field-collection-container clearfix"><h3>Basics</h3><ul class="baseBig"><li><h4><a href="/learn/module/inheritance" title="">Inheritance</a></h4><p>All Modules extends the base class Tc.Module. Learn more about the basic Module structure and how inheritance works in TerrificJS.</p></li><li><h4><a href="/learn/module/properties" title="">Properties</a></h4><p>Every module has a small set of generally available properties. Ever wanted to know how TerrificJS ensures capsulation? Then this is for you!</p></li></ul><h3>Hooks</h3><p></p><p>Each <em>Module</em> has several opportunities to hook itself into the module initializing process. All hook methods (called phases) are optional &ndash;
+        so you don't have to implement them, if you don't need them. They are called in the same order as below.</p><p></p><ul class="baseBig"><li><h4><a href="/learn/module/dependencies" title="">dependencies</a></h4><p>The dependencies phase helps you to reduce the initial amount of JavaScript on your page by giving you the possibility to lazy load additional libraries, plugins or utils at the time you need them</p></li><li><h4><a href="/learn/module/beforebinding" title="">beforeBinding</a></h4><p>During the <em>beforeBinding</em> phase you can manipulate your DOM or load some additional data via AJAX for the following phases.</p></li><li><h4><a href="/learn/module/onbinding" title="">onBinding</a></h4><p>This phase is the most common and important one. Here you are binding the events on your DOM and breathe life into your Modules. The power is yours!</p></li><li><h4><a href="/learn/module/afterbinding" title="">afterBinding</a></h4><p>You want to provide a default state for your Module? This is the phase for triggering your bound events.</p></li></ul><h3>Other methods</h3><ul class="baseBig"><li><h4><a href="/learn/module/require" title="">require</a></h4><p>This method is used in the dependencies phase. It ensures that the dependencies are loaded correctly and that dependencies that are requested multiple times do not get you in trouble.</p></li><li><h4><a href="/learn/module/fire" title="">fire</a></h4><p>The fire method is your communication device. Stay in touch with your connected Modules!</p></li></ul></div>    </div>

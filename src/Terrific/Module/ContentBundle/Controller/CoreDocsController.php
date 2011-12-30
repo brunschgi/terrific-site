@@ -30,4 +30,14 @@ class CoreDocsController extends Controller
     {
         return array();
     }
+
+    /**
+     * Gets back the module documentation content
+     *
+     * @Template()
+     */
+    public function moduleAction()
+    {
+        return array();
+    }
 }

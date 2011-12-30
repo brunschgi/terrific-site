@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'QuicksandBook';
-    src: url('/web/fonts/Quicksand_Book-webfont.eot');
-    src: url('/web/fonts/Quicksand_Book-webfont.eot?#iefix') format('embedded-opentype'), url('/web/fonts/Quicksand_Book-webfont.woff') format('woff'), url('/web/fonts/Quicksand_Book-webfont.ttf') format('truetype'), url('/web/fonts/Quicksand_Book-webfont.svg#QuicksandBook') format('svg');
+    src: url('/bundles/terrificcomposition/fonts/Quicksand_Book-webfont.eot');
+    src: url('/bundles/terrificcomposition/fonts/Quicksand_Book-webfont.eot?#iefix') format('embedded-opentype'), url('/bundles/terrificcomposition/fonts/Quicksand_Book-webfont.woff') format('woff'), url('/bundles/terrificcomposition/fonts/Quicksand_Book-webfont.ttf') format('truetype'), url('/bundles/terrificcomposition/fonts/Quicksand_Book-webfont.svg#QuicksandBook') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -9,23 +9,58 @@
 
 @font-face {
     font-family: 'QuicksandBold';
-    src: url('/web/fonts/Quicksand_Bold-webfont.eot');
-    src: url('/web/fonts/Quicksand_Bold-webfont.eot?#iefix') format('embedded-opentype'), url('/web/fonts/Quicksand_Bold-webfont.woff') format('woff'), url('/web/fonts/Quicksand_Bold-webfont.ttf') format('truetype'), url('/web/fonts/Quicksand_Bold-webfont.svg#QuicksandBold') format('svg');
+    src: url('/bundles/terrificcomposition/fonts/Quicksand_Bold-webfont.eot');
+    src: url('/bundles/terrificcomposition/fonts/Quicksand_Bold-webfont.eot?#iefix') format('embedded-opentype'), url('/bundles/terrificcomposition/fonts/Quicksand_Bold-webfont.woff') format('woff'), url('/bundles/terrificcomposition/fonts/Quicksand_Bold-webfont.ttf') format('truetype'), url('/bundles/terrificcomposition/fonts/Quicksand_Bold-webfont.svg#QuicksandBold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 /* General */
 body {
-    background: #fff;
+    background: #EDEEF0;
     font-family: Helvetica, Arial, sans-serif;
     color: #7F7F7F;
 }
 
-.body {
+.line.center {
     width: 960px;
     margin: 0 auto;
 }
+
+.slopes {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 150px;
+}
+
+.slopes .modContent {
+    margin: 0 -80px;
+    -moz-transform-origin: left center;
+}
+
+.slopes .modContent:nth-child(odd) {
+    background: #fff;
+    margin-top: -200px;
+    -moz-transform: rotate(5deg);
+    -moz-box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.slopes .modContent:nth-child(even) {
+    background: #EDEEF0;
+    -moz-transform: rotate(-5deg);
+    -moz-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4) inset;
+}
+
+.slopes .modContent:nth-child(odd) .slope {
+    -moz-transform: rotate(-5deg);
+    padding: 30px 0 250px 0;
+}
+
+.slopes .modContent:nth-child(even) .slope {
+    -moz-transform: rotate(5deg);
+    padding: 50px 0 150px 0;
+}
+
 
 /* Headings */
 h2.base, h3.base, h4.base, h5.base, h6.base, .rich h2, .rich h3, .rich h4, .rich h5, .rich h6 {
@@ -87,7 +122,7 @@ ul.base li, ol.base li, .rich ul li, .rich ol li {
 }
 
 ul.base li, .rich ul li {
-    background: transparent url(/web/img/sprite.png) 0px 0.62em no-repeat;
+    background: transparent url('/bundles/terrificcomposition/images/sprite.png') 0px 0.62em no-repeat;
     padding-left: 22px;
 }
 

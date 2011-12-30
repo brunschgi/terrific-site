@@ -44,4 +44,14 @@ class ContentController extends Controller
     {
         return array();
     }
+
+    /**
+     * Gets back the composer content
+     *
+     * @Template()
+     */
+    public function coreAction()
+    {
+        return array();
+    }
 }

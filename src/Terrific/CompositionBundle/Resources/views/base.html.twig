@@ -3,8 +3,9 @@
 {% block css_default %}
     {% stylesheets
         '@TerrificCompositionBundle/Resources/public/css/default.css'
+        '@TerrificCompositionBundle/Resources/public/css/elements.css'
         '@TerrificCompositionBundle/Resources/public/css/solarized.css'
-        output="css/default.css"
+        output="bundles/acmedemo/css/default.css"
         filter="cssrewrite"
     %}
         <link rel="stylesheet" href="{{ asset_url }}" />
@@ -13,8 +14,6 @@
 
 {% block composition %}
 {{ tc.module('Navigation', 'Navigation:main') }}
-{{ tc.module('Logo') }}
-
 {% block body %}
 {% endblock %}
 
