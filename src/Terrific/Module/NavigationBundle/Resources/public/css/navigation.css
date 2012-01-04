@@ -1,39 +1,94 @@
 /* @group Module: Navigation */
 @media all {
     .modNavigation {
-        background: #000;
+        background-image: -o-linear-gradient(left , rgb(0,0,0) 50%, transparent 50%);
+        background-image: -moz-linear-gradient(left , rgb(0,0,0) 50%, transparent 50%);
+        background-image: -webkit-linear-gradient(left , rgb(0,0,0) 50%, transparent 50%);
+        background-image: -ms-linear-gradient(left , rgb(0,0,0) 50%, transparent 50%);
+        background-image: linear-gradient(left , rgb(0,0,0) 50%, transparent 50%);
     }
 
     .modNavigation ul {
-        overflow: hidden;
         margin: 0 auto;
-        width: 960px;
+        width: 940px;
+        padding-left: 20px;
+        overflow: hidden;
+        background: #000;
+        -ms-transform: skew(-22deg);
+        -o-transform: skew(-22deg);
+        -webkit-transform: skew(-22deg);
+        -moz-transform: skew(-22deg);
+        transform: skew(-22deg);
+
     }
     
     .modNavigation li {
         float: left;
-        font-family: 'QuicksandBook', Arial, Helvetica, sans-serif;
-        font-size: 0.6875em; /* 11 / 16 */
+        font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+        font-size: 1em; /* 16 / 16 */
         line-height: 1em;
         letter-spacing: 0.1em;
+        -ms-transform: skew(22deg);
+        -o-transform: skew(22deg);
+        -webkit-transform: skew(22deg);
+        -moz-transform: skew(22deg);
+        transform: skew(22deg);
+    }
+
+    .modNavigation li:first-child {
+        margin-left: -15px;
     }
     
     .modNavigation a {
         display: block;
-        color: #A9A9AA;
+        color: #fff;
+        padding: 24px 0 20px 15px; /* 24 + 20 + 16 (font) = 60 */
         text-decoration: none;
         text-transform: uppercase;
-        padding: 21px 15px 16px; /* 21 + 16 + 11 (font) = 48 */
+        -ms-transform: skew(-22deg);
+        -o-transform: skew(-22deg);
+        -webkit-transform: skew(-22deg);
+        -moz-transform: skew(-22deg);
+        transform: skew(-22deg);
+        -ms-box-shadow: inset 1px 1px 10px 2px rgba(0, 0, 0, 0.3);
+        -o-box-shadow: inset 1px 1px 10px 2px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: inset 1px 1px 10px 2px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: inset 1px 1px 10px 2px rgba(0, 0, 0, 0.3);
+        box-shadow: inset 1px 1px 10px 2px rgba(0, 0, 0, 0.3);
+        text-shadow: -1px 1px 1px #000000;
     }
 
-    .modNavigation a:hover {
-        color: #fff;
-        background: #FF0052;
+    .modNavigation a:after {
+        padding-left: 15px;
+        content: "/";
     }
 
-    .modNavigation a:active {
-        color: #fff;
-        background: #7F7F7F;
+    .modNavigation li:last-child a:after {
+        content: "";
+    }
+
+    .modNavigation a:hover, .modNavigation .current a {
+        background: #de002f;
+        margin-left: -8px;
+        padding-left: 23px;
+    }
+
+    .modNavigation a:hover:after, .modNavigation .current a:after {
+        visibility: hidden;
+    }
+
+    .modNavigation a:active, .modNavigation .current a {
+        color: #000;
+        background: #fff;
+    }
+
+    .modNavigation a span, .modNavigation a:after {
+        display: inline-block;
+        -ms-transform: skew(22deg);
+        -o-transform: skew(22deg);
+        -webkit-transform: skew(22deg);
+        -moz-transform: skew(22deg);
+        transform: skew(22deg);
     }
 }
 

@@ -18,9 +18,24 @@
 
     .modContent .highlight {
         margin: 0.5em 0.15384615em;
-        border: 1px solid #7F7F7F;
-        box-shadow: 1px 3px 2px 0 #dddddd;
+        box-shadow: 1px 3px 2px 0 rgba(0, 0, 0, 0.4);
+
     }
+
+    .modContent .highlight:after {
+        position: relative;
+        display: inline;
+        content: '';
+        top: 10px;
+        left: -10px;
+        height: 0;
+        width: 0;
+        border: 20px solid transparent;
+        border-left-color: #000;
+        color: #000;
+    }
+
+
 
     .modContent .slogan {
         display: block;
@@ -31,15 +46,33 @@
         line-height: 1.6em; /* 24 / 15 */
     }
 
-    .modContent h2.promo {
-        padding-top: 1.5em;
-        margin-bottom: 0;
-        border: none;
+    .modContent h2 {
+        display: block;
+        position: absolute;
+        background: #fff;
+        margin: 0;
+        padding: 5em 1em 0.6em 101em; /* 101 -> because of the axial transform */
+        left: -100em;
+        top: -4em;
+        white-space: nowrap;
+        -ms-transform: skew(-22deg);
+        -o-transform: skew(-22deg);
+        -webkit-transform: skew(-22deg);
+        -moz-transform: skew(-22deg);
+        transform: skew(-22deg);
+    }
+
+    .modContent h2 a {
+        display: block;
+        -ms-transform: skew(22deg);
+        -o-transform: skew(22deg);
+        -webkit-transform: skew(22deg);
+        -moz-transform: skew(22deg);
+        transform: skew(22deg);
     }
 
     .modContent .promo {
-        text-align: center;
-        margin: 0 1em;
+        margin: 0 0.5em;
         border-bottom: 5px solid #dddddd
     }
 

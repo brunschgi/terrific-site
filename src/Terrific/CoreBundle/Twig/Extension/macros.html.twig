@@ -8,7 +8,7 @@
 {% set attrs = attrs | default({}) %}
 {% set data = data | default({}) %}
 <div
-class="mod {# specific mod#}{{ "mod" ~ name }}{# end specific mod #}{# skins #}{% for skin in skins %}{{ ' skin' ~ name ~ (skin | capitalize) }}{% endfor %}{# end skins #}{# connectors #}{% for connector in connectors %}{{ ' conn' ~ connector }}{% endfor %}{# end connectors #}{# additional class(es) #}{% if attrs.class is defined %}{{ ' ' ~ attr.class }}{% endif %}{# end additional class(es) #}"
+class="mod {# specific mod#}{{ "mod" ~ name }}{# end specific mod #}{# skins #}{% for skin in skins %}{{ ' skin' ~ name ~ (skin | capitalize) }}{% endfor %}{# end skins #}{# connectors #}{% for connector in connectors %}{{ ' conn' ~ connector }}{% endfor %}{# end connectors #}{# additional class(es) #}{% if attrs.class is defined %}{{ ' ' ~ attrs.class }}{% endif %}{# end additional class(es) #}"
 
 {# additional attrs (exception class attribute) #}
 {% for attr, value in attrs %}

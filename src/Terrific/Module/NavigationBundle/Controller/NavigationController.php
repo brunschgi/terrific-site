@@ -2,11 +2,11 @@
 
 namespace Terrific\Module\NavigationBundle\Controller;
 
-use Knp\Menu\MenuFactory;
-use Knp\Menu\Renderer\ListRenderer;
+use Terrific\Module\NavigationBundle\Custom\SpanListRenderer;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Routing\Router;
 
 
 class NavigationController extends Controller
@@ -18,19 +18,9 @@ class NavigationController extends Controller
      */
     public function mainAction(Request $request)
     {
-        $factory = new MenuFactory();
-        $menu = $factory->createItem('Main');
-        $menu->setCurrentUri($request->getRequestUri());
+        $menu = new \Terrific\Module\NavigationBundle\Menu\MainMenu($request, $this->get('router'));
 
-        $menu->addChild('Concept', array('uri' => $this->generateUrl('home')));
-        $menu->addChild('Core', array('uri' => '/core'));
-        $menu->addChild('Composer', array('uri' => '/composer'));
-        $menu->addChild('Integrations', array('uri' => '/#integrations'));
-        $menu->addChild('Blog', array('uri' => '/blog'));
-        $menu->addChild('Showcases', array('uri' => '/showcases'));
-        $menu->addChild('About', array('uri' => '/about'));
-
-        $renderer = new ListRenderer();
+        $renderer = new SpanListRenderer();
         return array('menu' => $renderer->render($menu));
     }
 }

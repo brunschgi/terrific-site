@@ -1,3 +1,4 @@
+/* reduced set of OOCSS rules */
 .page{margin:0 auto;width:960px;_text-align:left;}
 .leftCol{float:left;width:250px;_margin-right:-3px;}
 .rightCol{float:right;width:300px;_margin-left:-3px;}
@@ -16,3 +17,13 @@
 .size1of3{width:33.33333%;}
 .size2of3{width:66.66666%;}
 .lastUnit{float:none;width:auto;_position:relative;_left:-3px;_margin-right:-3px;}
+
+/* clearfix */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}

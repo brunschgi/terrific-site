@@ -12,41 +12,17 @@ use Symfony\Component\HttpFoundation\Request;
 class ContentController extends Controller
 {
     /**
-     * Gets back the concept content
+     * Gets back the home content
      *
      * @Template()
      */
-    public function conceptAction()
-    {
-        $js = file_get_contents(__DIR__ . '/../Resources/snippets/concept.js');
-        $html = file_get_contents(__DIR__ . '/../Resources/snippets/concept.html');
-        $css = file_get_contents(__DIR__ . '/../Resources/snippets/concept.css');
-
-        return array('snippets' => array('js' => $js, 'html' => $html, 'css' => $css));
-    }
-
-    /**
-     * Gets back the composer content
-     *
-     * @Template()
-     */
-    public function composerAction()
+    public function homeAction()
     {
         return array();
     }
 
     /**
-     * Gets back the composer content
-     *
-     * @Template()
-     */
-    public function integrationsAction()
-    {
-        return array();
-    }
-
-    /**
-     * Gets back the composer content
+     * Gets back the core content
      *
      * @Template()
      */

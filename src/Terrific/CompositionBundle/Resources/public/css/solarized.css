@@ -1,4 +1,4 @@
-.highlight { background: #f5f5f5; padding: 0.61538462em /* 8 / 13 */; scroll: auto; }
+.highlight { background: #000; padding: 0.61538462em /* 8 / 13 */; scroll: auto; font-family: "Lucida Sans Unicode","Lucida Grande",Verdana,Arial,Helvetica,sans-serif; }
 
 .hll { background-color: #ffffcc }
 .c { color: #586E75 } /* Comment */

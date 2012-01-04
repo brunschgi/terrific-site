@@ -3,21 +3,5 @@
 {% block body %}
 {{ tc.module('Social', 'links') }}
 {{ tc.module('Logo') }}
-<div class="line center">
-    <div class="unit size1of3">
-        {{ tc.module('Teaser', 'concept') }}
-    </div>
-    <div class="unit size1of3">
-        {{ tc.module('Teaser', 'compose') }}
-    </div>
-    <div class="lastUnit">
-        {{ tc.module('Teaser', 'integrate') }}
-    </div>
-</div>
-<div class="slopes">
-{{ tc.module('Content', 'Content:concept') }}
-{{ tc.module('Content', 'Content:composer') }}
-{{ tc.module('Content', 'Content:integrations') }}
-</div>
-
+{{ tc.module('Content', 'Content:home', null, null, { 'class' : 'slopes'}) }}
 {% endblock %}
