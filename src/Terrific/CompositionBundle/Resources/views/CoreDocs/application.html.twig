@@ -1,7 +1,6 @@
 {% extends 'TerrificCompositionBundle::base.html.twig' %}
 
 {% block body %}
-<div class="body">
-    {{ tc.module('Content', 'CoreDocs:application') }}
-</div>
+{{ tc.module('Logo') }}
+{{ tc.module('Content', 'CoreDocs:application', null, null, { 'class' : 'slopes'})}}
 {% endblock %}

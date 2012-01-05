@@ -2,7 +2,8 @@
 @media all {
 
     .modContent .rich {
-        padding: 0 0.9375em;
+        padding-left: 0.9375em;
+        padding-right: 0.9375em;
     }
 
     .modContent .block {
@@ -17,25 +18,23 @@
     }
 
     .modContent .highlight {
-        margin: 0.5em 0.15384615em;
-        box-shadow: 1px 3px 2px 0 rgba(0, 0, 0, 0.4);
-
+        padding-bottom: 1em;
     }
 
-    .modContent .highlight:after {
+    .modContent .bubble {
+        margin: 0.5em 0.15384615em;
+    }
+
+    .modContent .bubble .arrow{
         position: relative;
-        display: inline;
-        content: '';
-        top: 10px;
-        left: -10px;
+        top: -16px;
+        font-size: 0pt;
         height: 0;
         width: 0;
-        border: 20px solid transparent;
+        border: 30px solid transparent;
         border-left-color: #000;
         color: #000;
     }
-
-
 
     .modContent .slogan {
         display: block;
@@ -62,7 +61,7 @@
         transform: skew(-22deg);
     }
 
-    .modContent h2 a {
+    .modContent h2 a, .modContent h2 span {
         display: block;
         -ms-transform: skew(22deg);
         -o-transform: skew(22deg);

@@ -33,7 +33,7 @@ body {
 
 .slopes .slope {
     position: relative;
-    margin: 5em -5em 0 -5em;
+    margin: 5em -10em 0 -10em;
     -ms-transform: rotate(5deg);
     -o-transform: rotate(5deg);
     -webkit-transform: rotate(5deg);
