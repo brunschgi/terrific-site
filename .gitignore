@@ -6,3 +6,5 @@
 /app/logs/
 /vendor/
 /app/config/parameters.ini
+.DS_Store
+.idea/
