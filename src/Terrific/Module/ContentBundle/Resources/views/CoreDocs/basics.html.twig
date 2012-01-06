@@ -1,11 +1,8 @@
 <div class="rich">
-    <h2>Basics</h2>
-
     <p>Although TerrificJS is very intuitive to use, there are a few basics that you need to understand.<br>
         Otherwise you will be lost! … or at least they help you to become a TerrificJS addict in no time ;-)</p>
 
-    <h3>Conventions</h3>
-
+    <h3 id="conventions">Conventions</h3>
     <p>
         TerrificJS takes the <a href="https://github.com/stubbornella/oocss">OOCSS</a> naming conventions and slightly
         enhances it for specific JavaScript tasks.
@@ -17,9 +14,7 @@
         <li>Connectors</li>
     </ul>
 
-
-    <h4>Modules</h4>
-
+    <h4 id="modules">Modules</h4>
     <p>
         The Modules in TerrificJS solely rely on the OOCSS module naming conventions:
     </p>
@@ -36,9 +31,7 @@
         whether the specific <a href="{{ path('core_docs_module') }}">Module</a> exists or not.
     </p>
 
-
-    <h4>Skins</h4>
-
+    <h4 id="skins">Skins</h4>
     <p>
         Skins are basic OOCSS components. But what the hell is a <a href="{{ path('core_docs_skin') }}">TerrificJS Skin</a>?
         TerrificJS skins are essentially nothing more than a <a
@@ -50,13 +43,11 @@
     <!-- your module content goes here -->
 </div>
 {% endhighlight %}
-
     <p>
         To apply a TerrificJS <a href="{{ path('core_docs_skin') }}">Skin</a> to your module you simply have
         to add an additional skin class to your markup – ie. skinNewsHighlighted. This will decorate your <em>Tc.Module.News</em>
         instance with the appropriate <em>Tc.Module.News.Highlighted</em> skin.
     </p>
-
     <p>
         In some very rare cases you eventually need your module to be decorated more than once. Nothing easier than
         that!
@@ -72,9 +63,7 @@
         skin. So TerrificJS will decorate your module twice by retaining the order in your markup.
     </p>
 
-
-    <h4>Connectors</h4>
-
+    <h4 id="connectors">Connectors</h4>
     <p>
         Connectors provides you the possibility to let your Modules talk with each other over configurable communication
         channels. Whilst the preceding components – Modules and Skins – both have their OOCSS and therefore visual
@@ -126,13 +115,11 @@
         be used sparingly and with caution. Especially when the <em>*</em> module not only receives but also fires some
         events, this tends to produce lots of notifications and therefore to a possible performance penalty.
     </p>
-
     <p>
         Please refer to the <a href="{{ path('core_docs_connector') }}" title="">Connector documentation</a> for further information.
     </p>
 
-    <h4>Conclusion</h4>
-
+    <h4 id="conclusion">Conclusion</h4>
     <p>As long as your markup uses the above naming conventions you do not have to worry about registering your
         TerrificJS components manually. This is all done for you automatically.
     </p>
@@ -144,11 +131,12 @@
         your modules by hand.
     </p>
 
-    <h3>Bootstrap</h3>
+    <h3 id="bootstrap">Bootstrap</h3>
     <p>
     Every TerrificJS page or application has a bootstrap that does all of the annoying work for you automatically. All you have to do to is to place the bootstrap code at the end of your TerrificJS application. Believe me, it really saves you a lot of time and tedious work ;-)
     </p>
-    <h4>Example – Basic Bootstrap</h4>
+
+    <h4 id="basicbootstrap">Basic bootstrap</h4>
 {% highlight 'js' 'pygment' %}
 (function($) {
     $(document).ready(function() {
@@ -166,8 +154,7 @@
     If you need components that does not conform to the <a href="#conventions" title="">TerrificJS naming conventions</a> – ie. global modules for sitewide functionality – please have a look at the <a href="{{ path('core_docs_application') }}#registerModule" title="">registerModule</a> documentation.
     </p>
 
-
-    <h3>Config</h3>
+    <h3 id="config">Config</h3>
     <p>
     TerrificJS comes with a very small config. It is shared among almost all TerrificJS components – so it is a good thing to store your configuration param in this global object.
     </p>
@@ -199,7 +186,7 @@ Tc.Config = {
     </p>
 
 
-    <h4>#1 – Simple global extension</h4>
+    <h4 id="globalextension">#1 – Simple global extension</h4>
     <p>
     Often is is enough to simple change or extend the config prior bootstrapping your application.
     </p>
@@ -213,7 +200,7 @@ Tc.Config = Tc.$.extend(Tc.Config, {
     The main advantage of this solution is that you can bundle your extended config with all of your other JavaScript resources. But in some cases this is not ideal – especially when it comes to <acronym title="Content Management System">CMS</acronym> integration and you need a little bit more of flexibility.
     </p>
 
-    <h4>#2 – Bootstrap extension</h4>
+    <h4 id="bootstrapextension">#2 – Bootstrap extension</h4>
 {% highlight 'js' 'pygment' %}
 (function($) {
     $(document).ready(function() {

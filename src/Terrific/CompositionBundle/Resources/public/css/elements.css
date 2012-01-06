@@ -18,7 +18,7 @@
 /* General */
 body {
     font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
-    color: #7F7F7F;
+    color: #333;
 }
 
 .autoCenter {
@@ -62,30 +62,53 @@ body {
     padding: 8em 0 4em 0;
 }
 
-
 /* Headings */
-h2.base, h3.base, h4.base, h5.base, h6.base, .rich h2, .rich h3, .rich h4, .rich h5, .rich h6 {
-    font-family: 'Quicksand', Helvetica, sans-serif;
+h2.base, h3.base, h4.base, h5.base, .rich h3, .rich h4, .rich h5 {
     color: #333;
+}
+
+h2.base, h3.base, .rich h2, .rich h3 {
+    font-family: 'Quicksand', Helvetica, sans-serif;
 }
 
 h3.base:first-child, .rich h3:first-child {
     margin-top: 0;
 }
 
-h2.base, .rich h2 {
+h2.base {
     font-size: 2.5em; /* 40 / 16 */
     letter-spacing: 0.05em;
     text-transform: uppercase;
     line-height: 1.2em; /* 48 / 40 */
     margin: 0 0 0.6em 0; /* 24 / 40  */
-    color: #333333;
+    display: block;
+    position: absolute;
+    background: #fff;
+    margin: 0;
+    padding: 5em 1em 0.6em 101em; /* 101 -> because of the axial transform */
+    left: -100em;
+    top: -4em;
+    white-space: nowrap;
+    -ms-transform: skew(-22deg);
+    -o-transform: skew(-22deg);
+    -webkit-transform: skew(-22deg);
+    -moz-transform: skew(-22deg);
+    transform: skew(-22deg);
+}
+
+h2.base a, h2.base span {
+    display: block;
+    -ms-transform: skew(22deg);
+    -o-transform: skew(22deg);
+    -webkit-transform: skew(22deg);
+    -moz-transform: skew(22deg);
+    transform: skew(22deg);
 }
 
 h3.base, .rich h3 {
-    font-size: 1.666666em; /* 30 / 18 */
-    line-height: 1.2em; /* 36 / 30 */
-    margin: 1.2em 0 0.5em 0;
+    font-size: 2em; /* 32 / 18 */
+    line-height: 1.125em; /* 36 / 32 */
+    margin: 1.125em 0 0.5em 0;
 }
 
 h4.base, .rich h4 {
@@ -100,11 +123,10 @@ h5.base, .rich h5 {
     margin: 1.2em 0 0.5em 0;
 }
 
-h5.base, .rich h5 {
-    font-size: 1.111111em; /* 20 / 18 */
-    line-height: 1.2em; /* 24 / 20 */
-    margin: 1.2em 0 0 0;
+.modContent h2 {
+
 }
+
 
 /* Lists */
 ul.base, .rich ul, ol.base, .rich ol {
@@ -156,6 +178,18 @@ mark.base, .rich mark {
 
 blockquote.base, .rich blockquote {
 
+}
+
+highlight.base, .rich .highlight {
+    margin-bottom: 1.25em; /* 20 / 15 */
+}
+
+em.base, .rich em {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+    display: inline-block;
+    padding: 0 2px;
 }
 
 /* Images */

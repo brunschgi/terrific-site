@@ -17,12 +17,12 @@
         background: none;
     }
 
-    .modContent .highlight {
-        padding-bottom: 1em;
-    }
-
     .modContent .bubble {
         margin: 0.5em 0.15384615em;
+    }
+
+    .modContent .bubble .highlight {
+        padding-bottom: 1.5em;
     }
 
     .modContent .bubble .arrow{
@@ -43,31 +43,6 @@
         width: 600px;
         font-size: 0.9375em; /* 15 /16 */
         line-height: 1.6em; /* 24 / 15 */
-    }
-
-    .modContent h2 {
-        display: block;
-        position: absolute;
-        background: #fff;
-        margin: 0;
-        padding: 5em 1em 0.6em 101em; /* 101 -> because of the axial transform */
-        left: -100em;
-        top: -4em;
-        white-space: nowrap;
-        -ms-transform: skew(-22deg);
-        -o-transform: skew(-22deg);
-        -webkit-transform: skew(-22deg);
-        -moz-transform: skew(-22deg);
-        transform: skew(-22deg);
-    }
-
-    .modContent h2 a, .modContent h2 span {
-        display: block;
-        -ms-transform: skew(22deg);
-        -o-transform: skew(22deg);
-        -webkit-transform: skew(22deg);
-        -moz-transform: skew(22deg);
-        transform: skew(22deg);
     }
 
     .modContent .promo {

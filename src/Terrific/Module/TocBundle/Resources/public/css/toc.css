@@ -1,0 +1,25 @@
+/* @group Module: Default */
+@media all {
+
+    .modToc {
+        position: absolute;
+        top: 0;
+        margin-top: 200px;
+        background: #fff;
+        border: 1px solid #eee;
+        padding: 0.5em;
+        z-index: 2;
+    }
+
+    .modToc ul {
+        list-style: disc;
+        padding-left: 1em;
+    }
+
+    .modToc.fixed {
+        position: fixed;
+        margin-top: 0;
+    }
+}
+
+/* @end */

@@ -12,22 +12,13 @@
     {% block css_reset %}
         {% stylesheets
             '@TerrificCoreBundle/Resources/public/css/cssreset-min.css'
-            output="css/reset.css"
+            output="css/compiled/reset.css"
         %}
             <link rel="stylesheet" href="{{ asset_url }}" />
         {% endstylesheets %}
     {% endblock %}
     {% block css_default %}
-    {% endblock %}
-    {% block css_dependencies %}
-        {% stylesheets
-            'css/static/libraries/*'
-            'css/static/plugins/*'
-            'css/static/utils/*'
-            output="css/compiled/dependencies.css"
-        %}
-            <link rel="stylesheet" href="{{ asset_url }}" />
-        {% endstylesheets %}
+        {# for general css files (ie. css resets) #}
     {% endblock %}
     {% block styles %}
         {% stylesheets
@@ -46,7 +37,7 @@
     {% block jquery %}
         {% javascripts
             '@TerrificCoreBundle/Resources/public/js/jquery-1.7.1.min.js'
-            output='js/jquery-1.7.1.min.js'
+            output='js/compiled/jquery-1.7.1.min.js'
         %}
             <script src="{{ asset_url }}" type="text/javascript"></script>
         {% endjavascripts %}
@@ -54,20 +45,13 @@
     {% block terrificjs %}
         {% javascripts
             '@TerrificCoreBundle/Resources/public/js/terrific-1.0.0.min.js'
-            output='js/terrific-1.0.0.min.js'
+            output='js/compiled/terrific-1.0.0.min.js'
         %}
             <script src="{{ asset_url }}" type="text/javascript"></script>
         {% endjavascripts %}
     {% endblock %}
-    {% block js_dependencies %}
-        {% javascripts
-               'js/static/libraries/*'
-               'js/static/plugins/*'
-               'js/static/utils/*'
-               output='js/compiled/dependencies.js'
-           %}
-               <script src="{{ asset_url }}" type="text/javascript"></script>
-        {% endjavascripts %}
+    {% block js_default %}
+        {# for general js files (ie. plugins that are needed on every page) #}
     {% endblock %}
     {% block scripts %}
         {% javascripts
@@ -83,8 +67,9 @@
         <script type="text/javascript">
             (function($) {
                 $(document).ready(function() {
-                    var $page = $('body');
-                    var application = new Tc.Application();
+                    var $page = $('body'),
+                        application = new Tc.Application();
+
                     application.registerModules($page);
                     application.start();
                 });

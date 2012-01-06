@@ -54,6 +54,15 @@ class CoreDocsController extends Controller
     }
 
     /**
+     * @Route("/core/docs/sandbox", name="core_docs_sandbox")
+     * @Template()
+     */
+    public function sandboxAction()
+    {
+        return array();
+    }
+
+    /**
      * @Route("/core/docs/connector", name="core_docs_connector")
      * @Template()
      */

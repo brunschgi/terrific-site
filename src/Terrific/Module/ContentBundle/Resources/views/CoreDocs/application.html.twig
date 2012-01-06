@@ -1,13 +1,10 @@
-<div class="slope">
-<div class="slopeContent autoCenter rich">
-    <h2 class="base"><span>Application</span></h2>
-    <div class="unit size2of3">
+ <div class="rich">
     <p>Whilst the <em>Modules</em> are the stars of your TerrificJS application or website, the <em>Application</em> is
         the master and commander, the heartpiece of Terrific. It is instantiated during the Bootstrap and is responsible
         for the magical module registration process and for keeping all of your great <em>Modules</em> together.</p>
     <p>If you want to gain a deeper understanding of how TerrificJS works - this is for you!</p>
 
-    <h3>registerModule</h3>
+    <h3 id="registermodule"s>registerModule</h3>
 {% highlight 'js' 'pygment' %}
 /**
   * @method registerModule
@@ -26,7 +23,7 @@
     However there may be some cases where you are not able to apply these conventions to your project or to a specific part of your markup. In this case <em>registerModule</em> provides you the abililty to register your modules by hand.
     </p>
 
-    <h4>Example: Register a "global" module</h4>
+    <h4 id="registerglobalmodule">Register a "global" module</h4>
 {% highlight 'js' 'pygment' %}
 (function($) {
     $(document).ready(function() {
@@ -42,7 +39,7 @@
     In the above example we register a global module that provides sitewide functionality on the <em>$page</em>. The $page jQuery object is set as the context of the <em> Tc.Module.Global</em> module instance.
     </p>
 
-    <h4>Example: Register all modules by hand</h4>
+    <h4 id="registermodulesbyhand">Register modules by hand</h4>
 {% highlight 'js' 'pygment' %}
 (function($) {
     $(document).ready(function() {
@@ -59,7 +56,7 @@
     This way you are able to register your <em>Modules</em> manually wherever you want without the need of using the <a href="{{ path('core_docs_basics') }}#conventions" title="">TerrificJS naming conventions</a> for your markup.
     </p>
 
-    <h3>registerModules</h3>
+    <h3 id="registermodules">registerModules</h3>
 {% highlight 'js' 'pygment' %}
 /**
  * @method registerModules
@@ -74,7 +71,7 @@ registerModules : function([$ctx]) {
     <blockquote><p>
         So you will never have to worry about anything - it's just magic!
     </p></blockquote>
-    <h4>Example: Bootstrap</h4>
+    <h4 id="registermodulesincontext">Register modules in a specific context</h4>
 {% highlight 'js' 'pygment' %}
 (function($) {
     $(document).ready(function() {
@@ -104,7 +101,7 @@ registerModules : function([$ctx]) {
     <p>
         The snippet above only registers the <em>Modules</em> in the head and the footer section.
     </p>
-    <h3>start</h3>
+    <h3 id="start">start</h3>
 {% highlight 'js' 'pygment' %}
 /**
  * @method start
@@ -117,7 +114,7 @@ start: function([modules]) {
         The registration process only instantiates the TerrificJS components. Until <em>start</em>  is called, nothing seems to happen from a users point of view. The real game, however, starts as soon as <em>start</em> is called.
     </p>
     <blockquote><p>All of your great <em>Modules</em> will come to life.</p></blockquote>
-    <h4>Example: Bootstrap</h4>
+    <h4 id="startmodules">Start all registered modules</h4>
 {% highlight 'js' 'pygment' %}
 (function($) {
     $(document).ready(function() {
@@ -131,9 +128,4 @@ start: function([modules]) {
     <p>
         As you see in the bootstrap example above, <em>start</em> has to be called after the module registration process. Calling <em>start</em> loops through all registered <em>Modules</em> and calls <em>start</em> on every individual <em>Module</em>. At this point the <em>Application</em> has done its initial work. Now the turn is at your <em>Modules</em>.
     </p>
-</div>
-<div class="unit lastUnit">
-    Table of Contents
-</div>
-</div>
-</div>
+ </div>
