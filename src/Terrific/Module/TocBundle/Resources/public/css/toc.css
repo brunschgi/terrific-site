@@ -7,8 +7,13 @@
         margin-top: 200px;
         background: #fff;
         border: 1px solid #eee;
-        padding: 0.5em;
+        padding: 1em;
         z-index: 2;
+        box-shadow: 0 4px 10px -1px rgba(200, 200, 200, 0.7);
+    }
+
+    .modToc h3 {
+        font-size: 1.5em;
     }
 
     .modToc ul {

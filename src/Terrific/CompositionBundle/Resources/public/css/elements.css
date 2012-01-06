@@ -32,8 +32,7 @@ body {
 }
 
 .slopes .slope {
-    position: relative;
-    margin: 5em -10em 0 -10em;
+    margin: 5em -12em 0 -12em;
     -ms-transform: rotate(5deg);
     -o-transform: rotate(5deg);
     -webkit-transform: rotate(5deg);
@@ -44,8 +43,10 @@ body {
     -webkit-transform-origin: left center;
     -moz-transform-origin: left center;
     transform-origin: left center;
+    box-shadow: 0 4px 8px -1px rgba(200, 200, 200, 0.7);
     background: #EDEEF0;
     overflow: hidden;
+    position: relative;
 }
 
 .slopes .slopeContent {
@@ -61,6 +62,7 @@ body {
     transform-origin: left center;
     padding: 8em 0 4em 0;
 }
+
 
 /* Headings */
 h2.base, h3.base, h4.base, h5.base, .rich h3, .rich h4, .rich h5 {
