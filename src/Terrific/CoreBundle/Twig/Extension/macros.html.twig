@@ -1,7 +1,7 @@
 {% macro module(name, view, skins, connectors, attrs, data) %}
 
 {# validate params #}
-{% set name = (name | capitalize) | default('Default') %}
+{% set name = (name) | default('Default') %}
 {% set view = (view) | default(name) %}
 {% set skins = skins | default([]) %}
 {% set connectors = connectors | default([]) %}

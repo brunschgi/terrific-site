@@ -1,39 +1,20 @@
 /* @group Module: Default */
 @media all {
 
+    /* spacers */
     .modContent .rich {
         padding-left: 0.9375em;
         padding-right: 0.9375em;
     }
 
     .modContent .block {
-        padding-top: 4em;
-        width: 960px;
-        margin: 0 auto;
+        padding-top: 3.125em;
+        margin: 0;
     }
 
     .modContent ul.dir li {
         padding-left: 0;
         background: none;
-    }
-
-    .modContent .bubble {
-        margin: 0.5em 0.15384615em;
-    }
-
-    .modContent .bubble .highlight {
-        padding-bottom: 1.5em;
-    }
-
-    .modContent .bubble .arrow{
-        position: relative;
-        top: -16px;
-        font-size: 0pt;
-        height: 0;
-        width: 0;
-        border: 30px solid transparent;
-        border-left-color: #000;
-        color: #000;
     }
 
     .modContent .slogan {
@@ -45,9 +26,35 @@
         line-height: 1.6em; /* 24 / 15 */
     }
 
+    .modContent .highlight { /* for code view */
+        padding: 1em; /* 13 / 13 */
+    }
+
+
+    /* bubble content */
+    .modContent .bubble .highlight {
+        padding: 0 0 0.5em 0;
+    }
+
+
+    .modContent .bubble .h3 {
+        color: #fff;
+    }
+
+    .modContent .bubble .comingsoon {
+        display: block;
+        text-align: center;
+        padding: 2em 0 2.6em;
+        text-transform: uppercase;
+        color: #de002f;
+    }
+
+    .modContent .bubble .button {
+        background-image: -moz-linear-gradient(center top , rgba(222, 00, 47, 1) 0%, rgba(159, 00, 34, 1) 50%, rgba(140, 00, 27, 1) 50%, rgba(100, 00, 13, 1) 100%);
+    }
+
     .modContent .promo {
-        margin: 0 0.5em;
-        border-bottom: 5px solid #dddddd
+        margin: 0 0.9375em;
     }
 
     .modContent .nav {
@@ -58,34 +65,8 @@
         background: none;
         display: block;
         float: left;
-        padding: 0 0.9375em 0 0;
+        padding: 0 0.25em 0 0;
     }
-
-    .modContent .button {
-        background-color: rgba(50, 50, 50, 0.9);
-        background-image: -moz-linear-gradient(center top , rgba(50, 50, 50, 0.9) 0%, rgba(30, 30, 30, 0.9) 50%, rgba(20, 20, 20, 0.9) 50%, rgba(0, 0, 0, 0.9) 100%);
-        border: 0 none;
-        border-radius: 4px 4px 4px 4px;
-        box-shadow: 1px 1px 1px 0 rgba(135, 135, 135, 0.1) inset, -1px -1px 1px 0 rgba(135, 135, 135, 0.1) inset;
-        color: #FFFFFF;
-        font-family: 'QuicksandBook', Helvetica, sans-serif;
-        font-size: 1.111111em;
-        line-height: 1em;
-        padding: 0.6em 1em;
-        text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.8), 0 1px 1px rgba(255, 255, 255, 0.3);
-    }
-
-    .modContent .button:hover {
-        background-color: rgba(70, 70, 70, 0.9);
-        background-image: -moz-linear-gradient(center top , rgba(70, 70, 70, 0.9) 0%, rgba(50, 50, 50, 0.9) 50%, rgba(40, 40, 40, 0.9) 50%, rgba(20, 20, 20, 0.9) 100%);
-        cursor: pointer;
-    }
-
-    .modContent .button:active {
-        background-color: rgba(30, 30, 30, 0.9);
-        background-image: -moz-linear-gradient(center top , rgba(30, 30, 30, 0.9) 0%, rgba(20, 20, 20, 0.9) 50%, rgba(10, 10, 10, 0.9) 50%, rgba(0, 0, 0, 0.9) 100%);
-    }
-
 }
 
 /* @end */

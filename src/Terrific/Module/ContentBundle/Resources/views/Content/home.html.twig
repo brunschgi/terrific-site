@@ -1,11 +1,10 @@
 <div class="slope">
     <div class="slopeContent autoCenter">
-        <h2 class="base"><a id="concept">Concept</a></h2>
+        <h2 class="h2"><a id="concept">Concept</a></h2>
         <span class="slogan">Build your own Legos</span>
 
         <div class="line block">
             <div class="unit size1of3">
-                <img src="{{ asset('bundles/terrificmodulecontent/images/content/spaghetti.jpg')}}" width="279"/>
             </div>
             <div class="lastUnit rich">
                 <h3>What Terrific can do for you</h3>
@@ -48,7 +47,6 @@
                 </ul>
             </div>
             <div class="lastUnit">
-                <img src="{{ asset('bundles/terrificmodulecontent/images/content/structure.jpg')}}" width="279"/>
             </div>
         </div>
         <div class="line block">
@@ -67,10 +65,10 @@
 {% endhighlight %}
 <span class="arrow"></span>
 </div>
-                <div class="promo rich">
-                    <h4>Give your HTML some semantics…</h4>
+                <div class="promo">
+                    <h4 class="h3">Give your HTML some semantics…</h4>
 
-                    <p>
+                    <p class="base">
                         Simply mark your modules by giving them a name. This will do the trick and everything is wired
                         up
                         for
@@ -95,10 +93,10 @@
 {% endhighlight %}
 <span class="arrow"></span>
 </div>
-                <div class="promo rich">
-                    <h4>Write CSS in OOCSS manner…</h4>
+                <div class="promo">
+                    <h4 class="h3">Write CSS in OOCSS manner…</h4>
 
-                    <p>
+                    <p class="base">
                         Write encapsulating CSS rules in OOCSS manner. This prevents you from strange side-effects when
                         using your modules in different parts of your layout.
                     </p>
@@ -119,10 +117,10 @@
 {% endhighlight %}
 <span class="arrow"></span>
 </div>
-                <div class="promo rich">
-                    <h4>Flavor it with a little JS magic…</h4>
+                <div class="promo">
+                    <h4 class="h3">Flavor it with a little JS magic…</h4>
 
-                    <p>
+                    <p class="base">
                         Create a TerrificJS module with the same name, fill it with your jQuery code and let the magic
                         happen!
                     </p>
@@ -131,7 +129,7 @@
         </div>
         <div class="line block">
             <div class="unit size1of3">
-                <img src="{{ asset('bundles/terrificmodulecontent/images/content/playing.jpg')}}" width="279"/>
+                &nbsp;
             </div>
             <div class="lastUnit rich">
                 <h3>It's like playing Lego</h3>
@@ -148,12 +146,12 @@
 </div>
 <div class="slope">
     <div class="slopeContent autoCenter">
-        <h2 class="base"><a id="composer">Composer</a></h2>
+        <h2 class="h2"><a id="composer">Composer</a></h2>
         <span class="slogan">Compose frontends like a virtuoso</span>
 
         <div class="line block">
             <div class="unit size1of3">
-                <img src="{{ asset('bundles/terrificmodulecontent/images/content/spaghetti.jpg')}}" width="279"/>
+                &nbsp;
             </div>
             <div class="lastUnit rich">
                 <p>
@@ -183,74 +181,41 @@
         </div>
     </div>
 </div>
-<div class="slope">
+<div class="slope last">
     <div class="slopeContent autoCenter">
-        <h2 class="base"><a id="integrations">Integrations</a></h2>
+        <h2 class="h2"><a id="integrations">Integrations</a></h2>
     <span class="slogan">
         If you prefer to build your frontend directly integrated within your CMS/Framework – instead of using the Terrific Composer – these
-        integrations are for you!</span>
-
+        integrations are for you! And there are more to come…</span>
         <div class="line block">
             <div class="unit size1of3">
-                <img src="{{ asset('bundles/terrificmodulecontent/images/integrations/terrific_for_wordpress.png')}}"
-                     width="279"/>
+                <div class="bubble rich">
+                    <h4 class="h3">Terrific Theme Framework for WordPress</h4>
+                    <p>A modular approach for your WordPress theme.</p>
+                    <ul class="nav">
+                        <li><a class="button" href="/wordpress">Learn More</a></li>
+                        <li><a class="button" href="/wordpress/download">Download</a></li>
+                    </ul>
+                    <span class="arrow"></span>
+                </div>
+                <img src="{{ asset('bundles/terrificmodulecontent/images/integrations/wordpress.png')}}"
+                     width="80"/>
             </div>
-            <div class="lastUnit rich">
-                <ul class="nav">
-                    <li><a href="/wordpress">Learn More</a></li>
-                    <li><a href="/wordpress/download">Download</a></li>
-                </ul>
-                <p>
-                    Morbi a enim in magna semper bibendum. Etiam scelerisque, nunc ac egestas consequat, odio nibh
-                    euismod
-                    nulla, eget auctor orci nibh vel nisi. Aliquam erat volutpat. Mauris vel neque sit amet nunc gravida
-                    congue
-                    sed sit amet purus. Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Aenean facilisis
-                    nulla
-                    vitae urna tincidunt.
-                </p>
-            </div>
-        </div>
-        <div class="line block">
             <div class="unit size1of3">
-                <img src="{{ asset('bundles/terrificmodulecontent/images/integrations/terrific_for_symfony.png')}}"
-                     width="279"/>
+                <div class="bubble rich">
+                    <span class="comingsoon h3">Coming Soon</span>
+                    <span class="arrow"></span>
+                </div>
+                <img src="{{ asset('bundles/terrificmodulecontent/images/integrations/symfony.png')}}"
+                     width="80"/>
             </div>
-            <div class="lastUnit rich">
-                <ul class="nav">
-                    <li><a href="/symfony">Learn More</a></li>
-                    <li><a href="/symfony/download">Download</a></li>
-                </ul>
-                <p>
-                    Morbi a enim in magna semper bibendum. Etiam scelerisque, nunc ac egestas consequat, odio nibh
-                    euismod
-                    nulla, eget auctor orci nibh vel nisi. Aliquam erat volutpat. Mauris vel neque sit amet nunc gravida
-                    congue
-                    sed sit amet purus. Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Aenean facilisis
-                    nulla
-                    vitae urna tincidunt.
-                </p>
-            </div>
-        </div>
-        <div class="line block">
-            <div class="unit size1of3">
-                <img src="{{ asset('bundles/terrificmodulecontent/images/integrations/terrific_for_codeigniter.png')}}"
-                     width="279"/>
-            </div>
-            <div class="lastUnit rich">
-                <ul class="nav">
-                    <li><a href="/symfony">Learn More</a></li>
-                    <li><a href="/symfony/download">Download</a></li>
-                </ul>
-                <p>
-                    Morbi a enim in magna semper bibendum. Etiam scelerisque, nunc ac egestas consequat, odio nibh
-                    euismod
-                    nulla, eget auctor orci nibh vel nisi. Aliquam erat volutpat. Mauris vel neque sit amet nunc gravida
-                    congue
-                    sed sit amet purus. Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Aenean facilisis
-                    nulla
-                    vitae urna tincidunt.
-                </p>
+            <div class="unit lastUnit comingsoon">
+                <div class="bubble rich">
+                    <span class="comingsoon h3">Coming Soon</span>
+                    <span class="arrow"></span>
+                </div>
+                <img src="{{ asset('bundles/terrificmodulecontent/images/integrations/codeigniter.png')}}"
+                     width="80"/>
             </div>
         </div>
     </div>
