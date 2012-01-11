@@ -21,52 +21,33 @@ body {
     color: #676767;
 }
 
-.autoCenter {
+.center {
     width: 960px;
     margin: 0 auto;
 }
 
-.slopes {
-    width: 100%;
-    overflow: hidden;
-    margin-top: -8em;
-}
-
-.slopes .slope {
-    margin: 5em -12em 0 -12em;
-    -ms-transform: rotate(5deg);
-    -o-transform: rotate(5deg);
-    -webkit-transform: rotate(5deg);
-    -moz-transform: rotate(5deg);
-    transform: rotate(5deg);
-    -ms-transform-origin: left center;
-    -o-transform-origin: left center;
-    -webkit-transform-origin: left center;
-    -moz-transform-origin: left center;
-    transform-origin: left center;
-    background: #EDEEF0;
-    overflow: hidden;
+.hd.center {
     position: relative;
 }
 
-.slopes .slope.last {
-    padding-bottom: 3em;
+.slope {
+    background: #EDEEF0;
+    margin-top: 5em;
+    -ms-transform: skew(0, 5deg);
+    -o-transform: skew(0, 5deg);
+    -webkit-transform: skew(0, 5deg);
+    -moz-transform: skew(0, 5deg);
+    transform: skew(0, 5deg);
 }
 
-.slopes .slopeContent {
-    -ms-transform: rotate(-5deg);
-    -o-transform: rotate(-5deg);
-    -webkit-transform: rotate(-5deg);
-    -moz-transform: rotate(-5deg);
-    transform: rotate(-5deg);
-    -ms-transform-origin: left center;
-    -o-transform-origin: left center;
-    -webkit-transform-origin: left center;
-    -moz-transform-origin: left center;
-    transform-origin: left center;
+.slopeContent  {
     padding: 8em 0 4em 0;
+    -ms-transform: skew(0, -5deg);
+    -o-transform: skew(0, -5deg);
+    -webkit-transform: skew(0, -5deg);
+    -moz-transform: skew(0, -5deg);
+    transform: skew(0, -5deg);
 }
-
 
 /* Headings */
 .h3, .h4, .h5, .rich h3, .rich h4, .rich h5 {
@@ -82,18 +63,17 @@ body {
 }
 
 .h2 {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    background: #fff;
+    padding: 2.3em 1em 0.6em 100.8em; /* 0.6 =  24 / 40  */
+    margin-top: 0.2em;
+    left: -100em;
     font-size: 2.5em; /* 40 / 16 */
     letter-spacing: 0.05em;
     text-transform: uppercase;
     line-height: 1.2em; /* 48 / 40 */
-    margin: 0 0 0.6em 0; /* 24 / 40  */
-    display: block;
-    position: absolute;
-    background: #fff;
-    margin: 0;
-    padding: 5em 1em 0.6em 101em; /* 101 -> because of the axial transform */
-    left: -100em;
-    top: -4em;
     white-space: nowrap;
     -ms-transform: skew(-22deg);
     -o-transform: skew(-22deg);
@@ -112,19 +92,19 @@ body {
 }
 
 .h3, .rich h3 {
-    font-size: 1.5em; /* 24 / 18 */
+    font-size: 1.5em; /* 24 / 16 */
     line-height: 1.25em; /* 30 / 24 */
     margin: 1.25em 0 0.416666666em 0;
 }
 
 .h4, .rich h4 {
-    font-size: 1.333333em; /* 24 / 18 */
+    font-size: 1.333333em; /* 24 / 16 */
     line-height: 1em;
     margin: 0.5em 0 0.5em 0;
 }
 
 .h5, .rich h5 {
-    font-size: 1.111111em; /* 20 / 18 */
+    font-size: 1.111111em; /* 20 / 16 */
     line-height: 1.2em; /* 24 / 20 */
     margin: 1.2em 0 0.5em 0;
 }
