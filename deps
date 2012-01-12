@@ -1,3 +1,11 @@
+[TerrificCore]
+    git=https://github.com/brunschgi/TerrificCoreBundle.git
+    target=/bundles/Terrific/CoreBundle
+
+[TerrificComposer]
+    git=https://github.com/brunschgi/TerrificComposerBundles.git
+    target=/bundles/Terrific/Composer
+
 [Highlight]
     git=https://github.com/brunschgi/HighlightBundle.git
     target=/bundles/Highlight
