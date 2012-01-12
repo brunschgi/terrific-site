@@ -1,5 +1,5 @@
-TerrificComposerCoreBundle:
-    resource: "@TerrificComposerCoreBundle/Controller/"
+TerrificComposerAppBundle:
+    resource: "@TerrificComposerAppBundle/Controller/"
     type:     annotation
     prefix:   /terrific/composer
 
