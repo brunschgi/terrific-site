@@ -33,22 +33,22 @@
 
 {# terrificjs bootstrap #}
 {% block bootstrap %}
-        <script type="text/javascript">
-            (function($) {
-                $(document).ready(function() {
-                    var $page = $('body'),
-                        config = {
-                            dependencyPath: {
-                                library: '/bundles/terrificcomposition/js/dependencies/libraries/',
-                                plugin: '/bundles/terrificcomposition/js/dependencies/plugins/',
-                                util: '/bundles/terrificcomposition/js/dependencies/utils/'
-                            }
-                        },
-                        application = new Tc.Application($page, config);
+    <script type="text/javascript">
+        (function($) {
+            $(document).ready(function() {
+                var $page = $('body'),
+                    config = {
+                        dependencyPath: {
+                            library: '/bundles/terrificcomposition/js/dependencies/libraries/',
+                            plugin: '/bundles/terrificcomposition/js/dependencies/plugins/',
+                            util: '/bundles/terrificcomposition/js/dependencies/utils/'
+                        }
+                    },
+                    application = new Tc.Application($page, config);
 
-                    application.registerModules();
-                    application.start();
-                });
-            })(Tc.$);
-        </script>
+                application.registerModules();
+                application.start();
+            });
+        })(Tc.$);
+    </script>
 {% endblock %}
