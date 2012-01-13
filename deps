@@ -1,12 +1,16 @@
-[TerrificCore]
+[TerrificCoreBundle]
     git=https://github.com/brunschgi/TerrificCoreBundle.git
     target=/bundles/Terrific/CoreBundle
 
-[TerrificComposer]
+[TerrificComposerBundles]
     git=https://github.com/brunschgi/TerrificComposerBundles.git
     target=/bundles/Terrific/Composer
 
-[Highlight]
+[lessphp]
+    git=https://github.com/leafo/lessphp.git
+    target=/lessphp
+
+[HighlightBundle]
     git=https://github.com/brunschgi/HighlightBundle.git
     target=/bundles/Highlight
 

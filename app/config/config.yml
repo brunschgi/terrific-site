@@ -3,16 +3,15 @@ imports:
     - { resource: security.yml }
     - { resource: @HighlightBundle/Resources/config/config.yml }
 
+# Symfony Configuration
 framework:
-    #esi:             ~
-    #translator:      { fallback: %locale% }
     secret:          %secret%
     charset:         UTF-8
     router:          { resource: "%kernel.root_dir%/config/routing.yml" }
     form:            true
     csrf_protection: true
     validation:      { enable_annotations: true }
-    templating:      { engines: ['twig'] } #assets_version: SomeVersionScheme
+    templating:      { engines: ['twig'] }
     session:
         default_locale: %locale%
         auto_start:     true
@@ -26,16 +25,12 @@ twig:
 assetic:
     debug:          %kernel.debug%
     use_controller: false
-    # java: /usr/bin/java
+    java: /usr/bin/java
     filters:
         cssrewrite: ~
-        less:
-            node: /usr/bin/node
-            node_paths: [/usr/lib/node]
-        # closure:
-        #     jar: %kernel.root_dir%/java/compiler.jar
-        # yui_css:
-        #     jar: %kernel.root_dir%/java/yuicompressor-2.4.2.jar
+        lessphp:
+            apply_to: "\.less$"
+            file:   %kernel.root_dir%/../vendor/lessphp/lessc.inc.php
 
 # Doctrine Configuration
 doctrine:
