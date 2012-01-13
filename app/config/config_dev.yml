@@ -3,7 +3,7 @@ imports:
 
 framework:
     router:   { resource: "%kernel.root_dir%/config/routing_dev.yml" }
-    profiler: { only_exceptions: true }
+    profiler: { only_exceptions: false }
 
 web_profiler:
     toolbar: false
@@ -21,3 +21,6 @@ monolog:
 
 assetic:
     use_controller: true
+
+terrific_composer:
+    toolbar: true

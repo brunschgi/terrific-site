@@ -2,9 +2,9 @@
     git=https://github.com/brunschgi/TerrificCoreBundle.git
     target=/bundles/Terrific/CoreBundle
 
-[TerrificComposerBundles]
-    git=https://github.com/brunschgi/TerrificComposerBundles.git
-    target=/bundles/Terrific/Composer
+[TerrificComposerBundle]
+    git=https://github.com/brunschgi/TerrificComposerBundle.git
+    target=/bundles/Terrific/ComposerBundle
 
 [lessphp]
     git=https://github.com/leafo/lessphp.git
