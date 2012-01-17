@@ -7,12 +7,9 @@ framework:
 
 assetic:
     filters:
-        yui_css:
-            jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.6.jar"
+        cssmin:
             apply_to: "\.css$"
-        yui_js:
-            jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.6.jar"
-            apply_to: "\.js$"
+            file:   %kernel.root_dir%/../vendor/cssmin/cssmin-v3.0.1.php
 
 monolog:
     handlers:
