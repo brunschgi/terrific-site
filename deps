@@ -10,6 +10,10 @@
     git=https://github.com/brunschgi/cssmin.git
     target=/cssmin
 
+[jsmin]
+    git=https://github.com/mrclay/jsmin_minify.git
+    target=/jsmin
+
 [lessphp]
     git=https://github.com/leafo/lessphp.git
     target=/lessphp

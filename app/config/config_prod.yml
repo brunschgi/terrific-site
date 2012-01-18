@@ -9,7 +9,12 @@ assetic:
     filters:
         cssmin:
             apply_to: "\.css$"
-            file:   %kernel.root_dir%/../vendor/cssmin/cssmin-v3.0.1.php
+            file:   %kernel.root_dir%/../vendor/cssmin/cssmin.php
+
+        jsmin:
+            apply_to: "\.js"
+            file:   %kernel.root_dir%/../vendor/jsmin/JSMin.php
+            resource: %kernel.root_dir%/../vendor/bundles/Terrific/CoreBundle/Resources/config/jsmin.xml
 
 monolog:
     handlers:
