@@ -5,10 +5,12 @@ namespace Terrific\CompositionBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Terrific\ComposerBundle\Annotation\Composer;
 
 class CoreDocsController extends Controller
 {
     /**
+     * @Composer("Core Documentation Overview")
      * @Route("/core/docs", name="core_docs")
      * @Template()
      */
@@ -18,6 +20,7 @@ class CoreDocsController extends Controller
     }
 
     /**
+     * @Composer("Core Basics Documentation")
      * @Route("/core/docs/basics", name="core_docs_basics")
      * @Template()
      */
@@ -27,6 +30,7 @@ class CoreDocsController extends Controller
     }
 
     /**
+     * @Composer("Core Application Documentation")
      * @Route("/core/docs/application", name="core_docs_application")
      * @Template()
      */
@@ -36,6 +40,7 @@ class CoreDocsController extends Controller
     }
 
     /**
+     * @Composer("Core Module Documentation")
      * @Route("/core/docs/module", name="core_docs_module")
      * @Template()
      */
@@ -45,6 +50,7 @@ class CoreDocsController extends Controller
     }
 
     /**
+     * @Composer("Core Skin Documentation")
      * @Route("/core/docs/skin", name="core_docs_skin")
      * @Template()
      */
@@ -54,6 +60,7 @@ class CoreDocsController extends Controller
     }
 
     /**
+     * @Composer("Core Sandbox Documentation")
      * @Route("/core/docs/sandbox", name="core_docs_sandbox")
      * @Template()
      */
@@ -63,6 +70,7 @@ class CoreDocsController extends Controller
     }
 
     /**
+     * @Composer("Core Connector Documentation")
      * @Route("/core/docs/connector", name="core_docs_connector")
      * @Template()
      */
