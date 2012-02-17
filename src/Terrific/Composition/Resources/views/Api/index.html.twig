@@ -1,0 +1,60 @@
+{% extends 'TerrificComposition::base.html.twig' %}
+
+{% block body %}
+<div class="center">
+    {{ tc.module('Intro', 'api') }}
+</div>
+<div class="slope first">
+    <div class="center slopeContent">
+        <div class="centered">
+            <img alt="Terrific Architecture" src="{{ asset('bundles/terrificmodulecontent/images/api/architecture.png')}}"/>
+        </div>
+        <div class="line block">
+            <div class="unit size1of3">
+                {{ tc.module('Teaser', 'Api/modules')}}
+            </div>
+            <div class="unit size1of3">
+                {{ tc.module('Teaser', 'Api/skins')}}
+            </div>
+            <div class="unit lastUnit">
+                {{ tc.module('Teaser', 'Api/application')}}
+            </div>
+        </div>
+        <div class="line block">
+            <div class="unit size1of3">
+                {{ tc.module('Teaser', 'Api/sandbox')}}
+            </div>
+            <div class="unit size1of3">
+                {{ tc.module('Teaser', 'Api/connectors')}}
+            </div>
+            <div class="unit lastUnit">
+                {{ tc.module('Teaser', 'Api/bootstrap')}}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="center hd">
+    <h2 class="h2" id="namingconventions"><span>Conventions</span></h2>
+</div>
+<div class="slope">
+    <div class="center slopeContent">
+        <div class="rich">
+            TerrificJS uses Naming Conventions to prevent you from doing tedious work over and over again. Of course you don't have to follow these Conventions, but it will really saves you a lot of time…
+        </div>
+        <div class="line block">
+            <div class="unit size1of3">
+                {{ tc.module('Teaser', 'Api/namingmodules')}}
+            </div>
+            <div class="unit size1of3">
+                {{ tc.module('Teaser', 'Api/namingskins')}}
+            </div>
+            <div class="unit lastUnit">
+                {{ tc.module('Teaser', 'Api/namingconnectors')}}
+            </div>
+        </div>
+        <div class="rich">
+            Read more about the TerrificJS Naming Conventions in the <a href="{{ path('api_basics')}}">Basics Chapter</a>.
+        </div>
+    </div>
+</div>
+{% endblock %}

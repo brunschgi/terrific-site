@@ -1,0 +1,64 @@
+{% extends 'TerrificComposition::base.html.twig' %}
+
+{% block body %}
+<div class="center">
+{{ tc.module('Intro', 'concept') }}
+</div>
+<div class="slope first">
+    <div class="center slopeContent">
+        {{ tc.module('Content', 'Concept/concept') }}
+        <div class="line block">
+            <div class="unit size1of3">
+                {{ tc.module('Teaser', 'Concept/structure') }}
+            </div>
+            <div class="unit size1of3">
+                {{ tc.module('Teaser', 'Concept/maintainability') }}
+            </div>
+            <div class="lastUnit">
+                {{ tc.module('Teaser', 'Concept/reusability') }}
+            </div>
+        </div>
+        <div class="line block">
+            <div class="unit size1of3">
+                {{ tc.module('Teaser', 'Concept/html') }}
+            </div>
+            <div class="unit size1of3">
+                {{ tc.module('Teaser', 'Concept/css') }}
+            </div>
+            <div class="lastUnit">
+                {{ tc.module('Teaser', 'Concept/js') }}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="center hd">
+    <h2 class="h2" id="composer"><span>Composer</span></h2>
+</div>
+<div class="slope">
+    <div class="center slopeContent">
+        {{ tc.module('Content', 'Concept/composer') }}
+    </div>
+</div>
+<div class="center hd">
+    <h2 class="h2" id="integrations"><span>Integrations</span></h2>
+</div>
+<div class="slope">
+    <div class="center slopeContent">
+        <span class="slogan">
+If you prefer to build your frontend directly integrated within your CMS/Framework – instead of using the Terrific Composer – these
+integrations are for you! And there are more to come…</span>
+        <div class="line block">
+            <div class="unit size1of3">
+                {{ tc.module('Teaser', 'Integrations/wordpress') }}
+            </div>
+            <div class="unit size1of3">
+                {{ tc.module('Teaser', 'Integrations/symfony') }}
+            </div>
+            <div class="unit lastUnit">
+                {{ tc.module('Teaser', 'Integrations/codeigniter') }}
+            </div>
+        </div>
+    </div>
+</div>
+<div style="background: #fff; height: 900px">&nbsp;</div>
+{% endblock %}

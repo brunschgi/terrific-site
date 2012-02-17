@@ -1,0 +1,34 @@
+{% extends 'TerrificComposition::base.html.twig' %}
+
+{% block body %}
+<div class="center">
+{{ tc.module('Intro', 'composer') }}
+</div>
+<div class="slope first">
+    <div class="center slopeContent">
+        <div class="line block">
+            <div class="unit size1of3">
+                {{ tc.module('Teaser', 'Features/toolbar')}}
+            </div>
+            <div class="unit size1of3">
+                {{ tc.module('Teaser', 'Features/modulelegos')}}
+            </div>
+            <div class="unit lastUnit">
+                {{ tc.module('Teaser', 'Features/reuseofmodules')}}
+            </div>
+        </div>
+        <div class="line block">
+            <div class="unit size1of3">
+                {{ tc.module('Teaser', 'Features/integration')}}
+            </div>
+            <div class="unit size1of3">
+                {{ tc.module('Teaser', 'Features/less')}}
+            </div>
+            <div class="unit lastUnit">
+                {{ tc.module('Teaser', 'Features/favorites')}}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

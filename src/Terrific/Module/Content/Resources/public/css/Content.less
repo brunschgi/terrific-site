@@ -1,0 +1,31 @@
+/* @group Module: Default */
+@import "../../../../../Composition/Resources/public/css/mixins.less";
+
+@media all {
+
+    .modContent {
+
+        background: url('../images/content/build.jpg') no-repeat 0 0;
+
+        /* spacers */
+        .rich {
+            padding-left: 0.9375em;
+            padding-right: 0.9375em;
+        }
+
+        ul.dir li {
+            padding-left: 0;
+            background: none;
+        }
+
+        .highlight { /* for code view */
+            padding: 1em; /* 13 / 13 */
+        }
+
+        .screenshot {
+            .box-shadow(0 3px 7px rgba(0,0,0,0.4));
+        }
+    }
+}
+
+/* @end */
