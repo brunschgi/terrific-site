@@ -1,34 +1,67 @@
 {% extends 'TerrificComposition::base.html.twig' %}
 
+{% block title %}Terrific Composer{% endblock %}
+
 {% block body %}
+<span class="demo">&nbsp;</span>
 <div class="center">
 {{ tc.module('Intro', 'composer') }}
 </div>
 <div class="slope first">
     <div class="center slopeContent">
-        <div class="line block">
+        <blockquote class="centered offset">
+            Terrific Composer is a Frontend Development Framework specifically designed for building top-notch frontends based on the <a class="base" href="{{ path('home')}}">Terrific concept</a>.
+        </blockquote>
+        <div class="line">
             <div class="unit size1of3">
-                {{ tc.module('Teaser', 'Features/toolbar')}}
-            </div>
-            <div class="unit size1of3">
-                {{ tc.module('Teaser', 'Features/modulelegos')}}
-            </div>
-            <div class="unit lastUnit">
-                {{ tc.module('Teaser', 'Features/reuseofmodules')}}
-            </div>
-        </div>
-        <div class="line block">
-            <div class="unit size1of3">
-                {{ tc.module('Teaser', 'Features/integration')}}
+                {{ tc.module('Teaser', 'Composer/create') }}
             </div>
             <div class="unit size1of3">
-                {{ tc.module('Teaser', 'Features/less')}}
+                {{ tc.module('Teaser', 'Composer/open') }}
             </div>
-            <div class="unit lastUnit">
-                {{ tc.module('Teaser', 'Features/favorites')}}
+            <div class="lastUnit">
+                {{ tc.module('Teaser', 'Composer/inspect') }}
             </div>
         </div>
     </div>
 </div>
-
+<div class="center hd">
+    <h2 class="h2"><span>Flexibility</span></h2>
+</div>
+<div class="slope">
+    <div class="center slopeContent">
+        <div class="line">
+            <div class="unit size1of3">
+                {{ tc.module('Teaser', 'Composer/import')}}
+            </div>
+            <div class="unit size1of3">
+                {{ tc.module('Teaser', 'Composer/export')}}
+            </div>
+            <div class="unit lastUnit">
+                {{ tc.module('Teaser', 'Composer/less')}}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="center hd">
+    <h2 class="h2"><span>Getting Started</span></h2>
+</div>
+<div class="slope">
+    <div class="center slopeContent">
+        <blockquote class="indent">
+            Enjoy! The Composer is still in a very early stage… the documentation is coming soon.
+        </blockquote>
+        <div class="line">
+            <div class="unit size1of3">
+                {{ tc.module('Teaser', 'Composer/install')}}
+            </div>
+            <div class="unit size1of3">
+                {{ tc.module('Teaser', 'Composer/structure')}}
+            </div>
+            <div class="unit lastUnit">
+                {{ tc.module('Teaser', 'Composer/reuse')}}
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

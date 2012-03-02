@@ -17,6 +17,15 @@
   box-shadow: @shadow;
 }
 
+/* Border Radius */
+.border-radius(@border-radius) {
+  -webkit-border-radius: @border-radius;
+  -moz-border-radius: @border-radius;
+  -o-border-radius: @border-radius;
+  -ms-border-radius: @border-radius;
+  border-radius: @border-radius;
+}
+
 /* Transition */
 .transition(@transition) {
   -webkit-transition: @transition;
@@ -24,4 +33,13 @@
   -o-transition: @transition;
   -ms-transition: @transition;
   transition: @transition;
+}
+
+/* Transform */
+.transform(@transform) {
+  -webkit-transform: @transform;
+  -moz-transform: @transform;
+  -o-transform: @transform;
+  -ms-transform: @transform;
+  transform: @transform;
 }

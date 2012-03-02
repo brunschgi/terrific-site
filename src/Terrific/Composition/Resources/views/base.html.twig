@@ -3,8 +3,8 @@
 {% block css_default %}
     {% stylesheets
         '@TerrificComposition/Resources/public/css/default.css'
-        '@TerrificComposition/Resources/public/css/elements.css'
-        '@TerrificComposition/Resources/public/css/solarized.css'
+        '@TerrificComposition/Resources/public/css/elements.less'
+        '@TerrificComposition/Resources/public/css/solarized.less'
         output="css/compiled/default.css"
     %}
         <link rel="stylesheet" href="{{ asset_url }}" />
@@ -12,14 +12,16 @@
 {% endblock %}
 
 {% block js_default %}
-{#
-    {% javascripts
-                  '@TerrificComposition/Resources/public/js/yyyy.min.js'
-                   output='js/compiled/dependencies.js'
-               %}
-    <script src="{{ asset_url }}" type="text/javascript"></script>
-    {% endjavascripts %}
-#}
+<script type="text/javascript">
+    /* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+        t.parentNode.insertBefore(s, t);
+    })();
+    /* ]]> */</script>
 {% endblock %}
 
 {# content that is the same on every page (ie. logo) goes into composition #}

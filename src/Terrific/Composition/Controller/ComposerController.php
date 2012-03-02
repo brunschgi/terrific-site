@@ -16,10 +16,16 @@ class ComposerController extends Controller
      */
     public function indexAction()
     {
-        // activate the toolbar
-        // echo 'test'.$this->container->set('mode', 'terrific_composer.toolbar', 'Terrific\ComposerBundle');
-        // echo $this->container->set('mode', 'terrific_composer.toolbar', true);
+        return array();
+    }
 
+    /**
+     * @Composer("Composer Download")
+     * @Route("/composer/download", name="composer_download")
+     * @Template()
+     */
+    public function downloadAction()
+    {
         return array();
     }
 }

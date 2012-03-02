@@ -155,8 +155,7 @@ if (ini_get('session.auto_start')) {
 
                 <div class="symfony-block-content">
                     <h1>Welcome!</h1>
-                    <p>Welcome to your new Symfony project.</p>
-                    <p>This script will guide you through the basic configuration of your project. You can also do the same by editing the ‘<strong>app/config/parameters.ini</strong>’ file directly.</p>
+                    <p>Welcome to your new Terrific Composer project.</p>
 
                     <?php if (count($majorProblems)): ?>
                         <h2>
@@ -177,7 +176,7 @@ if (ini_get('session.auto_start')) {
                                 Additionally, to
                             <?php else: ?>
                                 To<?php endif; ?>
-                            enhance your Symfony experience, it’s recommended that you fix the following :
+                            enhance your Terrific Composer and therefore Symfony2 experience, it’s recommended that you fix the following :
                         </p>
                         <ol>
                             <?php foreach ($minorProblems as $problem): ?>
@@ -199,14 +198,13 @@ if (ini_get('session.auto_start')) {
 
                     <ul class="symfony-install-continue">
                         <?php if (!count($majorProblems)): ?>
-                            <li><a href="app_dev.php/_configurator/">Configure your Symfony Application online</a></li>
-                            <li><a href="app_dev.php/">Bypass configuration and go to the Welcome page</a></li>
+                            <li><a href="app_dev.php/">Go to the Welcome page</a></li>
                         <?php endif ?>
                         <li><a href="config.php">Re-check configuration</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="version">Symfony Standard Edition</div>
+        <div class="version">Terrific Composer</div>
     </body>
 </html>

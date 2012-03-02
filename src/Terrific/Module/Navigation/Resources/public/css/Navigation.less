@@ -1,0 +1,85 @@
+/* @group Module: Navigation */
+@import "../../../../../Composition/Resources/public/css/mixins.less";
+
+@media screen {
+    .modNavigation {
+        background-image: -o-linear-gradient(left , rgb(0,0,0) 50%, transparent 50%);
+        background-image: -moz-linear-gradient(left , rgb(0,0,0) 50%, transparent 50%);
+        background-image: -webkit-linear-gradient(left , rgb(0,0,0) 50%, transparent 50%);
+        background-image: -ms-linear-gradient(left , rgb(0,0,0) 50%, transparent 50%);
+        background-image: linear-gradient(left , rgb(0,0,0) 50%, transparent 50%);
+
+        ul {
+            margin: 0 auto;
+            width: 940px;
+            padding-left: 20px;
+            overflow: hidden;
+            background: #000;
+            .transform(skew(-22deg));
+        }
+
+        li {
+            float: left;
+            font-family: 'Helvetica Neue', Helvetica, sans-serif;
+            font-size: 1em; /* 16 / 16 */
+            line-height: 1em;
+            letter-spacing: 0.12em;
+            .transform(skew(22deg));
+        }
+
+        li:first-child {
+            margin-left: -15px;
+        }
+
+        a {
+            outline: none;
+            display: block;
+            color: #fff;
+            padding: 24px 0 20px 15px; /* 24 + 20 + 16 (font) = 60 */
+            text-decoration: none;
+            text-transform: uppercase;
+            .transform(skew(-22deg));
+            .box-shadow(inset 1px 1px 10px 2px rgba(0, 0, 0, 0.3));
+        }
+
+        a:after {
+            padding-left: 15px;
+            content: "/";
+        }
+
+        li:last-child a:after {
+            content: "";
+        }
+
+        a:hover, .current a {
+            background: #74AE00;;
+            margin-left: -8px;
+            padding-left: 23px;
+        }
+
+        a:hover:after, .current a:after {
+            visibility: hidden;
+        }
+
+        .current a {
+            color: #000;
+            background: #fff;
+            .box-shadow(none);
+        }
+
+        a span, a:after {
+            display: inline-block;
+            .transform(skew(22deg));
+        }
+
+    }
+}
+
+
+@media print {
+    .modNavigation {
+        display: none;
+    }
+}
+
+/* @end */

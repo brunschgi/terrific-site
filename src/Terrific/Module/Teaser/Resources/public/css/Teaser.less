@@ -1,5 +1,5 @@
 /* @group Module: Teaser */
-@media all {
+@media screen {
     .modTeaser {
         overflow: hidden;
 
@@ -7,26 +7,51 @@
             margin: 0 0.9375em;
         }
 
+        .h3 {
+            margin-bottom: 0.416666666em;
+        }
+
+        .h3:first-child {
+            margin-top: 1.25em;
+        }
+
         /* bubble content */
-        .bubble .highlight {
-            padding: 0 0 0.5em 0;
-        }
+        .bubble {
+            position: relative;
 
-        .bubble .h3 {
-            color: #fff;
-        }
+            .highlight {
+                padding: 0 0 0.5em 0;
+            }
 
-        .bubble .comingsoon {
-            display: block;
-            text-align: center;
-            padding: 2em 0 2.6em;
-            text-transform: uppercase;
-            color: #de002f;
-        }
+            .h3 {
+                color: #fff;
+            }
 
-        .bubble .button {
-            background-image: -moz-linear-gradient(center top , rgba(222, 00, 47, 1) 0%, rgba(159, 00, 34, 1) 50%, rgba(140, 00, 27, 1) 50%, rgba(100, 00, 13, 1) 100%);
-            font-size: 1em;
+            .comingsoon {
+                display: block;
+                text-align: center;
+                padding: 2em 0 2.6em;
+                text-transform: uppercase;
+                color: #74ae00;
+            }
+
+            .button {
+                background-image: -moz-linear-gradient(center top , rgba(222, 00, 47, 1) 0%, rgba(159, 00, 34, 1) 50%, rgba(140, 00, 27, 1) 50%, rgba(100, 00, 13, 1) 100%);
+                font-size: 1em;
+            }
+
+            .lang {
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 0.2em;
+                background: #fff;
+                color: #000;
+                border: 1px solid #000;
+                font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                font-size: 12 / 16em;
+            }
         }
 
         .buttons {
@@ -78,6 +103,42 @@
 
         .icon.bootstrap:before {
             background-position: -500px 0;
+        }
+
+        .icon.structure:before {
+            background-position: -600px 0;
+        }
+
+        .icon.maintain:before {
+            background-position: -700px 0;
+        }
+
+        .icon.reuse:before {
+            background-position: -800px 0;
+        }
+
+        .icon.create:before {
+            background-position: -900px 0;
+        }
+
+        .icon.open:before {
+            background-position: -1000px 0;
+        }
+
+        .icon.inspect:before {
+            background-position: -1100px 0;
+        }
+
+        .icon.import:before {
+            background-position: -1200px 0;
+        }
+
+        .icon.export:before {
+            background-position: -1300px 0;
+        }
+
+        .icon.support:before {
+            background-position: -1400px 0;
         }
     }
 }

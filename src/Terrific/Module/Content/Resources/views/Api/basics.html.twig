@@ -3,21 +3,9 @@
         Otherwise you will be lost! … or at least they help you to become a TerrificJS addict in no time ;-)</p>
 
     <h3 id="conventions">Conventions</h3>
-    <p>
-        TerrificJS takes the <a href="https://github.com/stubbornella/oocss">OOCSS</a> naming conventions and slightly
-        enhances it for specific JavaScript tasks.
-        There are 3 different components in TerrificJS that all have their own naming conventions:
-    </p>
-    <ul>
-        <li>Modules</li>
-        <li>Skins</li>
-        <li>Connectors</li>
-    </ul>
 
     <h4 id="modules">Modules</h4>
-    <p>
-        The Modules in TerrificJS solely rely on the OOCSS module naming conventions:
-    </p>
+
 {% highlight 'html' 'pygment' %}
 <div class="mod modNews">
     <!-- your module content goes here -->
@@ -33,10 +21,10 @@
 
     <h4 id="skins">Skins</h4>
     <p>
-        Skins are basic OOCSS components. But what the hell is a <a href="{{ path('api_skin') }}">TerrificJS Skin</a>?
+        What the hell is a <a href="{{ path('api_skin') }}">TerrificJS Skin</a>?
         TerrificJS skins are essentially nothing more than a <a
             href="http://en.wikipedia.org/wiki/Decorator_pattern#JavaScript_.28coffee_making_scenario.29" title="">JavaScript
-        Decorator</a>. To use the OOCSS vocabulary and to avoid synonyms we go with the term skin.
+        Decorator</a>.
     </p>
 {% highlight 'html' 'pygment' %}
 <div class="mod modNews skinNewsHighlighted">
@@ -66,7 +54,7 @@
     <h4 id="connectors">Connectors</h4>
     <p>
         Connectors provides you the possibility to let your Modules talk with each other over configurable communication
-        channels. Whilst the preceding components – Modules and Skins – both have their OOCSS and therefore visual
+        channels. Whilst the preceding components – Modules and Skins – both have their CSS and therefore visual
         counterpart,
         connectors are purely abstract. So connectors do not need an additional class on your TerrificJS module. Instead
         the naming convention for connectors are based on the <a href="http://ejohn.org/blog/html-5-data-attributes/"

@@ -20,6 +20,6 @@ class MainMenu extends MenuItem
         $this->addChild('API', array('uri' => $router->generate('api')));
         /* $this->addChild('Blog', array('uri' => $request->getBaseUrl().'/blog'));
         $this->addChild('Showcases', array('uri' => $request->getBaseUrl().'/showcases')); */
-        $this->addChild('About', array('uri' => $request->getBaseUrl().'/about'));
+        $this->addChild('About', array('uri' => $router->generate('about')));
     }
 }

@@ -1,13 +1,16 @@
 {% extends 'TerrificComposition::base.html.twig' %}
 
+{% block title %}Terrific{% endblock %}
+
 {% block body %}
 <div class="center">
-{{ tc.module('Intro', 'concept') }}
+    {{ tc.module('Intro', 'concept') }}
 </div>
 <div class="slope first">
     <div class="center slopeContent">
-        {{ tc.module('Content', 'Concept/concept') }}
-        <div class="line block">
+        <img src="{{ asset('bundles/terrificcomposition/images/concept/concept.png')}}"/>
+
+        <div class="line">
             <div class="unit size1of3">
                 {{ tc.module('Teaser', 'Concept/structure') }}
             </div>
@@ -18,7 +21,10 @@
                 {{ tc.module('Teaser', 'Concept/reusability') }}
             </div>
         </div>
-        <div class="line block">
+        <blockquote class="centered">
+            A Terrific Module is made of HTML, JS and CSS…
+        </blockquote>
+        <div class="line">
             <div class="unit size1of3">
                 {{ tc.module('Teaser', 'Concept/html') }}
             </div>
@@ -29,6 +35,9 @@
                 {{ tc.module('Teaser', 'Concept/js') }}
             </div>
         </div>
+        <div class="hint">
+            Learn more about the <a class="base" href="{{ path('api')}}#namingconventions">Naming Conventions</a> that wire up everything for you in the background.
+        </div>
     </div>
 </div>
 <div class="center hd">
@@ -36,7 +45,33 @@
 </div>
 <div class="slope">
     <div class="center slopeContent">
-        {{ tc.module('Content', 'Concept/composer') }}
+        <blockquote class="indent">
+            To make your life easier I created the Terrific Composer. The Composer is a Frontend Development Framework specifically designed for building top-notch frontends based on the Terrific concept.
+        </blockquote>
+        <div class="buttons"><a class="button" href="{{ path('composer')}}">Learn More</a> <a class="button" href="{{ path('composer_download')}}">Download Composer</a></div>
+        <div class="line">
+            <div class="unit size1of3">
+                {{ tc.module('Teaser', 'Composer/create') }}
+            </div>
+            <div class="unit size1of3">
+                {{ tc.module('Teaser', 'Composer/open') }}
+            </div>
+            <div class="lastUnit">
+                {{ tc.module('Teaser', 'Composer/inspect') }}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="center hd">
+    <h2 class="h2" id="terrificjs"><span>API</span></h2>
+</div>
+<div class="slope">
+    <div class="center slopeContent">
+        <blockquote class="indent">TerrificJS provides you a Scalable Javascript
+            Architecture, that helps you to modularize your jQuery Code in a very intuitive and natural way.</blockquote>
+        <div class="buttons"><a class="button" href="{{ path('api')}}">Learn More</a> <a class="button" href="{{ path('api_download')}}">Download TerrificJS</a></div>
+        <a class="centered img" href="{{ path('api')}}"><img class="screenshot"
+                                                         src="{{ asset('bundles/terrificcomposition/images/api/architecture.png')}}"/></a>
     </div>
 </div>
 <div class="center hd">
@@ -44,10 +79,9 @@
 </div>
 <div class="slope">
     <div class="center slopeContent">
-        <span class="slogan">
-If you prefer to build your frontend directly integrated within your CMS/Framework – instead of using the Terrific Composer – these
-integrations are for you! And there are more to come…</span>
-        <div class="line block">
+        <blockquote class="indent">
+            Integrate your Terrific Frontend in your CMS/Framework of choice… </blockquote>
+        <div class="line">
             <div class="unit size1of3">
                 {{ tc.module('Teaser', 'Integrations/wordpress') }}
             </div>
@@ -60,5 +94,4 @@ integrations are for you! And there are more to come…</span>
         </div>
     </div>
 </div>
-<div style="background: #fff; height: 900px">&nbsp;</div>
 {% endblock %}

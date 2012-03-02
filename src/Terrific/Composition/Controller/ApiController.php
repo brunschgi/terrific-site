@@ -78,4 +78,14 @@ class ApiController extends Controller
     {
         return array();
     }
+
+    /**
+     * @Composer("TerrificJS Download")
+     * @Route("/api/download", name="api_download")
+     * @Template()
+     */
+    public function downloadAction()
+    {
+        return array();
+    }
 }

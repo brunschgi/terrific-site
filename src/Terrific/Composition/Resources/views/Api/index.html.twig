@@ -1,5 +1,7 @@
 {% extends 'TerrificComposition::base.html.twig' %}
 
+{% block title %}TerrificJS{% endblock %}
+
 {% block body %}
 <div class="center">
     {{ tc.module('Intro', 'api') }}
@@ -7,7 +9,7 @@
 <div class="slope first">
     <div class="center slopeContent">
         <div class="centered">
-            <img alt="Terrific Architecture" src="{{ asset('bundles/terrificmodulecontent/images/api/architecture.png')}}"/>
+            <img alt="Terrific Architecture" src="{{ asset('bundles/terrificcomposition/images/api/architecture.png')}}"/>
         </div>
         <div class="line block">
             <div class="unit size1of3">
@@ -38,10 +40,10 @@
 </div>
 <div class="slope">
     <div class="center slopeContent">
-        <div class="rich">
+        <h3 class="h3 indent">
             TerrificJS uses Naming Conventions to prevent you from doing tedious work over and over again. Of course you don't have to follow these Conventions, but it will really saves you a lot of time…
-        </div>
-        <div class="line block">
+        </h3>
+        <div class="line">
             <div class="unit size1of3">
                 {{ tc.module('Teaser', 'Api/namingmodules')}}
             </div>
@@ -52,8 +54,8 @@
                 {{ tc.module('Teaser', 'Api/namingconnectors')}}
             </div>
         </div>
-        <div class="rich">
-            Read more about the TerrificJS Naming Conventions in the <a href="{{ path('api_basics')}}">Basics Chapter</a>.
+        <div class="hint">
+            Read more about the TerrificJS Naming Conventions in the <a class="base" href="{{ path('api_basics')}}">Basics Chapter</a>.
         </div>
     </div>
 </div>

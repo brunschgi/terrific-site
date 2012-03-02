@@ -18,4 +18,14 @@ class DefaultController extends Controller
     {
         return array();
     }
+
+    /**
+     * @Composer("About")
+     * @Route("/about", name="about")
+     * @Template()
+     */
+    public function aboutAction()
+    {
+        return array();
+    }
 }

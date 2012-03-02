@@ -1,7 +1,7 @@
 /* @group Module: Default */
 @import "../../../../../Composition/Resources/public/css/mixins.less";
 
-@media all {
+@media screen {
 
     .modContent {
 
@@ -22,8 +22,34 @@
             padding: 1em; /* 13 / 13 */
         }
 
-        .screenshot {
-            .box-shadow(0 3px 7px rgba(0,0,0,0.4));
+        .author {
+            font-size: 1.5em; /* 24 / 16 */
+            line-height: 1.25em; /* 30 / 24 */
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: #222;
+        }
+
+        .role {
+            margin: 0 0 1em;
+            color: #222;
+            display: block;
+        }
+
+        ul.donate {
+            margin: 0 auto;
+            overflow: hidden;
+            width: 225px;
+
+            li {
+                display: block;
+                float: left;
+                margin: 0 5px;
+            }
+
+            li:first-child {
+                position: relative;
+                top: 0.5em;
+            }
         }
     }
 }

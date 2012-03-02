@@ -1,4 +1,6 @@
 /* @group Module: Intro */
+@import "../../../../../Composition/Resources/public/css/mixins.less";
+
 @media all {
 
     .modIntro {
@@ -7,28 +9,83 @@
         z-index: 10;
 
         .bubble {
-            background: #de002f;
+            background: #74AE00;
             color: #fff;
-            font-family: 'Quicksand', Helvetica, sans-serif;
+            font-family: 'Helvetica Neue', Helvetica, sans-serif;
             font-size: 1.875em;
             line-height: 1em;
+            font-weight: lighter;
             text-transform: uppercase;
-            max-width: 14em;
+            letter-spacing: 0.07em;
             float: left;
+
+            &.spread {
+                min-width: 15.8em;
+            }
         }
 
-        a {
+        img {
             display: block;
             float: left;
             padding-top: 2.5em;
         }
 
         .bubble .arrow {
-            border-left-color: #de002f;
+            border-left-color: #74AE00;
         }
 
         .emphasize {
-            font-weight: bold;
+           font-weight: bolder;
+           letter-spacing: 0.04em;
+        }
+
+        .buttons {
+            position: relative;
+            top: -2em;
+            width: 34em;
+        }
+
+        .button {
+          .gradient(#EDEEF0, #fff, #EDEEF0);
+          border-color: #ccc #ccc #bbb;
+          .box-shadow(inset 0 1px 0 0 #efefef);
+          color: #333;
+          text-shadow: 0 1px 0 #fff;
+
+          &:hover {
+            .gradient(#ccc, #fff, #ccc);
+            .box-shadow(inset 0 1px 0 0 #EDEEF0);
+          }
+
+          &:active {
+            border-color: #ccc #ccc #aaa;
+            .box-shadow(inset 0 0 8px 4px #EDEEF0);
+          }
+        }
+
+        .social {
+            width: 500px;
+            list-style: none outside none;
+            min-height: 30px;
+            overflow: hidden;
+            position: relative;
+            top: -2em;
+            padding: 5px 25px;
+
+            li {
+                color: #000;
+                display: inline;
+                margin: 0 5px 0 0;
+            }
+
+            .github-btn, .tweet-btn, .follow-btn, .flattr-btn {
+                position: relative;
+                top: 5px;
+            }
+
+            .flattr-btn {
+                top: 6px;
+            }
         }
     }
 }

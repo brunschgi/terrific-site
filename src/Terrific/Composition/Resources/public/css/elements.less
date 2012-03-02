@@ -1,0 +1,272 @@
+@import 'mixins.less';
+
+/* General */
+body {
+    font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+    color: #5E5E5E;
+}
+
+.center {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.indent {
+    padding-left: 0.9375em;
+}
+
+.hd.center {
+    position: relative;
+}
+
+.slope {
+    background: #EDEEF0;
+    margin-top: 5em;
+    .transform(skew(0, 5deg));
+}
+
+.slope.first {
+    margin-top: -3em;
+}
+
+.slopeContent  {
+    padding: 8em 0 4em 0;
+    .transform(skew(0, -5deg));
+}
+
+.slope.first .slopeContent {
+    padding-top: 3em;
+}
+
+/* Headings */
+.h3, .h4, .h5, .rich h3, .rich h4, .rich h5, blockquote, .rich blockquote {
+    color: #000;
+}
+
+.h2, .h3, .rich h2, .rich h3, blockquote, .rich blockquote {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.h2 {
+    color: #74AE00;
+    display: block;
+    position: absolute;
+    z-index: 10;
+    background: #fff;
+    padding: 2.3em 1em 0.6em 100.8em; /* 0.6 =  24 / 40  */
+    margin-top: 0.2em;
+    left: -100em;
+    font-size: 2.5em; /* 40 / 16 */
+    letter-spacing: 0.05em;
+    line-height: 1.2em; /* 48 / 40 */
+    white-space: nowrap;
+    .transform(skew(-22deg));
+}
+
+.h2 a, .h2 span {
+    display: block;
+    .transform(skew(22deg));
+}
+
+.h3, .rich h3, blockquote, .rich blockquote {
+    font-size: 1.5em; /* 24 / 16 */
+    line-height: 1.25em; /* 30 / 24 */
+    margin: 2em 0 1.5em 0;
+}
+
+.h3:first-child, .rich h3:first-child, blockquote:first-child, .rich blockquote:first-child {
+    margin-top: 0;
+}
+
+.h3.centered {
+    margin-left: auto;
+    margin-right: auto;
+    width: 600 / 24em;
+}
+
+.h4, .rich h4 {
+    font-size: 1.333333em; /* 24 / 16 */
+    line-height: 1em;
+    margin: 0.5em 0 0.5em 0;
+}
+
+.h5, .rich h5 {
+    font-size: 1.111111em; /* 20 / 16 */
+    line-height: 1.2em; /* 24 / 20 */
+    margin: 1.2em 0 0.5em 0;
+}
+
+
+/* Lists */
+ul.base, .rich ul, ol.base, .rich ol {
+    margin: 0.4em 0 1.25em 0;
+    font-size: 1em;
+    line-height: 1.25em; /* 20 / 14 */
+}
+
+ul.base ul, ol.base ol, .rich ul ul, .rich ol ol {
+    margin: 0.5em 0 0 0;
+    font-size: 1em;
+}
+
+ul.base li, ol.base li, .rich ul li, .rich ol li {
+    margin-bottom: 0.35714286em;
+}
+
+ul.base li, .rich ul li {
+    background: transparent url('/bundles/terrificcomposition/images/sprite.png') 0px 0.62em no-repeat;
+    padding-left: 22px;
+}
+
+ol.base li, .rich ol li {
+    list-style: decimal-leading-zero;
+    list-style-position: inside;
+    background: none;
+    padding: 0 0 0 1.5em;
+}
+
+/* Text blocks */
+p.base, .rich p {
+    margin-bottom: 1.25em; /* 20 / 16 */
+    font-size: 1em;
+    line-height: 1.5em; /* 24 / 16 */
+}
+
+mark.base, .rich mark {
+    background: #74AE00;
+    color: #fff;
+    white-space: nowrap;
+    padding: 0 0.4em;
+}
+
+highlight.base, .rich .highlight {
+    margin-bottom: 1.25em; /* 20 / 15 */
+}
+
+em.base, .rich em {
+    color: #696969;
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+    display: inline-block;
+    padding: 0 2px;
+}
+
+blockquote.offset {
+    margin-top: 2em
+}
+
+/* Images */
+img.base, .rich img {
+    margin-bottom: 1.2em; /* 18 / 15 */
+}
+
+/* Links */
+a.base, .rich a {
+    display: inline-block;
+    padding: 0 0.25em;
+    color: #74AE00;
+    background: transparent;
+    text-decoration: none;
+}
+
+a.base:visited .rich a:visited {
+    background: #7F7F7F;
+    color: #fff
+}
+
+a.base:hover, a.base:active, .rich a:hover, .rich a:active {
+    background: #74AE00;
+    color: #fff;
+}
+
+/* Buttons */
+a.button {
+  .gradient(#74AE00, #74AE00,  #4e8f1b);
+  border: 1px solid #4e8f1b;
+  border-bottom: 1px solid #5b992b;
+  .border-radius(4px);
+  .box-shadow(inset 0 1px 0 0 #96ca6d);
+  color: #fff;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 20 / 16em;
+  line-height: 1em;
+  padding: 0.5em 1em;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 #4c9021;
+
+  &:hover {
+    .gradient(#5b992b, #5b992b, #4e8f1b);
+    .box-shadow(inset 0 1px 0 0 #8dbf67);
+  }
+
+  &:active {
+    border: 1px solid #5b992b;
+    border-bottom: 1px solid #538c27;
+    .box-shadow(inset 0 0 8px 4px #4e8f1b);
+    text-shadow: 0 1px 0 0 #eeeeee;
+  }
+}
+
+
+/* Bubble */
+.bubble {
+    position: relative;
+    background: #000;
+    color: #EDEEF0;
+    padding: 0.8125em; /* 13 / 16 */
+    margin: 0.5em 0.15384615em 1.5em;
+}
+
+.bubble .arrow{
+    position: absolute;
+    left: -0.8125em;
+    bottom: -19px;
+    font-size: 0pt;
+    height: 0;
+    width: 0;
+    border: 20px solid transparent;
+    border-left-color: #000;
+    color: #000;
+}
+
+.block {
+    padding-top: 3.125em;
+    margin: 0;
+}
+
+.hint {
+    display: block;
+    margin: 12 / 16em auto;
+    text-align: center;
+    width: 700 / 16em;
+    line-height: 24 / 16em;
+}
+
+.centered {
+    display: block;
+    text-align: center;
+}
+
+.centered p {
+    width: 30em;
+    margin: 1em auto;
+}
+
+.buttons {
+    display: block;
+    text-align: center;
+    margin: 3em auto 5em auto;
+}
+
+.demo {
+    display: block;
+    position: fixed;
+    z-index: 1000;
+    top: 4px;
+    right: 42px;
+    width: 140px;
+    height: 125px;
+    background: transparent url('/bundles/terrificcomposition/images/demo.png') no-repeat top left;
+}

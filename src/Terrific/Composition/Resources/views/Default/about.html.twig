@@ -1,0 +1,14 @@
+{% extends 'TerrificComposition::base.html.twig' %}
+
+{% block title %}Terrific, About{% endblock %}
+
+{% block body %}
+<div class="center">
+    {{ tc.module('Intro', 'about') }}
+</div>
+<div class="slope first">
+    <div class="center slopeContent">
+        {{ tc.module('Content', 'About/about')}}
+    </div>
+</div>
+{% endblock %}
