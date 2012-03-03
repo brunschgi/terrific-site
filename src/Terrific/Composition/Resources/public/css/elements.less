@@ -39,11 +39,11 @@ body {
 }
 
 /* Headings */
-.h3, .h4, .h5, .rich h3, .rich h4, .rich h5, blockquote, .rich blockquote {
+.h3, .h4, .h5, .rich h3, .rich h4, .rich h5, blockquote {
     color: #000;
 }
 
-.h2, .h3, .rich h2, .rich h3, blockquote, .rich blockquote {
+.h2, .h3, .rich h2, .rich h3, blockquote {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -68,13 +68,13 @@ body {
     .transform(skew(22deg));
 }
 
-.h3, .rich h3, blockquote, .rich blockquote {
+.h3, .rich h3, blockquote {
     font-size: 1.5em; /* 24 / 16 */
     line-height: 1.25em; /* 30 / 24 */
     margin: 2em 0 1.5em 0;
 }
 
-.h3:first-child, .rich h3:first-child, blockquote:first-child, .rich blockquote:first-child {
+.h3:first-child, .rich h3:first-child, blockquote:first-child {
     margin-top: 0;
 }
 
@@ -152,8 +152,31 @@ em.base, .rich em {
     padding: 0 2px;
 }
 
-blockquote.offset {
-    margin-top: 2em
+blockquote {
+    position: relative;
+
+    &.indent {
+        margin-left: 0.7em;
+    }
+
+    &.offset {
+        margin-top: 2em
+    }
+
+    &:before, &:after {
+        content: "«";
+        display: inline-block;
+        font-size: 30px;
+        font-weight: 300;
+        margin-left: -0.7em;
+        line-height: 1em;
+        width: 0.5em;
+    }
+
+    &:after {
+        content: "»";
+        margin-left: 0;
+    }
 }
 
 /* Images */
