@@ -68,9 +68,6 @@ registerModules : function([$ctx]) {
     <p>
         <em>registerModules</em> is perhaps the most important method of TerrificJS. It takes care of the <a href="{{ path('api_basics') }}#conventions" title="">TerrificJS naming conventions</a> and instantiates all <em>Modules</em>, <em>Skins</em> and defined <em>Connectors</em> in the given context automatically. The clue is, that because of this only the TerrificJS components that are actually used on the current page are instantiated. So there are no unused objects, no unnecessarily executed JavaScript code, no misunderstandings, no chaos - everything is perfectly fitted for the current page.
     </p>
-    <blockquote>
-        So you will never have to worry about anything - it's just magic!
-    </blockquote>
     <h4 id="registermodulesincontext">Register modules in a specific context</h4>
 {% highlight 'js' 'pygment' %}
 (function($) {
@@ -113,9 +110,6 @@ start: function([modules]) {
     <p>
         The registration process only instantiates the TerrificJS components. Until <em>start</em>  is called, nothing seems to happen from a users point of view. The real game, however, starts as soon as <em>start</em> is called.
     </p>
-    <blockquote>
-        All of your great Modules will come to life
-    </blockquote>
     <h4 id="startmodules">Start all registered modules</h4>
 {% highlight 'js' 'pygment' %}
 (function($) {

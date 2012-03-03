@@ -15,8 +15,24 @@ body {
     padding-left: 0.9375em;
 }
 
+.top {
+    position: relative;
+    z-index: 20;
+}
+
 .hd.center {
     position: relative;
+}
+
+.hd.first {
+
+    h2 {
+        top: -4.5em;
+    }
+
+    span {
+        width: 140px;
+    }
 }
 
 .slope {
@@ -156,26 +172,23 @@ blockquote {
     position: relative;
 
     &.indent {
-        margin-left: 0.7em;
+        margin-left: 52px;
     }
 
     &.offset {
         margin-top: 2em
     }
 
-    &:before, &:after {
-        content: "«";
+    &:before {
+        content: " ";
+        background: url('/bundles/terrificcomposition/images/quote.png') top left no-repeat transparent;
+        height: 1em;
         display: inline-block;
-        font-size: 30px;
+        font-size: 36px;
         font-weight: 300;
-        margin-left: -0.7em;
+        margin-left: -52px;
         line-height: 1em;
-        width: 0.5em;
-    }
-
-    &:after {
-        content: "»";
-        margin-left: 0;
+        width: 45px;
     }
 }
 
