@@ -48,10 +48,10 @@
             var $nav = $ctx;
             var top = $nav.offset().top;
             $(window).scroll(function() {
-                // what the y position of the scroll is
+                // whats the y position of the scroll
                 var y = $(this).scrollTop();
 
-                // whether that's below the form
+                // whether that's below the fold
                 if (y >= top) {
                     // if so, ad the fixed class
                     $nav.addClass('fixed');
