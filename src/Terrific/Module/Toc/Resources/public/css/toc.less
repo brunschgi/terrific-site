@@ -9,18 +9,30 @@
         margin-top: 100px;
         background: #fff;
         border: 1px solid #eee;
-        padding: 1em;
+        padding: 1em 1em 2em 1em;
         z-index: 2;
         .box-shadow(0 4px 10px -1px rgba(200, 200, 200, 0.7));
+        max-width: 273px;
     }
 
     .modToc h3 {
         font-size: 1.5em;
     }
 
-    .modToc ul {
-        list-style: square;
-        padding-left: 1em;
+    .modToc ul ul {
+        padding-top: 0;
+        font-size: 14 / 16em;
+        line-height: 1.2em;
+    }
+    
+    .modToc li {
+        padding-top: 1em;
+    }
+    
+    .modToc ul ul li {
+        padding-top: 0.5em;
+        background: none;
+        padding-left: 22px;
     }
 
     .modToc.fixed {

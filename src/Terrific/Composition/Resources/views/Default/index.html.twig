@@ -3,6 +3,7 @@
 {% block title %}Terrific{% endblock %}
 
 {% block body %}
+<span class="demo">&nbsp;</span>
 <div class="center top">
     {{ tc.module('Intro', 'concept') }}
 </div>
@@ -11,8 +12,6 @@
 </div>
 <div class="slope first">
     <div class="center slopeContent">
-        <img src="{{ asset('bundles/terrificcomposition/images/concept/concept.png')}}"/>
-
         <div class="line">
             <div class="unit size1of3">
                 {{ tc.module('Teaser', 'Concept/structure') }}
@@ -24,6 +23,7 @@
                 {{ tc.module('Teaser', 'Concept/reusability') }}
             </div>
         </div>
+        <img src="{{ asset('bundles/terrificcomposition/images/concept/concept.png')}}"/>
         <blockquote class="centered">
             A Terrific Module is made of HTML, JS and CSS
         </blockquote>
