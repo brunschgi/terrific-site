@@ -86,7 +86,7 @@ body {
 .h3, .rich h3, blockquote {
     font-size: 1.5em; /* 24 / 16 */
     line-height: 1.25em; /* 30 / 24 */
-    margin: 2em 0 1.5em 0;
+    margin: 2em 0 1em 0;
 }
 
 .h3:first-child, .rich h3:first-child, blockquote:first-child {
@@ -129,7 +129,7 @@ ul.base li, ol.base li, .rich ul li, .rich ol li {
 }
 
 ul.base li, .rich ul li {
-    background: transparent url('/bundles/terrificcomposition/images/sprite.png') 0px 0.62em no-repeat;
+    background: transparent url('../img/sprite.png') 0px 0.62em no-repeat;
     padding-left: 22px;
 }
 
@@ -138,6 +138,54 @@ ol.base li, .rich ol li {
     list-style-position: inside;
     background: none;
     padding: 0 0 0 1.5em;
+}
+
+ol.baseBig {
+    li {
+        padding-left: 30px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 20 / 16em;
+        line-height: 1.2em;
+        min-height: 70 / 24em;
+        padding-top: 20px;
+    }
+
+    li:before {
+        clear: left;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 24 / 16em;
+        line-height: 1.5em;
+        height: 48px;
+        width: 48px;
+        display: block;
+        float: left;
+        text-align: center;
+        -moz-border-radius: 48px;
+        -webkit-border-radius: 48px;
+        -ms-border-radius: 48px;
+        -o-border-radius: 48px;
+        border-radius: 48px;
+        background: #222;
+        margin-right: 0.4em;
+        font-weight: 700;
+        color: white;
+        position: relative;
+        top: -12px;
+    }
+
+    .first:before {
+        content: '1';
+    }
+
+    .second:before {
+        content: '2';
+    }
+    .third:before {
+        content: '3';
+    }
+    .fourth:before {
+        content: '4';
+    }
 }
 
 /* Text blocks */
@@ -162,7 +210,6 @@ em.base, .rich em {
     color: #696969;
     font-family: monospace;
     font-style: normal;
-    font-size: 15px;
     display: inline-block;
     padding: 0 2px;
 }
@@ -180,7 +227,7 @@ blockquote {
 
     &:before {
         content: " ";
-        background: url('/bundles/terrificcomposition/images/quote.png') top left no-repeat transparent;
+        background: url('../img/quote.png') top left no-repeat transparent;
         height: 1em;
         display: inline-block;
         font-size: 36px;
@@ -279,6 +326,12 @@ a.button {
     line-height: 24 / 16em;
 }
 
+.notice {
+    margin: 24 / 16em 0;
+    line-height: 24 / 16em;
+    padding-left: 5.6em;
+}
+
 .centered {
     display: block;
     text-align: center;
@@ -303,5 +356,5 @@ a.button {
     right: 52px;
     width: 140px;
     height: 125px;
-    background: transparent url('/bundles/terrificcomposition/images/demo.png') no-repeat top left;
+    background: transparent url('../img/demo.png') no-repeat top left;
 }

@@ -2,9 +2,10 @@
 
 {% block css_default %}
     {% stylesheets
-        '@TerrificComposition/Resources/public/css/default.css'
-        '@TerrificComposition/Resources/public/css/elements.less'
-        '@TerrificComposition/Resources/public/css/solarized.less'
+        'bundles/terrificcomposition/css/default.css'
+        'bundles/terrificcomposition/css/elements.less'
+        'bundles/terrificcomposition/css/solarized.less'
+        filter="cssrewrite"
         output="css/compiled/default.css"
     %}
         <link rel="stylesheet" href="{{ asset_url }}" />
@@ -40,9 +41,9 @@
                 var $page = $('body'),
                     config = {
                         dependencyPath: {
-                            library: '/bundles/terrificcomposition/js/dependencies/libraries/',
-                            plugin: '/bundles/terrificcomposition/js/dependencies/plugins/',
-                            util: '/bundles/terrificcomposition/js/dependencies/utils/'
+                            library: '{{app.request.basepath}}/bundles/terrificcomposition/js/dependencies/libraries/',
+                            plugin: '{{app.request.basepath}}/bundles/terrificcomposition/js/dependencies/plugins/',
+                            util: '{{app.request.basepath}}/bundles/terrificcomposition/js/dependencies/utils/'
                         }
                     },
                     application = new Tc.Application($page, config);

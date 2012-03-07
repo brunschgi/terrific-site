@@ -1,5 +1,6 @@
 /web/bundles/
 /web/css/compiled/
+/web/terrific/
 /web/css/a*
 /web/js/compiled/
 /app/bootstrap*

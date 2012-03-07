@@ -1,0 +1,28 @@
+{% extends 'TerrificComposition::base.html.twig' %}
+
+{% block title %}Terrific Composer{% endblock %}
+
+{% block meta_others %}
+<meta http-equiv="refresh" content="0; URL={{app.request.basepath}}/downloads/terrific-composer.zip">
+{% endblock %}
+
+{% block body %}
+<span class="demo">&nbsp;</span>
+<div class="center top">
+    {{ tc.module('Intro', 'composerdownload') }}
+</div>
+<div class="center hd first">
+    <h2 class="h2"><span>&nbsp;</span></h2>
+</div>
+<div class="slope first">
+    <div class="center slopeContent">
+        <ol class="baseBig block">
+            <li class="first">Download the archive. Click <a class="base" href="{{app.request.basepath}}/downloads/terrific-composer.zip">Here</a> if the download doesn't start automatically.</li>
+            <li class="second">Unpack it within your web root directory</li>
+            <li class="third">Open <a class="base" href="http://localhost/terrific-composer/web">http://localhost/terrific-composer/web</a> in your browser</li>
+            <li class="fourth">Enjoy and compose frontends like a virtuoso!</li>
+        </ol>
+        <div class="notice">Please make sure you have <mark class="base">PHP >= 5.3.2</mark> installed.<br />For more detailed instructions have a look at the <mark class="base">README.md</mark></div>
+    </div>
+</div>
+{% endblock %}
