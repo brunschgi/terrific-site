@@ -44,13 +44,14 @@ class AppKernel extends Kernel
             $finder->directories()->in($dir)->depth('== 0');
 
             // deploy composition resources
+            @mkdir(__DIR__ .'/../web/bundles');
             // $this->recursiveDelete(__DIR__ .'/../web/bundles/terrificcomposition');
             $this->recursiveCopy(__DIR__.'/../src/Terrific/Composition/Resources/public', __DIR__ .'/../web/bundles/terrificcomposition');
 
             foreach ($finder as $file) {
                 // deploy module resources
-                // $this->recursiveDelete(__DIR__ .'/../web/bundles/terrificmodule'.$filename);
-                $this->recursiveCopy($file->getRealpath().'/Resources/public', __DIR__ .'/../web/bundles/terrificmodule'.$filename);
+                // $this->recursiveDelete(__DIR__ .'/../web/bundles/terrificmodule'.strtolower($file->getFilename()));
+                $this->recursiveCopy($file->getRealpath().'/Resources/public', __DIR__ .'/../web/bundles/terrificmodule'.strtolower($file->getFilename()));
             }
         }
 
