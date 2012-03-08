@@ -25,3 +25,6 @@ assetic:
             apply_to: "\.js"
             file:   %kernel.root_dir%/../vendor/jsmin/JSMin.php
             resource: %kernel.root_dir%/../vendor/bundles/Terrific/CoreBundle/Resources/config/jsmin.xml
+
+terrific_composer:
+    toolbar: 'demo'

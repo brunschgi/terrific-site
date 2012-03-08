@@ -19,4 +19,4 @@ assetic:
     debug: false
 
 terrific_composer:
-    toolbar: 'demo'
+    toolbar: true
