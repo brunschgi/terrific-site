@@ -3,7 +3,6 @@
 /web/terrific/
 /web/css/a*
 /web/js/compiled/
-/app/bootstrap*
 /app/cache/
 /app/logs/
 /vendor/
