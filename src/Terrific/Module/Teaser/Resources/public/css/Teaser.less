@@ -144,6 +144,104 @@
         .icon.download:before {
             background-position: -1500px 0;
         }
+
+        /* concept teaser */
+        ul.dir {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 24 / 16em;
+            background: #fff;
+            padding: 10px 0;
+            .border-radius(0 0 7px 7px);
+
+            li {
+                padding-left: 24 / 16em;
+                display: block;
+                border: 1px solid #e1e2e4;
+                border-width: 1px 0 0 0;
+            }
+
+            li:first-child {
+                border-top: none;
+            }
+
+            .logo {
+                border: 2px solid #74ae00;
+                padding: 5px 0;
+                margin: 5px 0;
+            }
+
+            .navigation {
+                border: 2px solid #21bff3;
+                padding: 5px 0;
+            }
+            
+            strong {
+                font-weight: bolder;
+            }
+
+            .first {
+                padding-left: 48 / 16em;
+            }
+
+            .second {
+                padding-left: 72 / 16em;
+            }
+        }
+        
+        .info {
+            display: block;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 20px;
+            font-weight: bolder;
+            line-height: 48 / 20em;
+            padding: 5px 1em;
+            color: #fff;
+            .border-radius(7px 7px 0 0);
+        }
+
+        .info.fits {
+            background: #74ae00;
+
+        }
+
+        .info.alert {
+            background: #db2738;
+        }
+
+        .info:after {
+            content: ' ';
+            display: block;
+            float: right;
+            background: transparent url(../img/infoicons.png) no-repeat left 50%;
+            width: 30px;
+            height: 48px
+        }
+
+        .info.fits:after {
+            background-position: 0 50%;
+        }
+
+        .info.alert:after {
+            background-position: -50px 50%;
+        }
+
+        .complexity:after {
+            content: ' ';
+            display: block;
+            float: right;
+            background: transparent url(../img/complexity.png) no-repeat left 50%;
+            width: 18px;
+            height: 24px;
+            padding: 0 30px 0 0;
+        }
+
+        .complexity.low:after {
+            background-position: 0 50%;
+        }
+
+        .complexity.high:after {
+            background-position: -50px 50%;
+        }
     }
 }
 /* @end */
