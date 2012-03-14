@@ -11,7 +11,7 @@ class ComposerController extends Controller
 {
     /**
      * @Composer("Composer Overview")
-     * @Route("/composer", name="composer")
+     * @Route("/composer/", name="composer")
      * @Template()
      */
     public function indexAction()
@@ -21,7 +21,7 @@ class ComposerController extends Controller
 
     /**
      * @Composer("Composer Download")
-     * @Route("/composer/download", name="composer_download")
+     * @Route("/composer/download/", name="composer_download")
      * @Template()
      */
     public function downloadAction()

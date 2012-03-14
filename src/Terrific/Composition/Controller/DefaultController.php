@@ -21,7 +21,7 @@ class DefaultController extends Controller
 
     /**
      * @Composer("About")
-     * @Route("/about", name="about")
+     * @Route("/about/", name="about")
      * @Template()
      */
     public function aboutAction()

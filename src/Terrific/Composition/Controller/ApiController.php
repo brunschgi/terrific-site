@@ -11,7 +11,7 @@ class ApiController extends Controller
 {
     /**
      * @Composer("API Overview")
-     * @Route("/api", name="api")
+     * @Route("/api/", name="api")
      * @Template()
      */
     public function indexAction()
@@ -21,7 +21,7 @@ class ApiController extends Controller
 
     /**
      * @Composer("Api Basics")
-     * @Route("/api/basics", name="api_basics")
+     * @Route("/api/basics/", name="api_basics")
      * @Template()
      */
     public function basicsAction()
@@ -31,7 +31,7 @@ class ApiController extends Controller
 
     /**
      * @Composer("Api Application")
-     * @Route("/api/application", name="api_application")
+     * @Route("/api/application/", name="api_application")
      * @Template()
      */
     public function applicationAction()
@@ -41,7 +41,7 @@ class ApiController extends Controller
 
     /**
      * @Composer("Api Module")
-     * @Route("/api/module", name="api_module")
+     * @Route("/api/module/", name="api_module")
      * @Template()
      */
     public function moduleAction()
@@ -51,7 +51,7 @@ class ApiController extends Controller
 
     /**
      * @Composer("Api Skin")
-     * @Route("/api/skin", name="api_skin")
+     * @Route("/api/skin/", name="api_skin")
      * @Template()
      */
     public function skinAction()
@@ -61,7 +61,7 @@ class ApiController extends Controller
 
     /**
      * @Composer("Api Sandbox")
-     * @Route("/api/sandbox", name="api_sandbox")
+     * @Route("/api/sandbox/", name="api_sandbox")
      * @Template()
      */
     public function sandboxAction()
@@ -71,7 +71,7 @@ class ApiController extends Controller
 
     /**
      * @Composer("Api Connector")
-     * @Route("/api/connector", name="api_connector")
+     * @Route("/api/connector/", name="api_connector")
      * @Template()
      */
     public function connectorAction()
@@ -81,7 +81,7 @@ class ApiController extends Controller
 
     /**
      * @Composer("TerrificJS Download")
-     * @Route("/api/download", name="api_download")
+     * @Route("/api/download/", name="api_download")
      * @Template()
      */
     public function downloadAction()
