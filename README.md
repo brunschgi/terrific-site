@@ -2,7 +2,7 @@ Terrific Composer
 =================
 
 Welcome to the Terrific Composer - a Frontend Development Framework specifically
-designed for building top-notch frontends based on the [Terrific concept](http://www.terrifically.org/).
+designed for building deluxe frontends based on the [Terrific concept](http://www.terrifically.org/).
 
 This document contains information on how to download and start using Terrific Composer.
 As Terrific Composer is built on top of Symfony2, please see the official Symfony
