@@ -36,6 +36,9 @@ addModules: function($ctx) {
     </p>
 
 {% highlight 'js' 'pygment' %}
+// Make the module instance available for closures
+var that = this;
+
 // Bind the click event to add a new widget
 $('.addWidget', this.$ctx).bind('click', function() {
     var modules = [];
@@ -95,6 +98,9 @@ removeModules: function(modules) {
     </p>
 
 {% highlight 'js' 'pygment' %}
+// Make the module instance available for closures
+var that = this;
+
 // Bind the click event to remove the widget itself
 $('.removeWidget', this.$ctx).bind('click', function() {
     // stop and unregister the module itself
@@ -143,6 +149,33 @@ stop: function() {
         This unbinds your previously bound click event. Furthermore, all TerrificJS specific data attributes get removed
         from the module node.
     </p>
+
+    <h3 id="subscription">subscribe / unsubscribe</h3>
+    <p>
+        Normally connection channels are established by using the <a href="{{ path('api_basics')}}#connectors">Connector Naming Conventions</a>.
+        However, in some cases a Module needs full control over its communication channels.
+    </p>
+    <h4 id="manageconnections">Example: Manage your connection channels</h4>
+    <p>
+        This code could ie. be placed in the onBinding phase of your module.
+    </p>
+
+{% highlight 'js' 'pygment' %}
+// Make the module instance available for closures
+var that = this;
+
+// Click event on subscribe button
+$('.subscribe', this.$ctx).on('click', function() {
+    // subscribe to channel 1
+    that.sandbox.subscribe(1, that);
+});
+
+/// Click event on unsubscribe button
+$('.unsubscribe', this.$ctx).on('click', function() {
+    // unsubscribe from channel 1
+    that.sandbox.unsubscribe(1, that);
+});
+{% endhighlight %}
 
     <h3 id="getmodulebyid">getModuleById</h3>
     <p>Connectors allow you to loosely couple your Modules. Although, in some rare cases you need a bit more

@@ -20,14 +20,12 @@ class SpanListRenderer extends ListRenderer
      */
     public function renderLink(ItemInterface $item, array $options = array())
     {
-        $options = array_merge($this->getDefaultOptions(), $options);
-
         if ($item->getUri() && (!$item->isCurrent() || $options['currentAsLink'])) {
             $text = sprintf('<a href="%s"%s><span>%s</span></a>', $this->escape($item->getUri()), $this->renderHtmlAttributes($item->getLinkAttributes()), $this->escape($item->getLabel()));
         } else {
             $text = sprintf('<span%s>%s</span>', $this->renderHtmlAttributes($item->getLabelAttributes()), $this->escape($item->getLabel()));
         }
 
-        return $this->format($text, 'link', $item->getLevel());
+        return $this->format($text, 'link', $item->getLevel(), $options);
     }
 }
