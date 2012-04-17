@@ -259,7 +259,7 @@ collectStates: function() {
     // loop through all modules on the page
     $('.mod', $ctx).each(function() {
         var $mod = $(this);
-        var instance = this.getModuleById($mod.data('id'));
+        var instance = that.sandbox.getModuleById($mod.data('id'));
 
         // check whether the module is observable
         if($.isFunction(instance.getStatus)) {
