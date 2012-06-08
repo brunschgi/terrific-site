@@ -7,7 +7,7 @@
 
     <h3 id="addmodules">addModules</h3>
 
-    <p>Thinking of Ajax and the module markup you may retrieve - How would you apply JavaScript functionality to these
+    <p>Thinking of Ajax and the Module markup you may retrieve - How would you apply JavaScript functionality to these
         snippets? addModules provides you exactly that - the possibility to easily add modules dynamically.</p>
 
 {% highlight 'js' 'pygment' %}
@@ -22,8 +22,8 @@ addModules: function($ctx) {
 {% endhighlight %}
 
     <p>
-        <em>addModules</em> is a very handy method that allows you to register and start new modules by simply
-        passing a jQuery object containing the module(s) DOM as the one and only parameter.
+        <em>addModules</em> is a very handy method that allows you to register and start new <em>Modules</em> by simply
+        passing a jQuery object containing the <em>Module(s)</em> DOM as the one and only parameter.
     </p>
 
     <p>
@@ -32,7 +32,7 @@ addModules: function($ctx) {
     <h4 id="addwidgets">Example: Add new widgets</h4>
 
     <p>
-        This code could ie. be placed in the <em>on</em> phase of your widget chooser module.
+        This code could ie. be placed in the onBinding phase of your widget chooser module.
     </p>
 
 {% highlight 'js' 'pygment' %}
@@ -40,13 +40,13 @@ addModules: function($ctx) {
 var that = this;
 
 // Bind the click event to add a new widget
-$('.addWidget', this.$ctx).on('click', function() {
+$('.addWidget', this.$ctx).bind('click', function() {
     var modules = [];
 
     $.ajax({
         url: '<url to get the markup of the widget(s)>',
         success: function(data) {
-            // if needed: wrap the markup with a div (it is used as context parameter, therefore modules are only found if they are not the root element)
+            // if needed: wrap the markup with a div (it is used as context parameter, because modules are only found if they are not the root element)
             var $data = $(data).wrap('<div></div>').parent();
 
             // if needed: connect the widget(s) to the appropriate connector channels
@@ -64,7 +64,7 @@ $('.addWidget', this.$ctx).on('click', function() {
 });
 {% endhighlight %}
     <p>
-        The snippet above registers and starts the found modules in <em>$data</em>. <em>addModules</em> returns
+        The snippet above registers and starts the found <em>Modules</em> in <em>$data</em>. <em>addModules</em> returns
         an array containing the instances of the found <em>Modules</em>. Isn't that simple?
     </p>
 
@@ -94,7 +94,7 @@ removeModules: function(modules) {
     <h4 id="removewidgets">Example: A widget removes itself</h4>
 
     <p>
-        This is code could ie. be placed in the <em>on</em> phase of the widget.
+        This is code could ie. be placed in the onBinding phase of the widget.
     </p>
 
 {% highlight 'js' 'pygment' %}
@@ -102,7 +102,7 @@ removeModules: function(modules) {
 var that = this;
 
 // Bind the click event to remove the widget itself
-$('.removeWidget', this.$ctx).on('click', function() {
+$('.removeWidget', this.$ctx).bind('click', function() {
     // stop and unregister the module itself
     that.sandbox.removeModules([that]);
 
@@ -139,7 +139,7 @@ stop: function() {
     var $ctx = this.$ctx;
 
     // unbind the previously bound click event
-    $('.removeWidget', $ctx).off('click');
+    $('.removeWidget', $ctx).unbind('click');
 
     // remove all data attributes from the module node
     $ctx.removeData();
@@ -157,7 +157,7 @@ stop: function() {
     </p>
     <h4 id="manageconnections">Example: Manage your connection channels</h4>
     <p>
-        This code could ie. be placed in the <em>on</em> phase of your module.
+        This code could ie. be placed in the onBinding phase of your module.
     </p>
 
 {% highlight 'js' 'pygment' %}

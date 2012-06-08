@@ -3,10 +3,10 @@
 /* Logo/js/Tc.Module.Logo.js */
 (function($) {
   Tc.Module.Logo = Tc.Module.extend({
-    dependencies: function() { },
-    beforeBinding: function() { },
-    onBinding: function() { },
-    afterBinding: function() { }
+    on: function(callback) {
+        callback();
+    },
+    after: function() { }
   });
 })(Tc.$);
 {% endhighlight %}

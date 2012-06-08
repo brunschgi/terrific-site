@@ -1,7 +1,7 @@
  <div class="rich">
-    <p>Whilst the modules are the stars of your TerrificJS application or website, the <em>Application</em> is
+    <p>Whilst the <em>Modules</em> are the stars of your TerrificJS application or website, the <em>Application</em> is
         the master and commander, the heartpiece of Terrific. It is instantiated during the Bootstrap and is responsible
-        for the magical module registration process and for keeping all of your great modules together.</p>
+        for the magical module registration process and for keeping all of your great <em>Modules</em> together.</p>
     <p>If you want to gain a deeper understanding of how TerrificJS works - this is for you!</p>
 
     <h3 id="registermodule"s>registerModule</h3>
@@ -27,35 +27,33 @@
 {% highlight 'js' 'pygment' %}
 (function($) {
     $(document).ready(function() {
-        var $page = $('body'),
-            application = new Tc.Application($page);
-
-        application.registerModules();
-        application.registerModule($page, 'Global');
-        application.start();
+        var $page = $('body');
+    var application = new Tc.Application($page);
+    application.registerModules();
+    application.registerModule($page, 'Global');
+    application.start();
     });
 })(Tc.$);
 {% endhighlight %}
     <p>
-    In the above example we register a global module that provides sitewide functionality on the <em>$page</em>. The <em>$page</em> jQuery object is set as the context of the <em> Tc.Module.Global</em> module instance.
+    In the above example we register a global module that provides sitewide functionality on the <em>$page</em>. The $page jQuery object is set as the context of the <em> Tc.Module.Global</em> module instance.
     </p>
 
     <h4 id="registermodulesbyhand">Register modules by hand</h4>
 {% highlight 'js' 'pygment' %}
 (function($) {
     $(document).ready(function() {
-        var $page = $('body'),
-            application = new Tc.Application($page);
-
-        application.registerModule($('#navigation'), 'Navigation', ['Home'], ['1']);
-        application.registerModule($('#imageSlider'), 'ImageSlider', null, ['1']);
+        var $page = $('body');
+    var application = new Tc.Application($page);
+    application.registerModule($('#navigation'), 'Navigation', ['Home'], ['1']);
+    application.registerModule($('#imageSlider'), 'ImageSlider', null, ['1']);
         application.registerModule($page, 'Global'); // layout functionality
-        application.start();
+    application.start();
     });
 })(Tc.$);
 {% endhighlight %}
     <p>
-    This way you are able to register your modules manually wherever you want without the need of using the <a href="{{ path('api_basics') }}#conventions" title="">TerrificJS naming conventions</a> for your markup.
+    This way you are able to register your <em>Modules</em> manually wherever you want without the need of using the <a href="{{ path('api_basics') }}#conventions" title="">TerrificJS naming conventions</a> for your markup.
     </p>
 
     <h3 id="registermodules">registerModules</h3>
@@ -74,25 +72,23 @@ registerModules : function([$ctx]) {
 {% highlight 'js' 'pygment' %}
 (function($) {
     $(document).ready(function() {
-        var $page = $('body'),
-            application = new Tc.Application($page);
-
+        var $page = $('body');
+        var application = new Tc.Application($page);
         application.registerModules();
         application.start();
     });
 })(Tc.$);
 {% endhighlight %}
     <p>
-        In the above example <em>registerModules</em> does not take a param. In this case the global context which has been given to the <em>Application</em> (<em>$page</em>) is used.
+        In the above example <em>registerModules</em> does not take a param. In this case the global context which has been given to the <em>Application</em> ($page) is used.
     </p>
     <p>
-        If you only want to register modules in specific parts of your application, you could do something like:
+        If you only want to register <em>Modules</em> in specific parts of your application, you could do something like:
     </p>
 {% highlight 'js' 'pygment' %}
 (function($) {
     $(document).ready(function() {
         var application = new Tc.Application();
-
         application.registerModules($('.head'));
         application.registerModules($('.foot'));
         application.start();
@@ -100,7 +96,7 @@ registerModules : function([$ctx]) {
 })(Tc.$);
 {% endhighlight %}
     <p>
-        The snippet above only registers the modules in the head and the footer section.
+        The snippet above only registers the <em>Modules</em> in the head and the footer section.
     </p>
     <h3 id="start">start</h3>
 {% highlight 'js' 'pygment' %}
@@ -118,15 +114,14 @@ start: function([modules]) {
 {% highlight 'js' 'pygment' %}
 (function($) {
     $(document).ready(function() {
-        var $page = $('body'),
-            application = new Tc.Application($page);
-     
+        var $page = $('body');
+        var application = new Tc.Application($page);
         application.registerModules();
         application.start();
     });
 })(Tc.$);
 {% endhighlight %}
     <p>
-        As you see in the bootstrap example above, <em>start</em> has to be called after the module registration process. Calling <em>start</em> loops through all registered modules and calls <em>start</em> on every individual module. At this point the <em>Application</em> has done its initial work. Now the turn is at your <a href="{{ path('api_module') }}">Modules</a>.
+        As you see in the bootstrap example above, <em>start</em> has to be called after the module registration process. Calling <em>start</em> loops through all registered <em>Modules</em> and calls <em>start</em> on every individual <em>Module</em>. At this point the <em>Application</em> has done its initial work. Now the turn is at your <em>Modules</em>.
     </p>
  </div>

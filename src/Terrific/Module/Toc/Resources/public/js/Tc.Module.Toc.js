@@ -17,20 +17,21 @@
          * @constructor
          * @param {jQuery} $ctx the jquery context
          * @param {Sandbox} sandbox the sandbox to get the resources from
-         * @param {String} modId the unique module id
+         * @param {String} id the unique module id
          */
-        init:function ($ctx, sandbox, modId) {
+        init: function ($ctx, sandbox, id) {
             // call base constructor
-            this._super($ctx, sandbox, modId);
+            this._super($ctx, sandbox, id);
         },
 
         /**
-         * Hook function to bind the module specific events.
+         * Hook function to do the module stuff.
          *
-         * @method onBinding
+         * @method on
+         * @param {Function} callback
          * @return void
          */
-        onBinding:function () {
+        on: function (callback) {
             var $ctx = this.$ctx;
 
             // scroll to the appropriate position
@@ -60,6 +61,8 @@
                     $nav.removeClass('fixed');
                 }
             });
+            
+            callback();
         }
     });
 })(Tc.$);

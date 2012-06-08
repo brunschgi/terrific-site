@@ -1,5 +1,5 @@
 <div class="rich">
-    <p>Although TerrificJS is very intuitive to use, there are a few basics that you need to understand.
+    <p>Although TerrificJS is very intuitive to use, there are a few basics that you need to understand.<br>
         Otherwise you will be lost! … or at least they help you to become a TerrificJS addict in no time ;-)</p>
 
     <h3 id="conventions">Conventions</h3>
@@ -7,13 +7,13 @@
     <h4 id="modules">Modules</h4>
 
 {% highlight 'html' 'pygment' %}
-<div class="mod mod-news">
+<div class="mod modNews">
     <!-- your module content goes here -->
 </div>
 {% endhighlight %}
     <p>
-        Looks pretty straight, isn't it? Your TerrificJS modules simply needs the <em>.mod</em> class – to identify them
-        as modules – and the specific module class – ie. <em>.mod-news</em>.<br>
+        Looks pretty straight, isn't it? Your TerrificJS Modules simply needs the <em>.mod</em> class – to identify them
+        as modules – and the specific module class – ie. <em>.modNews</em>.<br>
         These minimal conventions are enough for TerrificJS to instantiate the appropriate module –
         <em>Tc.Module.News</em> – automatically. To avoid JavaScript errors, TerrificJS checks prior to instantiation
         whether the specific <a href="{{ path('api_module') }}">Module</a> exists or not.
@@ -27,13 +27,13 @@
         Decorator</a>.
     </p>
 {% highlight 'html' 'pygment' %}
-<div class="mod mod-news skin-news-highlighted">
+<div class="mod modNews skinNewsHighlighted">
     <!-- your module content goes here -->
 </div>
 {% endhighlight %}
     <p>
         To apply a TerrificJS <a href="{{ path('api_skin') }}">Skin</a> to your module you simply have
-        to add an additional skin class to your markup – ie. skin-news-highlighted. This will decorate your <em>Tc.Module.News</em>
+        to add an additional skin class to your markup – ie. skinNewsHighlighted. This will decorate your <em>Tc.Module.News</em>
         instance with the appropriate <em>Tc.Module.News.Highlighted</em> skin.
     </p>
     <p>
@@ -41,58 +41,70 @@
         that!
     </p>
 {% highlight 'html' 'pygment' %}
-<div class='mod mod-news skin-news-highlighted skin-news-promo'>
+<div class='mod modNews skinNewsHighlighted skinNewsProminent'>
     <!-- your module content goes here -->
 </div>
 {% endhighlight %}
     <p>
-        Simply add a second skin class to your markup – ie. skin-news-promo. TerrificJS will decorate your module with
-        the <em>Tc.Module.News.Highlighted</em> skin first and then wrap it again with <em>Tc.Module.News.Promo</em>
+        Simply add a second skin class to your markup – ie. skinNewsProminent. TerrificJS will decorate your module with
+        the <em>Tc.Module.News.Highlighted</em> skin first and then wrap it again with <em>Tc.Module.News.Prominent</em>
         skin. So TerrificJS will decorate your module twice by retaining the order in your markup.
     </p>
 
     <h4 id="connectors">Connectors</h4>
     <p>
-        Connectors provides you the possibility to let your modules talk with each other over configurable communication
-        channels. Whilst the preceding components – modules and skins – both have their CSS and therefore visual
-        counterpart, connectors are purely abstract. So connectors do not need an additional class on your TerrificJS module. Instead
-        the naming convention for connectors are based on the <a href="http://ejohn.org/blog/html-5-data-attributes/">HTML5 data attribute</a>
+        Connectors provides you the possibility to let your Modules talk with each other over configurable communication
+        channels. Whilst the preceding components – Modules and Skins – both have their CSS and therefore visual
+        counterpart,
+        connectors are purely abstract. So connectors do not need an additional class on your TerrificJS module. Instead
+        the naming convention for connectors are based on the <a href="http://ejohn.org/blog/html-5-data-attributes/"
+            >HTML5 data attribute</a>
     </p>
 {% highlight 'html' 'pygment' %}
-<div class="mod mo-news skin-news-highlighted" data-connectors="1,Status,Special-2">
+<div class="mod modNews skinNewsHighlighted" data-connectors="1,2,MasterSlave3Master">
     <!-- your news module content goes here -->
 </div>
-<div class="mod mod-tracking" data-connectors="1">
+<div class="mod modTracking" data-connectors="*">
     <!-- your tracking module content goes here -->
 </div>
 {% endhighlight %}
     <p>
         The <em>data-connectors</em> attribute takes a comma separated list of connector ids. Each of them refers to a
-        separate communication channel. As you may have noticed in the snippet above, connector ids could contain 2 - separated by a dash –
-        parts:
+        separate communication channel. Connector ids does not necessarily have to be integers – as you may have noticed
+        in the snippet above. They could contain 3 parts:
     </p>
     <ul>
         <li>
             <mark>connectorName</mark>
-            – identifies the Connector class, ie. Special refers to the
-            Tc.Connector.Special class (optional)
+            – identifies the Connector class, ie. MasterSlave refers to the
+            Tc.Connector.MasterSlave class (optional)
         </li>
         <li>
             <mark>connectorId</mark>
-            – the communication channel id, eg. 1, Status, 2 (required)
+            – the communication channel id, ie. 3 (required)
         </li>
+        <li>
+            <mark>connectorRole</mark>
+            – identifies the role of the Module in this communication channel (optional), ie. the
+            MasterSlave connector provides you 2 possible roles: Master = I can fire and retrieve <a
+                href="{{ path('api_module') }}#fire">events</a>, Slave = I can only retrieve <a
+                href="{{ path('api_module') }}#fire">events</a></li>
     </ul>
     <p>
         If only the connectorId is provided, TerrificJS will wire up the associated <em>Modules</em> with the default
         connector. The default connector is the only bundled TerrificJS connector and treats all associated
-        modules equally – which means that every module can fire and retrieve events.
+        <em>Modules</em> equally – which means that every module can fire and retrieve events.
     </p>
 
     <p>
-        If you need an additional, more advanced connector — ie. the <em>Special</em> connector – you will have to write it
-        on your own.
+        If you need an additional, more advanced connector — ie. the MasterSlave connector – you will have to write it
+        on your own. One more thing: looking at the <em>.modTracking</em> above you may have noticed the wildcard
+        <em>*</em>. The modules with the wildcard will be connected to all communication channels. This feature should
+        be used sparingly and with caution. Especially when the <em>*</em> module not only receives but also fires some
+        events, this tends to produce lots of notifications and therefore to a possible performance penalty.
+    </p>
     <p>
-        Please refer to the <a href="{{ path('api_connector') }}" title="">connector documentation</a> for further information.
+        Please refer to the <a href="{{ path('api_connector') }}" title="">Connector documentation</a> for further information.
     </p>
 
     <h4 id="conclusion">Conclusion</h4>
@@ -145,19 +157,20 @@
  */
 Tc.Config = {
     /**
-     * The paths for the different types of dependencies.
+     * The paths for the different dependency types.
      *
-     * @property dependencies
+     * @property dependencyPath
      * @type Object
      */
-    dependencies: {
-        css: '/css/dependencies',
-        js: '/js/dependencies'
+    dependencyPath: {
+        library: '/js/libraries/dynamic/',
+        plugin: '/js/plugins/dynamic/',
+        util: '/js/utils/dynamic/'
     }
 };
 {% endhighlight %}
     <p>
-    The paths for the different dependencies are the only params – and they are not even required but helps you when using script loaders – for TerrificJS. But if needed you can extend or change the config as you want. There are two different ways to do so.
+    The paths for the different dependency types are the only necessary params for TerrificJS. But if needed you can extend or change the config as you want. There are two different ways to do so.
     </p>
 
 
@@ -190,6 +203,6 @@ Tc.Config = Tc.$.extend(Tc.Config, {
 })(Tc.$);
 {% endhighlight %}
     <p>
-    This solution provides you the maximal flexibility. You could even change your whole config on every bootstrap – ie. on every single page. Furthermore if you don't need to change the basic config – namely paths for the dependencies – there is no need to redeclare them.
+    This solution provides you the maximal flexibility. You could even change your whole config on every bootstrap – ie. on every single page. Furthermore if you don't need to change the basic config – namely paths for the different dependency types – there is no need to redeclare them.
     </p>
 </div>

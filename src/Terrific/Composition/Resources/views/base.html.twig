@@ -1,7 +1,8 @@
 {% extends 'TerrificCoreBundle::base.html.twig' %}
 
-{% block css_default %}
+{% block styles %}
     {% stylesheets
+        '@TerrificComposition/Resources/public/css/reset.less'
         '@TerrificComposition/Resources/public/css/default.css'
         '@TerrificComposition/Resources/public/css/elements.less'
         '@TerrificComposition/Resources/public/css/solarized.less'
@@ -10,6 +11,9 @@
     %}
         <link rel="stylesheet" href="{{ asset_url }}" />
     {% endstylesheets %}
+    {# styles from parent (terrific core) layout #}
+    {{ parent() }}
+
     <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-24236625-1']);
@@ -21,6 +25,7 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
     </script>
+
 {% endblock %}
 
 {# content that is the same on every page (ie. logo) goes into composition #}
