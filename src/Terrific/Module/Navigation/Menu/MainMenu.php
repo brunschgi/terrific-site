@@ -16,7 +16,7 @@ class MainMenu extends MenuItem
 
         $this->addChild('Concept', array('uri' => $router->generate('home')));
         $this->addChild('Composer', array('uri' => $router->generate('composer')));
-        $this->addChild('Integrations', array('uri' => $request->getBaseUrl().'/#integrations'));
+        // $this->addChild('Integrations', array('uri' => $request->getBaseUrl().'/#integrations'));
         $this->addChild('API', array('uri' => $router->generate('api')));
         /* $this->addChild('Blog', array('uri' => $request->getBaseUrl().'/blog'));
         $this->addChild('Showcases', array('uri' => $request->getBaseUrl().'/showcases')); */

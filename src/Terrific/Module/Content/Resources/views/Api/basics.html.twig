@@ -18,6 +18,16 @@
         <em>Tc.Module.News</em> – automatically. To avoid JavaScript errors, TerrificJS checks prior to instantiation
         whether the specific <a href="{{ path('api_module') }}">Module</a> exists or not.
     </p>
+    <p>
+        In some cases you do not want to instantiate a module during the bootstrap. Instead you
+        want to reduce the initial workload and lazy init the modules on demand (eg. after scrolling beyond the fold, on click for rarely used functionality etc.).
+        This can be achieved by simply setting the <em>data-ignore</em> flag.
+    </p>
+{% highlight 'html' 'pygment' %}
+<div class="mod mod-news" data-ignore="true">
+    <!-- your module content goes here -->
+</div>
+{% endhighlight %}
 
     <h4 id="skins">Skins</h4>
     <p>
@@ -59,7 +69,7 @@
         the naming convention for connectors are based on the <a href="http://ejohn.org/blog/html-5-data-attributes/">HTML5 data attribute</a>
     </p>
 {% highlight 'html' 'pygment' %}
-<div class="mod mo-news skin-news-highlighted" data-connectors="1,Status,Special-2">
+<div class="mod mo-news skin-news-highlighted" data-connectors="status,filtering,special-filtering">
     <!-- your news module content goes here -->
 </div>
 <div class="mod mod-tracking" data-connectors="1">
@@ -74,12 +84,12 @@
     <ul>
         <li>
             <mark>connectorName</mark>
-            – identifies the Connector class, ie. Special refers to the
+            – identifies the Connector class, ie. special refers to the
             Tc.Connector.Special class (optional)
         </li>
         <li>
             <mark>connectorId</mark>
-            – the communication channel id, eg. 1, Status, 2 (required)
+            – the communication channel id, eg. 1, filtering, status (required)
         </li>
     </ul>
     <p>

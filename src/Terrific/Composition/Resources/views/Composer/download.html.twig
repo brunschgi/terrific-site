@@ -2,8 +2,10 @@
 
 {% block title %}Terrific Composer, Download{% endblock %}
 
-{% block meta_others %}
+{% block meta %}
+<meta name="description" content="Start using Terrific Composer in 4 easy steps" />
 <meta http-equiv="refresh" content="0; URL={{app.request.basepath}}/downloads/terrific-composer.zip">
+{{ parent() }}
 {% endblock %}
 
 {% block body %}

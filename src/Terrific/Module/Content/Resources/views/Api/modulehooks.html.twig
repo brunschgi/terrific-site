@@ -34,10 +34,10 @@ on: function(callback) {
 {% highlight 'js' 'pygment' %}
 on: function(callback) {
     var $ctx = this.$ctx,
-        that = this;
+        self = this;
 
     $('.encapsulated', $ctx).on('click', function() {
-        console.log('I am the encapsulated button of module ' + that.id);
+        console.log('I am the encapsulated button of module ' + self.id);
     });
 
     callback();

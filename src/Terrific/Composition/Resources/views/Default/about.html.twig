@@ -2,6 +2,11 @@
 
 {% block title %}Terrific, About{% endblock %}
 
+{% block meta %}
+<meta name="description" content="See who is behind the Terrific project" />
+{{ parent() }}
+{% endblock %}
+
 {% block js_default %}
 <script type="text/javascript">
     /* <![CDATA[ */

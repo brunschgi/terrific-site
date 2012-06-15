@@ -5,12 +5,12 @@
  * Notifies all attached connectors about changes.
  *
  * @method fire
- * @param {String} state the new state
- * @param {Object} data the data to provide to your connected modules
- * @param {Function} defaultAction the default action to perform
- * @return {void}
+ * @param {String} state The new state
+ * @param {Object} data The data to provide to your connected modules (optional)
+ * @param {Array} channels  A list containting the channel ids to send the event to (optional)
+ * @param {Function} defaultAction The default action to perform (optinal)
  */
-fire: function(state, [data], [defaultAction]) {
+fire: function(state, [data], [channels], [defaultAction]) {
 {% endhighlight %}
     <p>The fire method is your communication device. Stay in touch with your connected modules!</p>
     <p>
@@ -27,13 +27,15 @@ fire: function(state, [data], [defaultAction]) {
 
     <p>In your «talking» module</p>
 {% highlight 'js' 'pygment' %}
-onBinding: function() {
-    var that = this,
+on: function(callback) {
+    var self = this,
     $ctx = this.$ctx;
 
     $('.talk', $ctx).bind('click', function() {
-        that.fire('changeMood', { mood : 'perfect' }, function() { $.log.debug('yeah... really'); });
+        self.fire('changeMood', { mood : 'perfect' }, function() { $.log.debug('yeah... really'); });
     });
+    
+    callback();
 }
 {% endhighlight %}
 
@@ -84,4 +86,30 @@ So, because everything seems to be ok - there is no need for a smalltalk...
 {% endhighlight %}
     <p>So by simply returning <em>false</em>, the receiving module can make a veto to suppress the execution of the
         <em>defaultAction</em> and the <em>afterChangeMood</em> method.</p>
+    
+    <h4>Example: Be selective with your smalltalk partners</h4>
+    <p>
+        If you have a look at the signature of the <em>fire</em> method again, you see that there is an optional <em>channels</em> parameter.
+        In some cases you are connected to several connection channels, but you only want to talk over a specific one.
+    </p>
+    <p>
+        In your «talking» module
+    </p>
+{% highlight 'js' 'pygment' %}
+on: function(callback) {
+    var self = this,
+    $ctx = this.$ctx;
+    
+    this.sandbox.subscribe('VIP'); // subscribe to the VIP channel
+
+    $('.talk', $ctx).bind('click', function() {
+        self.fire('changeMood', { mood : 'perfect' }, ['VIP'], function() { $.log.debug('Yes sir!'); });
+    });
+    
+    callback();
+}
+{% endhighlight %}
+    <p>
+        By specifing that you only want to talk over the VIP channel, you can be seletive by choosing your smalltak partners.
+    </p>
 </div>

@@ -37,7 +37,7 @@ addModules: function($ctx) {
 
 {% highlight 'js' 'pygment' %}
 // Make the module instance available for closures
-var that = this;
+var self = this;
 
 // Bind the click event to add a new widget
 $('.addWidget', this.$ctx).on('click', function() {
@@ -53,7 +53,7 @@ $('.addWidget', this.$ctx).on('click', function() {
             $('.mod', $data).data('connectors', ["1"]);
 
             // register and start the modules in $data
-            modules = that.sandbox.addModules($data);
+            modules = self.sandbox.addModules($data);
 
             // add them to the DOM
             $('.body').append($data);
@@ -76,7 +76,6 @@ $('.addWidget', this.$ctx).on('click', function() {
  *
  * @method removeModules
  * @param {Array} modules a list containting the module instances to remove.
- * @return {void}
  */
 removeModules: function(modules) {
 {% endhighlight %}
@@ -99,15 +98,15 @@ removeModules: function(modules) {
 
 {% highlight 'js' 'pygment' %}
 // Make the module instance available for closures
-var that = this;
+var self = this;
 
 // Bind the click event to remove the widget itself
 $('.removeWidget', this.$ctx).on('click', function() {
     // stop and unregister the module itself
-    that.sandbox.removeModules([that]);
+    self.sandbox.removeModules([self]);
 
     // remove it from the DOM
-    that.$ctx.remove();
+    self.$ctx.remove();
 
     return false;
 });
@@ -162,18 +161,18 @@ stop: function() {
 
 {% highlight 'js' 'pygment' %}
 // Make the module instance available for closures
-var that = this;
+var self = this;
 
 // Click event on subscribe button
 $('.subscribe', this.$ctx).on('click', function() {
     // subscribe to channel 1
-    that.sandbox.subscribe(1, that);
+    self.sandbox.subscribe(1, self);
 });
 
 /// Click event on unsubscribe button
 $('.unsubscribe', this.$ctx).on('click', function() {
     // unsubscribe from channel 1
-    that.sandbox.unsubscribe(1, that);
+    self.sandbox.unsubscribe(1, self);
 });
 {% endhighlight %}
 
@@ -252,14 +251,14 @@ getStatus: function() {
 
 {% highlight 'js' 'pygment' %}
 collectStates: function() {
-    var that = this,
+    var self = this,
     $ctx = this.$ctx,
     states = [];
 
     // loop through all modules on the page
     $('.mod', $ctx).each(function() {
         var $mod = $(this);
-        var instance = that.sandbox.getModuleById($mod.data('id'));
+        var instance = self.sandbox.getModuleById($mod.data('id'));
 
         // check whether the module is observable
         if($.isFunction(instance.getStatus)) {
