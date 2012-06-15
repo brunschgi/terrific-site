@@ -47,4 +47,5 @@ highlight:
         blockstyles: ""
         cssclass: pygment
 
-
+terrific_composer:
+    composition_bundles: ['%kernel.root_dir%/../src/Terrific/Composition']
