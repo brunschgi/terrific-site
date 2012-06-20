@@ -100,7 +100,7 @@ on: function(callback) {
     var self = this,
     $ctx = this.$ctx;
     
-    this.sandbox.subscribe('VIP'); // subscribe to the VIP channel
+    this.sandbox.subscribe('VIP', this); // subscribe to the VIP channel
 
     $('.talk', $ctx).bind('click', function() {
         self.fire('changeMood', { mood : 'perfect' }, ['VIP'], function() { $.log.debug('Yes sir!'); });
