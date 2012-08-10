@@ -1,29 +1,29 @@
 [TerrificCoreBundle]
-    git=https://github.com/brunschgi/TerrificCoreBundle.git
+    git=http://github.com/brunschgi/TerrificCoreBundle.git
     target=/bundles/Terrific/CoreBundle
 
 [TerrificComposerBundle]
-    git=https://github.com/brunschgi/TerrificComposerBundle.git
+    git=http://github.com/brunschgi/TerrificComposerBundle.git
     target=/bundles/Terrific/ComposerBundle
 
 [cssmin]
-    git=https://github.com/brunschgi/cssmin.git
+    git=http://github.com/brunschgi/cssmin.git
     target=/cssmin
 
 [jsmin]
-    git=https://github.com/mrclay/jsmin_minify.git
+    git=http://github.com/mrclay/jsmin_minify.git
     target=/jsmin
 
 [lessphp]
-    git=https://github.com/leafo/lessphp.git
+    git=http://github.com/leafo/lessphp.git
     target=/lessphp
 
 [HighlightBundle]
-    git=https://github.com/brunschgi/HighlightBundle.git
+    git=http://github.com/brunschgi/HighlightBundle.git
     target=/bundles/Highlight
 
 [KnpMenu]
-    git=https://github.com/KnpLabs/KnpMenu.git
+    git=http://github.com/KnpLabs/KnpMenu.git
     version=v1.1.2
 
 [symfony]
