@@ -1,0 +1,59 @@
+{% extends 'TerrificComposition::base.html.twig' %}
+
+{% block title %}Terrific{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Build modular and scalable frontends with TerrificJS and Terrific Composer" />
+{{ parent() }}
+{% endblock %}
+
+
+{% block body %}
+<span class="demo">&nbsp;</span>
+<div class="center top">
+    {{ tc.module('Intro', 'showcases') }}
+</div>
+<div class="center hd first">
+    <h2 class="h2"><span>&nbsp;</span></h2>
+</div>
+<div class="slope first">
+    <div class="center slope-content">
+        <blockquote class="centered offset">
+            Modularize your frontend with Terrific – You are in good company!
+        </blockquote>
+        <div class="line block">
+            <div class="unit size1of3">
+                {{ tc.module('Teaser', 'Showcases/freitag') }}
+            </div>
+            <div class="unit size1of3">
+                {{ tc.module('Teaser', 'Showcases/raiffeisen') }}
+            </div>
+            <div class="last-unit">
+                {{ tc.module('Teaser', 'Showcases/sbb') }}
+            </div>
+        </div>
+        <div class="line block">
+            <div class="unit size1of3">
+                {{ tc.module('Teaser', 'Showcases/freitag') }}
+            </div>
+            <div class="unit size1of3">
+                {{ tc.module('Teaser', 'Showcases/raiffeisen') }}
+            </div>
+            <div class="last-unit">
+                {{ tc.module('Teaser', 'Showcases/sbb') }}
+            </div>
+        </div>
+        <div class="line block">
+            <div class="unit size1of3">
+                {{ tc.module('Teaser', 'Showcases/freitag') }}
+            </div>
+            <div class="unit size1of3">
+                {{ tc.module('Teaser', 'Showcases/raiffeisen') }}
+            </div>
+            <div class="last-unit">
+                {{ tc.module('Teaser', 'Showcases/sbb') }}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
