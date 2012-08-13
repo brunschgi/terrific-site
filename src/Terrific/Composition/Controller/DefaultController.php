@@ -28,4 +28,14 @@ class DefaultController extends Controller
     {
         return array();
     }
+
+    /**
+     * @Composer("Showcases")
+     * @Route("/showcases/", name="showcases")
+     * @Template()
+     */
+    public function showcasesAction()
+    {
+        return array();
+    }
 }
