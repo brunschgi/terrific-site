@@ -22,4 +22,4 @@ terrific_composer:
     toolbar: true
 
 terrific_core:
-    copy_images: true
+    copy_images: false

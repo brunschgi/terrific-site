@@ -18,8 +18,13 @@ class MainMenu extends MenuItem
         $this->addChild('Composer', array('uri' => $router->generate('composer')));
         // $this->addChild('Integrations', array('uri' => $request->getBaseUrl().'/#integrations'));
         $this->addChild('API', array('uri' => $router->generate('api')));
+<<<<<<< HEAD
         //$this->addChild('Blog', array('uri' => 'http://blog.terrifically.org'));
         //$this->addChild('Showcases', array('uri' => $request->getBaseUrl().'/showcases'));
+=======
+        // $this->addChild('Blog', array('uri' => 'http://blog.terrifically.org'));
+        $this->addChild('Showcases', array('uri' => $request->getBaseUrl().'/showcases'));
+>>>>>>> showcases
         $this->addChild('About', array('uri' => $router->generate('about')));
     }
 }
