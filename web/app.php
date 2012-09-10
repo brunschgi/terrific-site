@@ -8,5 +8,5 @@ use Symfony\Component\HttpFoundation\Request;
 
 $kernel = new AppKernel('prod', false);
 $kernel->loadClassCache();
-//$kernel = new AppCache($kernel);
+$kernel = new AppCache($kernel);
 $kernel->handle(Request::createFromGlobals())->send();
