@@ -20,11 +20,11 @@ class ApiController extends Controller
     }
 
     /**
-     * @Composer("Api Basics")
-     * @Route("/api/basics/", name="api_basics")
+     * @Composer("Api Conventions")
+     * @Route("/api/conventions/", name="api_conventions")
      * @Template()
      */
-    public function basicsAction()
+    public function conventionsAction()
     {
         return array();
     }
@@ -75,6 +75,16 @@ class ApiController extends Controller
      * @Template()
      */
     public function connectorAction()
+    {
+        return array();
+    }
+
+    /**
+     * @Composer("Api Bootstrap")
+     * @Route("/api/bootstrap/", name="api_bootstrap")
+     * @Template()
+     */
+    public function bootstrapAction()
     {
         return array();
     }

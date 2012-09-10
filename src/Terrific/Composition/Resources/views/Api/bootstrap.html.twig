@@ -1,0 +1,22 @@
+{% extends 'TerrificComposition::base.html.twig' %}
+
+{% block title %}TerrificJS, Bootstrap{% endblock %}
+
+{% block body %}
+<div class="center">
+    <div class="right-col size1of3">
+        {{ tc.module('Toc', 'Api/bootstrap')}}
+    </div>
+</div>
+<div class="center hd" id="bootstrap">
+    <h2 class="h2"><span>Bootstrap</span></h2>
+</div>
+<div class="slope">
+    <div class="center slope-content">
+        <div class="bd size2of3">
+            {{ tc.module('Content', 'Api/bootstrap')}}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

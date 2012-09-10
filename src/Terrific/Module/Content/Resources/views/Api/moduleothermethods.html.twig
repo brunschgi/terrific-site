@@ -34,7 +34,7 @@ on: function(callback) {
     $('.talk', $ctx).bind('click', function() {
         self.fire('changeMood', { mood : 'perfect' }, function() { $.log.debug('yeah... really'); });
     });
-    
+
     callback();
 }
 {% endhighlight %}
@@ -44,10 +44,6 @@ on: function(callback) {
 {% highlight 'js' 'pygment' %}
 onChangeMood: function(data) {
     $.log.debug('... oh you are in a ' + data.mood + ' mood?');
-},
-
-afterChangeMood: function(data) {
-    $.log.debug('... is it because of the weather?');
 }
 {% endhighlight %}
     <p>The logging output of the conversation above is:</p>
@@ -55,14 +51,12 @@ afterChangeMood: function(data) {
 {% highlight 'html' 'pygment' %}
 ... oh you are in a perfect mood?
 yeah... really
-... is it because of the weather?
 {% endhighlight %}
     <h4>Example: Shut up your smalltalk partner</h4>
 
     <p>
-        Looking at the snippet above, you see that the «receiving» module has 2 chances to interact – <em>onChangeMood</em>
-        and <em>afterChangeMood</em>. But why?<br>
-        Maybe you are not in the mood for smalltalk ;-)
+        Sometimes you want to prevent – as with native JS events – the default action of an event.
+        For example if you are not in the mood for smalltalk ;-)
     </p>
 
     <p>In your «receiving» module</p>
@@ -71,10 +65,6 @@ yeah... really
 onChangeMood: function(data) {
     $.log.debug('... oh you are in a ' + data.mood + ' mood? So, because everything seems to be ok - there is no need for a smalltalk...');
     return false;
-},
-
-afterChangeMood: function(data) {
-    $.log.debug('... is it because of the weather?');
 }
 {% endhighlight %}
 
@@ -85,8 +75,8 @@ afterChangeMood: function(data) {
 So, because everything seems to be ok - there is no need for a smalltalk...
 {% endhighlight %}
     <p>So by simply returning <em>false</em>, the receiving module can make a veto to suppress the execution of the
-        <em>defaultAction</em> and the <em>afterChangeMood</em> method.</p>
-    
+        <em>defaultAction</em>.</p>
+
     <h4>Example: Be selective with your smalltalk partners</h4>
     <p>
         If you have a look at the signature of the <em>fire</em> method again, you see that there is an optional <em>channels</em> parameter.
@@ -99,13 +89,13 @@ So, because everything seems to be ok - there is no need for a smalltalk...
 on: function(callback) {
     var self = this,
     $ctx = this.$ctx;
-    
+
     this.sandbox.subscribe('VIP', this); // subscribe to the VIP channel
 
     $('.talk', $ctx).bind('click', function() {
         self.fire('changeMood', { mood : 'perfect' }, ['VIP'], function() { $.log.debug('Yes sir!'); });
     });
-    
+
     callback();
 }
 {% endhighlight %}
