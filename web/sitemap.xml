@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+    <loc>http://terrifically.org/</loc>
+</url>
+<url>
+    <loc>http://terrifically.org/composer/</loc>
+</url>
+<url>
+    <loc>http://terrifically.org/api/</loc>
+</url>
+<url>
+    <loc>http://terrifically.org/showcases/</loc>
+</url>
+<url>
+    <loc>http://terrifically.org/about/</loc>
+</url>
+<url>
+    <loc>http://terrifically.org/composer/download/</loc>
+</url>
+<url>
+    <loc>http://terrifically.org/api/download/</loc>
+</url>
+<url>
+    <loc>http://terrifically.org/api/module/</loc>
+</url>
+<url>
+    <loc>http://terrifically.org/api/skin/</loc>
+</url>
+<url>
+    <loc>http://terrifically.org/api/bootstrap/</loc>
+</url>
+<url>
+    <loc>http://terrifically.org/api/application/</loc>
+</url>
+<url>
+    <loc>http://terrifically.org/api/sandbox/</loc>
+</url>
+<url>
+    <loc>http://terrifically.org/api/connector/</loc>
+</url>
+<url>
+    <loc>http://terrifically.org/api/conventions/</loc>
+</url>
+</urlset>
