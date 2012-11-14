@@ -21,5 +21,6 @@ class MainMenu extends MenuItem
         // $this->addChild('Blog', array('uri' => 'http://blog.terrifically.org'));
         $this->addChild('Showcases', array('uri' => $request->getBaseUrl().'/showcases'));
         $this->addChild('About', array('uri' => $router->generate('about')));
+        $this->addChild('Discuss', array('uri' => 'http://groups.google.com/group/terrific-frontend'));
     }
 }
