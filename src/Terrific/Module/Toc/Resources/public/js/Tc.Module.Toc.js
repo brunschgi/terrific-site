@@ -15,7 +15,7 @@
          * @method init
          * @return {void}
          * @constructor
-         * @param {jQuery} $ctx the jquery context
+         * @param {jQuery|Zepto} $ctx the context
          * @param {Sandbox} sandbox the sandbox to get the resources from
          * @param {String} id the unique module id
          */
@@ -61,7 +61,7 @@
                     $nav.removeClass('fixed');
                 }
             });
-            
+
             callback();
         }
     });

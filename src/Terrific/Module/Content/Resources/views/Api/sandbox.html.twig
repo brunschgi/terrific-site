@@ -15,7 +15,7 @@
  * Adds (register and start) all modules in the given context scope.
  *
  * @method addModules
- * @param {jQuery} $ctx the jquery context.
+ * @param {jQuery|Zepto} $ctx the context.
  * @return {Array} a list containing the references of the registered modules.
  */
 addModules: function($ctx) {
@@ -23,7 +23,7 @@ addModules: function($ctx) {
 
     <p>
         <em>addModules</em> is a very handy method that allows you to register and start new modules by simply
-        passing a jQuery object containing the module(s) DOM as the one and only parameter.
+        passing a jQuery/Zepto object containing the module(s) DOM as the one and only parameter.
     </p>
 
     <p>
@@ -87,7 +87,7 @@ removeModules: function(modules) {
 
     <p>
         The given modules are stopped and unregistered. In other words: everything gets cleaned up - all references to
-        the <em>Modules</em> are being deleted and all jQuery data and events are being removed from the <em>Module</em>
+        the <em>Modules</em> are being deleted and all attached data and events are being removed from the <em>Module</em>
         DOM. So after that, the modules are only plain markup again - without any functionality.
     </p>
     <h4 id="removewidgets">Example: A widget removes itself</h4>
@@ -117,17 +117,17 @@ $('.removeWidget', this.$ctx).on('click', function() {
     </p>
 
     <p>
-        <strong>Notice</strong>: Removing all jQuery data and events from the module DOM is an expensive operation,
+        <strong>Notice</strong>: Removing all attached data and events from the module DOM is an expensive operation,
         because every single Node has to be checked! This expensive operation takes place in the <em>stop</em> method of
         the base <em>Module</em> (the one that all of your <em>Modules</em> inherit from). If, like in the above
-        example, the module is getting removed from the DOM afterwards, this operation is not necessary because jQuery
+        example, the module is getting removed from the DOM afterwards, this operation is not necessary because your library
         cleans up automatically.
     </p>
 
     <p>
         In this case it would be better to overwrite the <em>stop</em> method in the widget. As a best practice we
         recommend you to overwrite the <em>stop</em> method in your <em>Module</em> and unbind your bound events and
-        jQuery data manually.
+        attached data manually.
     </p>
     <h4 id="stop">Example: Overwriting the stop method</h4>
 
@@ -192,7 +192,7 @@ $('.unsubscribe', this.$ctx).on('click', function() {
 getModuleById: function(id) {
 {% endhighlight %}
     <p>
-        In most cases your <em>Modules</em> will communicate with each other over <em>Connector</em> channels (or jquery
+        In most cases your <em>Modules</em> will communicate with each other over <em>Connector</em> channels (or
         custom events if they better fit your needs). Using <em>Connectors</em> lets you couple your <em>Modules</em>
         loosely, which is great because your application will not break if one of the <em>Modules</em> does not exist on
         a page.

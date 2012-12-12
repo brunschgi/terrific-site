@@ -7,7 +7,7 @@
  *
  * @method init
  * @constructor
- * @param {jQuery} $ctx the jquery context
+ * @param {jQuery|Zepto} $ctx the context
  * @param {Sandbox} sandbox the sandbox to get the resources from
  * @param {Number} id the unique module id
  */
@@ -23,7 +23,7 @@ init: function($ctx, sandbox, id) {
         <li>
             <h5>$ctx</h5>
             <p>
-                The <em>$ctx</em> property contains the <em>Module</em> context. Accordingly to the <a title="" href="{{ path('api_conventions') }}">TerrificJS naming conventions</a> this is the DOM Node with the CSS class <em>.mod</em>. To ensure proper module encapsulation – and therefore to avoid side effects – you only have to use <em>$ctx</em> as the second parameter in all of your jQuery selectors. Please have a look at the example in the <a title="" href="#on">on phase</a>.
+                The <em>$ctx</em> property contains the <em>Module</em> context. Accordingly to the <a title="" href="{{ path('api_conventions') }}">TerrificJS naming conventions</a> this is the DOM Node with the CSS class <em>.mod</em>. To ensure proper module encapsulation – and therefore to avoid side effects – you only have to use <em>$ctx</em> as the second parameter in all of your selectors. Please have a look at the example in the <a title="" href="#on">on phase</a>.
             </p>
         </li>
         <li>
@@ -64,7 +64,7 @@ init: function($ctx, sandbox, id) {
          *
          * @method init
          * @constructor
-         * @param {jQuery} $ctx the jquery context
+         * @param {jQuery|Zepto} $ctx the jquery context
          * @param {Sandbox} sandbox the sandbox to get the resources from
          * @param {String} modId the unique module id
          */
@@ -98,7 +98,7 @@ init: function($ctx, sandbox, id) {
     <p>
         Looking at the default structure you see that TerrificJS use the <a title=""
                                                                             href="http://ejohn.org/blog/simple-javascript-inheritance/">Simple
-        JavaScript Inheritance</a>from the jquery inventor <a title="About John Resig" href="http://ejohn.org/about/">John
+        JavaScript Inheritance</a>from the jQuery inventor <a title="About John Resig" href="http://ejohn.org/about/">John
         Resig</a>. This inheritance pattern has a very small footprint and is very intuitive to use. In the next section
         I only explain the TerrificJS relevant aspects oft this pattern. If you want to know more details please read
         the <a title="" href="http://ejohn.org/blog/simple-javascript-inheritance/">original blog post</a> from John.
@@ -110,7 +110,7 @@ init: function($ctx, sandbox, id) {
  *
  * @method init
  * @constructor
- * @param {jQuery} $ctx the jquery context
+ * @param {jQuery|Zepto} $ctx the context
  * @param {Sandbox} sandbox the sandbox to get the resources from
  * @param {String} modId the unique module id
  */

@@ -8,7 +8,7 @@
 {% highlight 'js' 'pygment' %}
 /**
   * @method registerModule
-  * @param {jQuery} $node the module node.
+  * @param {jQuery|Zepto} $node the module node.
   * @param {String} modName the module name. it must match the class name of the module (case sensitive).
   * @param {Array} skins a list of skin names. each entry must match a class name of a skin (case sensitive)).
   * @param {Array} connectors a list of connectors identifiers. schema: <connectorName><connectorId><connectorRole> (ie. MasterSlave1Master).
@@ -37,7 +37,7 @@
 })(Tc.$);
 {% endhighlight %}
     <p>
-    In the above example we register a global module that provides sitewide functionality on the <em>$page</em>. The <em>$page</em> jQuery object is set as the context of the <em> Tc.Module.Global</em> module instance.
+    In the above example we register a global module that provides sitewide functionality on the <em>$page</em>. The <em>$page</em> object is set as the context of the <em> Tc.Module.Global</em> module instance.
     </p>
 
     <h4 id="registermodulesbyhand">Register modules by hand</h4>
@@ -62,7 +62,7 @@
 {% highlight 'js' 'pygment' %}
 /**
  * @method registerModules
- * @param {jQuery} $ctx the jquery context.
+ * @param {jQuery|Zepto} $ctx the context.
  * @return {Array} a list containing the references of the registered modules.
  */
 registerModules : function([$ctx]) {
