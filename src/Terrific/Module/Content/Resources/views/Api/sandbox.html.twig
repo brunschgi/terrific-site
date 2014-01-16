@@ -46,8 +46,7 @@ $('.addWidget', this.$ctx).on('click', function() {
     $.ajax({
         url: '<url to get the markup of the widget(s)>',
         success: function(data) {
-            // if needed: wrap the markup with a div (it is used as context parameter, therefore modules are only found if they are not the root element)
-            var $data = $(data).wrap('<div></div>').parent();
+            var $data = $(data);
 
             // if needed: connect the widget(s) to the appropriate connector channels
             $('.mod', $data).data('connectors', ["1"]);
@@ -82,7 +81,8 @@ removeModules: function(modules) {
 
     <p>
         <em>removeModules</em> is the opposite of <em>addModules</em>. As parameter you have to pass in an array
-        containing the <em>Module</em> instances (ie. the return value of <em>addModules</em> or <em>getModuleById</em>).
+        containing the <em>Module</em> instances (ie. the return value of <em>addModules</em> or <em>getModuleById</em>)
+		or the jQuery/Zepto object to look for registered modules in.
     </p>
 
     <p>

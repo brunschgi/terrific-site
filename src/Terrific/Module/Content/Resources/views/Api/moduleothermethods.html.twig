@@ -32,7 +32,7 @@ on: function(callback) {
     $ctx = this.$ctx;
 
     $('.talk', $ctx).bind('click', function() {
-        self.fire('changeMood', { mood : 'perfect' }, function() { $.log.debug('yeah... really'); });
+        self.fire('changeMood', { mood : 'perfect' }, function(data) { $.log.debug('yeah... really'); });
     });
 
     callback();
@@ -93,7 +93,7 @@ on: function(callback) {
     this.sandbox.subscribe('VIP', this); // subscribe to the VIP channel
 
     $('.talk', $ctx).bind('click', function() {
-        self.fire('changeMood', { mood : 'perfect' }, ['VIP'], function() { $.log.debug('Yes sir!'); });
+        self.fire('changeMood', { mood : 'perfect' }, ['VIP'], function(data) { $.log.debug('Yes sir!'); });
     });
 
     callback();

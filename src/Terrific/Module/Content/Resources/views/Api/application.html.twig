@@ -128,4 +128,25 @@ start: function([modules]) {
     <p>
         As you see in the bootstrap example above, <em>start</em> has to be called after the module registration process. Calling <em>start</em> loops through all registered modules and calls <em>start</em> on every individual module. At this point the <em>Application</em> has done its initial work. Now the turn is at your <a href="{{ path('api_module') }}">Modules</a>.
     </p>
+ 	<h3 id="after">end</h3>
+	<p>Sometimes it would be useful to react – eg. trigger something – from within the bootstrap when the module initialization is done. By using the <em>end</em> method you can do exactly this.</p>
+
+	<h4 id="afterhook">Register "end" hook</h4>
+{% highlight 'js' 'pygment' %}
+(function($) {
+    $(document).ready(function() {
+        var $page = $('body'),
+            application = new Tc.Application($page);
+
+        application.registerModules();
+
+		// register end hook (is executed at the end of all phases)
+		application.end(function() {
+			// do something here
+		});
+
+		application.start();
+    });
+})(Tc.$);
+ {% endhighlight %}
  </div>
