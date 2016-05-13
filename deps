@@ -1,62 +1,62 @@
 [TerrificCoreBundle]
-    git=http://github.com/brunschgi/TerrificCoreBundle.git
+    git=https://github.com/brunschgi/TerrificCoreBundle.git
     target=/bundles/Terrific/CoreBundle
 
 [TerrificComposerBundle]
-    git=http://github.com/brunschgi/TerrificComposerBundle.git
+    git=https://github.com/brunschgi/TerrificComposerBundle.git
     target=/bundles/Terrific/ComposerBundle
 
 [cssmin]
-    git=http://github.com/brunschgi/cssmin.git
+    git=https://github.com/brunschgi/cssmin.git
     target=/cssmin
 
 [jsmin]
-    git=http://github.com/mrclay/jsmin_minify.git
+    git=https://github.com/mrclay/jsmin_minify.git
     target=/jsmin
 
 [lessphp]
-    git=http://github.com/leafo/lessphp.git
+    git=https://github.com/leafo/lessphp.git
     target=/lessphp
 
 [HighlightBundle]
-    git=http://github.com/brunschgi/HighlightBundle.git
+    git=https://github.com/brunschgi/HighlightBundle.git
     target=/bundles/Highlight
 
 [KnpMenu]
-    git=http://github.com/KnpLabs/KnpMenu.git
+    git=https://github.com/KnpLabs/KnpMenu.git
     version=v1.1.2
 
 [symfony]
-    git=http://github.com/symfony/symfony.git
+    git=https://github.com/symfony/symfony.git
     version=v2.0.10
 
 [twig]
-    git=http://github.com/fabpot/Twig.git
+    git=https://github.com/fabpot/Twig.git
     version=v1.6.0
 
 [monolog]
-    git=http://github.com/Seldaek/monolog.git
+    git=https://github.com/Seldaek/monolog.git
     version=1.0.2
 
 [doctrine-common]
-    git=http://github.com/doctrine/common.git
+    git=https://github.com/doctrine/common.git
     version=2.1.4
 
 [assetic]
-    git=http://github.com/kriswallsmith/assetic.git
+    git=https://github.com/kriswallsmith/assetic.git
     version=v1.0.2
 
 [SensioFrameworkExtraBundle]
-    git=http://github.com/sensio/SensioFrameworkExtraBundle.git
+    git=https://github.com/sensio/SensioFrameworkExtraBundle.git
     target=/bundles/Sensio/Bundle/FrameworkExtraBundle
     version=origin/2.0
 
 [SensioDistributionBundle]
-    git=http://github.com/sensio/SensioDistributionBundle.git
+    git=https://github.com/sensio/SensioDistributionBundle.git
     target=/bundles/Sensio/Bundle/DistributionBundle
     version=origin/2.0
 
 [AsseticBundle]
-    git=http://github.com/symfony/AsseticBundle.git
+    git=https://github.com/symfony/AsseticBundle.git
     target=/bundles/Symfony/Bundle/AsseticBundle
     version=v1.0.1
