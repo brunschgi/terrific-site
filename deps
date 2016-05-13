@@ -11,7 +11,7 @@
     target=/cssmin
 
 [jsmin]
-    git=https://github.com/mrclay/jsmin_minify.git
+    git=https://github.com/rgrove/jsmin-php.git
     target=/jsmin
 
 [lessphp]
