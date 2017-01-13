@@ -258,12 +258,12 @@ collectStates: function() {
     // loop through all modules on the page
     $('.mod', $ctx).each(function() {
         var $mod = $(this);
-        var instance = self.sandbox.getModuleById($mod.data('id'));
+        var instance = self.sandbox.getModuleById($mod.data('terrificId'));
 
         // check whether the module is observable
         if($.isFunction(instance.getStatus)) {
             // add the current state to the states array
-            states[$mod.data('id')] = instance.getStatus();
+            states[$mod.data('terrificId')] = instance.getStatus();
         }
     }
 
